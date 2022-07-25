@@ -1,14 +1,14 @@
 \chapter{Fahrzeugprototyp}
 \label{cha:Prototyp}
+\section{Vision}
+Das Gesamtkonzept für den Fahrzeugprototypen basiert auf der Vision eines \glqq Fahrzeuges als Leinwand\grqq{} (englisch: \glqq car as a canvas\grqq{}). Das Zielbild dieser Vision ist ein Fahrzeug, das auf vollständiger Weise seine Wahrnehmung auf den Menschen verändern kann. Besonders die visuelle Wahrnehmung ist hier im Vordergrund der Vision, aber diese bleibt nicht singulär, sondern die anderen Wahrnehmungsarten sollen die visuelle Wahrnehmung unterstützen.\\
+Unter der übergeordneten Vision das Fahrzeug als Leinwand zu betrachten, bildet das Gesamtkonzept des Prototypen einen möglichen ersten Schritt in Richtung der Vision.
 \section{Gesamtkonzept}
-Das Gesamtkonzept für den Fahrzeugprototypen basiert auf der Vision eines Fahrzeuges als Leinwand (englisch: car as a canvas). Das Zielbild dieser Vision ist ein Fahrzeug, das auf vollständiger Weise seine Wahrnehmung auf den Menschen verändern kann. Besonders die optische Wahrnehmung ist hier im Vordergrund der Vision, aber diese bleibt nicht singulär, sondern die anderen Wahrnehmungsarten sind genauso veränderbar.\\
-
-Unter der übergeordneten Vision das Fahrzeug als Leinwand zu betrachten, bildet das Gesamtkonzept einen mögliche Variante der Vision. 
-Durch unterschiedliche Komponenten werden die optischen, haptischen, olfaktorischen und akustischen Individualisierungsmöglichkeiten vergrößert. Diese Komponenten können im Gegensatz zu vielen bisherigen Techniken dynamisch ihre Inhalte verändern und somit das Erscheinungsbild des Fahrzeuges über die Zeit verändern. Die Inhalte aller Kollektion sind abgestimmt unter einer Kollektion für den Besitzer auswählbar und mit anderen Kollektionen austauschbar.
-\section{Beschreibung}
+Das Gesamtkonzept besteht im Kern um digitale Kunst im Fahrzeug. Kunden können unterschiedliche digitale Kunstinhalte, sogenannte Kollektionen, erwerben und diese Kollektionen in ihrem Fahrzeug aktivieren. Die Kollektionen bestehen aus mehreren inhaltlichen Bestandteilen, welche auf neuartigen und bestehenden Fahrzeugkomponenten im Fahrzeug dargestellt werden. Neben optischen Komponenten unterstützen haptische, olfaktorische und akustische Komponenten die Kollektionen. Dazu bilden Augmented Reality (AR\nomenclature{AR}{Augemented Reality}) Anwendungen weitere Darstellungen der Kollektion mit Hilfe von Drittgeräten wie Mobiltelefone.\\
+Im Gegensatz zu bisherigen Individualisierungsmöglichkeiten, wie zum Beispiel Ambientebeleuchtung, können die Komponenten zum Einen dynamisch ihre Inhalte verändern und zum Anderen das gesamte Erscheinungsbild des Fahrzeuges durch ganzheitliche Kollektionen verändern. 
+\section{Beschreibung} %TODO%
 Zugrundeliegend für das Gesamtkonzept, was unten näher beschrieben wird, die Vision eines Fahrzeuges als Leinwand. Es soll für den Kunden möglich gemacht werden ihr Fahrzeug in einer neuen Art individualisieren zu können. Die Individualisierungen sollen durch neuartige eingebaute Komponenten und durch Augmented Reality Inhalte implementiert werden. Auf die Augmented Reality Inhalte wird in der folgenden Arbeit nicht näher eingegangen.\\
 Der Prototyp basiert auf einem elektrischen Mittelklasse Serienfahrzeug gebaut im Jahr 2020. Aufbauend auf diesem Fahrzeug wurden im Exterieur und Interieur Teile ergänzt und teilweise mit anderen Komponenten ausgetauscht.
-
 \section{Komponenten}
 Das Fahrzeug hat sowohl im Exterieur als auch im Interieur Komponenten verbaut. Die Komponenten wurden nach der verwendeten Technik und dem Ort benannt. Die Einteilung erfolgt nach der Betrachtungsweise innerhalb oder außerhalb des Fahrzeugs der Komponenten. Exterieur Komponenten werden von Beobachtern außerhalb des Fahrzeugs betrachtet. Interieur Komponenten entsprechend von innen.\\
 Im Exterieur sind dies ein E-Ink Display im Frontkühlergrill, ein durchgehendes RGB-Leuchtband in der Frontschürze, E-Ink Embleme über den beiden vorderen Radkästen, RGB-Leuchtbänder in allen vier Radkästen, Beamer in den beiden Außenspiegel, nach außen gerichtete Displays in den Fondtürfenstern, ein RGB Leuchtband in der Heckleuchte und zwei kleine E-Ink Displays unterhalb der Heckleuchte.
@@ -43,5 +43,9 @@ In der Mittelkonsole wurde das Ablagefach und die abgelederte Abdeckung durch ei
 \subsection{Durchsichtiges LCD Display im Dachfenster}
 An das Dachfenster wurde ein durchsichtiges LCD Display geklebt, das in schwarz weiß Bilder darstellen kann.
 \subsection{LED Matrix im Dachhimmel}
-Im Dachhimmel unter der Bestoffung befindet sich ein Matrix RGB LED Feld. Das Feld kann dynamische Farbeffekte für die Fahrzeugpassagiere erzeugen.
+Im Dachhimmel unter der Stoffverkleidung befindet sich ein Matrix RGB LED Feld. Das Feld kann dynamische Farbeffekte für die Fahrzeugpassagiere erzeugen.
 \section{Ansteuerung}
+Die Ansteuerung der Komponenten erfolgt über einen zentralen Rechner mit Windows Betriebssystem, der sich im Kofferraum des Fahrzeuges befindet und die Informationen für die Komponenten in einem Verzeichnis gespeichert hat. Die Komponenten sind entweder direkt über Leitungen oder über eine Wireless Local Area Network (WLAN\nomenclature{WLAN}{Wireless Local Area Network}) Schnittstelle mit dem Rechner verbunden.\\
+An dem Computer ist ein Mobiltelefon über WLAN angeschlossen, das mit Hilfe einer App unterschiedliche Inhalte für die Komponenten auswählen kann.\\
+Der Computer hat einen Zugriff auf das Bordnetz des Fahrzeug, um einzelne Signale herauslesen zu können. Durch bestimmte Signaländerungen löst der Computer Sequenzen von Inhalten in den Komponenten aus.\\
+Die Komponenten des Prototypen sind damit nicht über das Serienbordnetz des Fahrzeug angeschlossen, sondern sind gesamt von diesem abgekoppelt. 
