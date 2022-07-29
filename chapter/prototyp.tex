@@ -4,7 +4,8 @@
 Das Gesamtkonzept für den Fahrzeugprototypen basiert auf der Vision eines \glqq Fahrzeuges als Leinwand\grqq{} (englisch: \glqq Car as a canvas\grqq{}). Das Zielbild dieser Vision ist ein Fahrzeug, das auf vollständiger Weise seine Wahrnehmung auf den Menschen verändern kann. Besonders die visuelle Wahrnehmung ist hier im Vordergrund der Vision, aber diese bleibt nicht singulär, sondern die anderen Wahrnehmungsarten sollen die visuelle Wahrnehmung unterstützen.\\
 Unter der übergeordneten Vision das Fahrzeug als Leinwand zu betrachten, bildet das Gesamtkonzept des Prototypen einen möglichen ersten Schritt in Richtung der Vision.
 \section{Gesamtkonzept}
-Das Gesamtkonzept besteht im Kern um digitale Kunst im Fahrzeug. Kunden können unterschiedliche digitale Kunstinhalte, sogenannte Kollektionen, erwerben und diese Kollektionen in ihrem Fahrzeug aktivieren. Die Kollektionen bestehen aus mehreren inhaltlichen Bestandteilen, welche auf neuartigen und bestehenden Fahrzeugkomponenten im Fahrzeug dargestellt werden. Neben optischen Komponenten unterstützen haptische, olfaktorische und akustische Komponenten die Kollektionen. Dazu bilden Augmented Reality (AR\nomenclature{AR}{Augemented Reality}) Anwendungen weitere Darstellungen der Kollektionen mit Hilfe von einer eigenen App auf einem Mobiltelefon.\\
+Das Gesamtkonzept besteht im Kern um digitale Kunst im Fahrzeug. Kunden können unterschiedliche digitale Kunstinhalte, sogenannte Kollektionen, erwerben und diese Kollektionen in ihrem Fahrzeug aktivieren. Die Kollektionen bestehen aus mehreren inhaltlichen Bestandteilen, welche auf neuartigen und bestehenden Fahrzeugkomponenten im Fahrzeug dargestellt werden. Die Darstellung der Inhalte der Kollektionen kann entweder durchgehend sein oder nur durch bestimmte Trigger wie zum Beispiel das Entriegeln der Türen ausgelöst werden.
+Neben optischen Komponenten unterstützen haptische, olfaktorische und akustische Komponenten die Kollektionen. Dazu bilden Augmented Reality (AR\nomenclature{AR}{Augemented Reality}) Anwendungen weitere Darstellungen der Kollektionen mit Hilfe von einer eigenen App auf einem Mobiltelefon.\\
 Die App ist für den Besitzer das zentrale Steuersystem in der unterschiedliche Aktionen auf den einzelnen Seiten verfügbar sind:
 \begin{itemize}
 	\item Kollektionen können auf digitalen Börsen gehandelt werden
@@ -14,46 +15,56 @@ Die App ist für den Besitzer das zentrale Steuersystem in der unterschiedliche 
 	\item über ein eigenes Profil kann mit anderen Besitzern von Kollektionen Bilder durch ein soziales Netzwerk ausgetauscht werden
 \end{itemize}
 Im Gegensatz zu bisherigen Individualisierungsmöglichkeiten, wie zum Beispiel Ambientebeleuchtung oder LED Scheinwerfer, können die Kollektionen in diesem Gesamtkonzept zum Einen dynamisch ihre Inhalte verändern und zum Anderen das gesamte Erscheinungsbild des Fahrzeuges durch ganzheitlich verändern. Daneben bietet das Gesamtkonzept ein Ökosystem für den Handeln und die Interaktion für Kollektionen als digitale Wertgegenstände.
-\section{Beschreibung} %TODO%
-Zugrundeliegend für das Gesamtkonzept, was unten näher beschrieben wird, die Vision eines Fahrzeuges als Leinwand. Es soll für den Kunden möglich gemacht werden ihr Fahrzeug in einer neuen Art individualisieren zu können. Die Individualisierungen sollen durch neuartige eingebaute Komponenten und durch Augmented Reality Inhalte implementiert werden. Auf die Augmented Reality Inhalte wird in der folgenden Arbeit nicht näher eingegangen.\\
-Der Prototyp basiert auf einem elektrischen Mittelklasse Serienfahrzeug gebaut im Jahr 2020. Aufbauend auf diesem Fahrzeug wurden im Exterieur und Interieur Teile ergänzt und teilweise mit anderen Komponenten ausgetauscht.
+\section{Beschreibung}
+Der Prototyp wurde unter den Leitlinien des Gesamtkonzeptes entwickelt. Aufbauend auf einem produzierten elektrischen Serienfahrzeug wurden im Exterieur und Interieur Teile ergänzt und teilweise mit anderen Komponenten ausgetauscht, um das Gesamtkonzept zu folgen. Die Serienfunktionen wurden zum größten Teil durch die Umbauten nicht beeinträchtigt.\\
+Durch Zeit- und Budgetknappheit besitzt das Fahrzeug nicht alle Ideen des Gesamtkonzeptes. Bei den Hardware Komponenten gibt es keine mit olfaktorischen Sinneseindrücken. Die App besitzt alle oben beschriebenen Funktionen zumindest als Schaubilder, aber hat nur die Auswahl und Steuerung der Kollektionen und AR Inhalte als Funktionen implementiert.
 \section{Komponenten}
-Das Fahrzeug hat sowohl im Exterieur als auch im Interieur Komponenten verbaut. Die Komponenten wurden nach der verwendeten Technik und dem Ort benannt. Die Einteilung erfolgt nach der Betrachtungsweise innerhalb oder außerhalb des Fahrzeugs der Komponenten. Exterieur Komponenten werden von Beobachtern außerhalb des Fahrzeugs betrachtet. Interieur Komponenten entsprechend von innen.\\
-Im Exterieur sind dies ein E-Ink Display im Frontkühlergrill, ein durchgehendes RGB-Leuchtband in der Frontschürze, E-Ink Embleme über den beiden vorderen Radkästen, RGB-Leuchtbänder in allen vier Radkästen, Beamer in den beiden Außenspiegel, nach außen gerichtete Displays in den Fondtürfenstern, ein RGB Leuchtband in der Heckleuchte und zwei kleine E-Ink Displays unterhalb der Heckleuchte.
-Im Interieur sind dies ein durchgehendes RGB LED Leuchtband von den hinteren Türen über die vorderen Türen bis über das gesamte Cockpit, in den Türen ein LED Matrix Feld, Displays in der Einstiegsleiste der vorderen Türen, Beamer in den Fußraum der Frontsitze, andere Designs für das Fahrer und das Zentraldisplay, eine morphende Oberfläche in der Mittelkonsole, ein durchsichtiges LCD Display für das Dachfenster und eine LED Matrix für den hinteren Teil des Dachhimmels.
-Im folgenden werden alle Komponenten nähe betrachtet.
-\subsection{E-Ink Display im Frontkühlergrill}
-Das E-Ink Display befindet sich hinter einer Scheibe mit einem Markenlogo in der Mitte der Fahrzeugfront und schließt an den Seiten auf die beiden Frontlichter an. Das Display kann statische Bilder zeigen und soll mit einem großen Betrachtungswinkel von vorne gesehen werden.
-\subsection{RGB-Leuchtband in der Frontschürze}
-Das RGB-Leuchtband ist dreiteilig aufgeteilt. Zweit Teile befinden sich in der Frontleuchten und schließen auf gleicher Höhe mit dem Mittelstück an. Das Mittelstück befindet sich oberhalb des E-Ink Displays im Frontkühlergrill. Das Leuchtband kann dynamische Lichtinszenierungen erzeugen.
-\subsection{E-Ink Embleme über den vorderen Radkästen}
-Oberhalb der Radkästen befinden sich ca 20 cm Breite und 8 cm hohe E-Ink Displays. Diese können statisch Bilder darstellen und werden zum Anzeigen des Namens der verwendeten Kollektion genutzt.
-\subsection{Leuchtstreifen in den Radkästen}
-In allen vier Radkästen befinden sich RGB LED-Streifen am äußeren Rand und strahlen im Radkasten Innenraum auf den oberen Halbkreis des Reifenprofils. Die Beleuchtung ist dynamisch ansteuerbar.
-\subsection{Beamer in den Außenspiegeln}
-In den Außenspiegeln wurde der Innenraum mit der Spiegelmechanik ausgebaut und Beamer eingebaut. Der nach unten ausgerichtete Beamer bestrahlt die Flächen vor den vorderen Türen mit farbigen Videos.
-\subsection{Displays in den Fonttürfenstern}
-In den hinteren Türen befinden sich hinter der Nebenscheiben, die mit einer Leiste von den beweglichen Hauptglasscheiben getrennt sind, farbige LCD Dislpays. Diese können von außen betrachtet werden. Dir Rückseite der Displays ist von innen mit einer schwarzen Kunststoffverkleidung für die Passagiere abgedeckt.
-\subsection{Leuchtband in der Heckleuchte}
-In der Serienheckleuchte wurde das rote Leuchtband mit einem RGB LED-Streifen getauscht, um alle Farben darzustellen. Der Streifen ist dynamisch ansteuerbar.
-\subsection{E-Ink Displays in der Heckleuchte}
-Direkt unterhalb der Heckleuchten sind zwei E-Ink Displays eingebaut, um den Namen der Designs wie beim Display oberhalb des Radkastens für Betrachter von hinten zu zeigen.
-\subsection{Interieur Leuchtband}
-Der RGB LED-Streifen ist fünfgeteilt und erstreckt sich im oberen Bereich der Türverkleidung und schließt über das Cockpit zu einem einheitlichen Band ab. Der Streifen ist mit einer Streulichtabdeckung versehen, damit der Betrachter nicht die einzelnen LED erkennen kann. Der Streifen kann dynamisch Farben und Inszenierungen abspielen.
+Das Fahrzeug hat sowohl im Exterieur als auch im Interieur Komponenten verbaut. Die Komponenten wurden nach der verwendeten Technik und dem Ort benannt und nicht nach den Markennamen. Die Einteilung erfolgt nach der Betrachtungsweise innerhalb oder außerhalb des Fahrzeugs der Komponenten. Exterieur Komponenten werden von Beobachtern außerhalb des Fahrzeugs betrachtet. Interieur Komponenten entsprechend von innen.\\
+Im Exterieur sind dies ein E-Papier in der Frontschürze, ein durchgehendes LED-Streifen in der Frontschürze, E-Papier Embleme über den beiden vorderen Radkästen, LED-Streifen in allen vier Radkästen, Videoprojektoren in den beiden Außenspiegel, nach außen gerichtete Bildschirme in den hinteren Seitenfenstern, ein LED-Streifen in der Heckleuchte und zwei kleine E-Papiere unterhalb der Heckleuchte.\\
+Im Interieur sind dies ein durchgehender LED-Streifen von den hinteren Türen über die vorderen Türen bis über das gesamte Cockpit, in den Türen eine LED Matrizen, Bildschirme in der Einstiegsleiste der vorderen Türen, Videoprojektoren im Fußraum der Frontsitze, Benutzeroberflächen für den Fahrer- und den Zentralbildschirm, eine morphende Oberfläche in der Mittelkonsole, einen durchsichtigen Bildschirm im Dachfenster und eine LED Matrix im Dachhimmel.\\
+Im folgenden werden alle Komponenten nähe betrachtet:
+\subsection{E-Papier in der Frontschürze}
+Das E-Papier befindet sich hinter einer Scheibe mit einem Markenlogo in der Mitte der Fahrzeugfront und schließt an den Seiten über eine Abmaskierung auf die beiden Frontlichter an. Das E-Papier bewirkt mit der Laminierung an der Scheibe einen räumlichen Effekt, wonach das Markenlogo vor dem E-Papier hervor strahlt.
+Auf dem E-Papier werden graphische Designs dargestellt, die Betrachter vor dem Auto sehen können.
+\subsection{LED-Streifen in der Frontschürze}
+Der LED-Streifen ist dreiteilig aufgeteilt. Die zwei äußeren Teile befinden sich in der Frontleuchten und schließen auf gleicher Höhe mit dem mittleren Streifen an. Der mittlere Streifen befindet sich oberhalb des E-Papier in der Frontschürze.
+Auf dem Streifen werden dynamische bunte Lichtsequenzen gezeigt.
+Zusammen mit dem E-Papier in der Frontschürze bilden diese zwei Komponenten die Darstellung der Kollektionen im Frontbereich.
+\subsection{E-Papier Embleme über den vorderen Radkästen}
+Oberhalb der Radkästen befinden sich ca 20 cm Breite und 8 cm hohe E-Papiere. An dieser Stelle befand sich vorher ein Emblem der Fahrzeugbezeichnung.
+Die E-Papiere werden genutzt, um den Namen der verwendeten Kollektion anzuzeigen.
+\subsection{LED-Streifen in den Radkästen}
+In allen vier Radkästen befinden sich LED-Streifen am äußeren Rand und strahlen durch eine Leiste nur in den Radkasten Innenraum auf den oberen Halbkreis des Reifenprofils. 
+\subsection{Videoprojektoren in den Außenspiegeln}
+In den Außenspiegeln wurde der Innenraum mit der Spiegelmechanik ausgebaut und Videoprojektoren eingebaut. Der nach unten ausgerichtete Videoprojektor bestrahlt die Flächen durch ein Loch an der Unterseite des Außenspiegels vor den vorderen Türen.
+Durch den Videoprojektor können Videos auf dem Boden gezeigt werden.
+\subsection{Bildschirme in den hinteren Seitenfenstern}
+In den hinteren Seitenfenstern befinden sich hinter der unbeweglichen Nebenscheiben, die mit einer Leiste von den beweglichen Hauptglasscheiben getrennt sind, Bildschirme. Diese können von außen betrachtet werden. Die Rückseite der Bildschirme ist von innen mit einer schwarzen Kunststoffverkleidung für die Passagiere abgedeckt.\\
+Zusammen mit den LED-Streifen in den Radkästen und den Videoprojektoren in den Außenspiegeln bilden die Bildschirme in den Seitenfenstern die optische Darstellung der Kollektionen im Seitenbereich.
+\subsection{LED-Streifen in der Heckleuchte}
+In der Serienheckleuchte wurde das rote Leuchtband mit einem LED-Streifen getauscht. Der Streifen ist dreigeteilt mit dem mittleren Teil in der Heckklappe und den zwei äußeren Teilen im hinteren Kotflügel.
+\subsection{E-Papier in der Heckleuchte}
+Direkt unterhalb der Heckleuchten sind zwei E-Papiere in der Heckklappe eingebaut.
+Diese E-Papiere haben eine ähnliche Größe wie die E-Papiere oberhalb der Radkästen und werden auch genutzt, um den Namen der Kollektionen zu zeigen.\\
+Zusammen mit dem LED-Streifen in der Heckleuchte bilden die E-Papiere die Heckansicht der Kollektion für Betrachter.
+\subsection{LED-Streifen im Interieur}
+Der LED-Streifen ist fünfgeteilt und erstreckt sich im oberen Bereich der vier Türverkleidungen und schließt über das Cockpit zu einem einheitlichen Band ab. Der Streifen befindet sich hinter einer Streulichtscheibe, damit der Betrachter nicht die einzelnen LED erkennen kann. 
+Der Streifen spielt dynamische Inszenierungen für die Fahrzeuginsassen ab.
 \subsection{Matrix LED Türtafeln}
 In allen vier Türverkleidungen befinden sich unterhalb des LED-Streifens ein LED Feld hinter einer Abdeckung mit durchsichtigen Sternen. Die Sterne können somit mit unterschiedlichen Farben angestrahlt werden. 
-\subsection{Displays in der Einstiegsleiste}
-Anstelle einer Edelstahl Abdeckung mit einem Schriftzug befinden sich in den vorderen Türen Displays in der Einstiegsleiste. Die LCD Displays können bei geöffneter Türe Inhalte dem Betrachter darstellen.
-\subsection{Beamer im Fußraum}
-Für die vorderen Fußräume wurden zwei Beamer verbaut. Der eine Beamer befindet sich unterhalb der Lenkersäule, der Andere unterhalb des Handschuhfachs. Beide Beamer strahlen den Fußraum an und können dynamisch Inhalte abspielen.
-\subsection{Morphende Oberläche in der Mittelkonsole}
-In der Mittelkonsole wurde das Ablagefach und die abgelederte Abdeckung durch eine neuartige Vorrichtung ersetzt, die von innen mit Hilfe von kleinen Stiften auf die Abdeckung drückt, um ein bestimmtes Muster zu erzeugen.
-\subsection{Durchsichtiges LCD Display im Dachfenster}
-An das Dachfenster wurde ein durchsichtiges LCD Display geklebt, das in schwarz weiß Bilder darstellen kann.
+\subsection{Bildschirme in der Einstiegsleiste}
+Anstelle einer Edelstahl Abdeckung mit einem Schriftzug befinden sich in den vorderen Türen Bildschirme in der Einstiegsleiste. Die Bildschirme können bei geöffneter Türe Inhalte dem Fahrzeuginsassen und Betrachter Außerhalb des Fahrzeuges darstellen.
+\subsection{Videoprojektoren im Fußraum}
+Für die vorderen Fußraumböden wurden zwei Videoprojektoren verbaut. Der fahrerseitige Videoprojektor befindet sich unterhalb der Lenksäule, der Beifahrerseitige unterhalb des Handschuhfachs. Beide Videoprojektoren strahlen den Fußraum an und können dynamisch Inhalte abspielen.
+\subsection{Morphende Oberfläche in der Mittelkonsole}
+In der Mittelkonsole wurde das Ablagefach und die abgelederte Abdeckung durch eine neuartige Vorrichtung ersetzt, die von innen mit Hilfe von Formteilen auf die Oberflüche drückt und somit von außen optisch und haptisch spürbar ist. In der Vorrichtung befinden sich in einem Revolver drei Formteile mit unterschiedlicher Ausgestaltung.
+\subsection{Durchsichtiger Bildschirm im Dachfenster}
+An das Dachfenster wurde ein durchsichtiges Bildschirm geklebt, das bei Betrachten von innen Grafiken darstellen kann.
 \subsection{LED Matrix im Dachhimmel}
-Im Dachhimmel unter der Stoffverkleidung befindet sich ein Matrix RGB LED Feld. Das Feld kann dynamische Farbeffekte für die Fahrzeugpassagiere erzeugen.
+Im Dachhimmel unter der Stoffverkleidung befindet sich eine LED Matrix. Das Feld kann dynamische Farbeffekte erzeugen.
 \section{Ansteuerung}
-Die Ansteuerung der Komponenten erfolgt über einen zentralen Rechner mit Windows Betriebssystem, der sich im Kofferraum des Fahrzeuges befindet und die Informationen für die Komponenten in einem Verzeichnis gespeichert hat. Die Komponenten sind entweder direkt über Leitungen oder über eine Wireless Local Area Network (WLAN\nomenclature{WLAN}{Wireless Local Area Network}) Schnittstelle mit dem Rechner verbunden.\\
+Die Ansteuerung der Komponenten erfolgt über einen zentralen Rechner mit Windows Betriebssystem, der sich im Kofferraum des Fahrzeuges befindet und die Informationen für die Komponenten in einem lokalen Verzeichnis gespeichert hat. Die Komponenten sind entweder direkt über Leitungen oder über eine Wireless Local Area Network (WLAN\nomenclature{WLAN}{Wireless Local Area Network}) Schnittstelle mit dem Rechner verbunden.\\
+Die Displays und Beamer sind über HDMI (High Definition Multimedia Interface\nomenclature{HDMI}{High Definition Multimedia Interface}) mit dem Computer verbunden. Die Lichtleisten sind über USB (Universial Serial Bus\nomenclature{USB}{Universial Serial Bus}) mit dem Rechner über ein USB Hub verbunden. Die E-ink Displays werden von Raspberry Pis angesteuert und sind mit dem Renchner über LAN (Local Area Network\nomenclature{LAN}{Local Area Network}) verbunden. Der Dachhimmel wird über WLAN vom Computer aus angesteuert. Die Lautsprecher werden über einen Verstärker und ein USB Audio Interface mit dem Computer verbunden.
 An dem Computer ist ein Mobiltelefon über WLAN angeschlossen, das mit Hilfe einer App unterschiedliche Inhalte für die Komponenten auswählen kann.\\
 Der Computer hat einen Zugriff auf das Bordnetz des Fahrzeug, um einzelne Signale herauslesen zu können. Durch bestimmte Signaländerungen löst der Computer Sequenzen von Inhalten in den Komponenten aus.\\
 Die Komponenten des Prototypen sind damit nicht über das Serienbordnetz des Fahrzeug angeschlossen, sondern sind gesamt von diesem abgekoppelt. 
