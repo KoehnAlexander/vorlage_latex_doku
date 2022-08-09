@@ -1,5 +1,6 @@
-\begin{tikzpicture}
-	\node[draw, rectangle, text width=3.2cm, align=center] (Computer) at (0, -1) {Computer};
+\begin{tikzpicture}[every node/.style={scale=0.8}]
+	\node[text width=3.2cm, align=center] (Computer) at (0, -1) {Computer};
+	\draw[draw=black] (-1.5,-2.5) rectangle ++(3,3);
 	\node[draw, rectangle, text width=3cm, align=center] (Mainboard) at (0, 0) {Mainboard};
 	\node[draw, rectangle, text width=3cm, align=center] (Grafikkarten) at (0, -2) {Grafikkarten};
 	\node[draw, rectangle, text width=3cm, align=center] (LAN Switch) at (0, 3) {LAN Switch};
