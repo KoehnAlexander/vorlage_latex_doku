@@ -1,7 +1,8 @@
 \chapter{Analyse der Komponenten des Prototypen}
 \label{cha:Analyse}
-Nachfolgend werden alle Komponenten unter den von \ref{cha:Kriterien} genannten Kriterien analysiert. Im Zuge der Analyse werden im nächsten Kapitel Entwürfe für die Implementierung der Komponenten dargestellt.\\
-Die Analyse basiert auf den Komponenten des Prototypen, aber beschränkt sich nicht auf die einzeln verbaute Technologie, sondern geht auf den Gesamtkontext der Komponente ein. Grundlegend richtet sich die Analyse nach dem sinnlichen Darstellungszweck und dessen Bedarf an technischen Komponenten. Ein Beispiel dieser Herangehensweise ist der Bildschirm in der Eintiegsleiste. Die genaue Größe einer möglichen Serienimplementierung muss nicht gleich des Prototypen sein, aber sie muss eine Größe haben, die für die Darstellung der Inhalte geeignet ist.\\
+Nachfolgend werden alle Komponenten unter den von \ref{cha:Kriterien} genannten Kriterien analysiert. Im Zuge der Analyse werden im nächsten Kapitel Entwürfe für die Weiterentwicklung der Komponenten dargestellt.\\
+Die Analyse basiert auf den Komponenten des Prototypen, aber beschränkt sich nicht auf die einzeln verbaute Technologie, sondern geht auf den Gesamtkontext der Komponente ein. Grundlegend richtet sich die Analyse nach dem sinnlichen Darstellungszweck und dessen Bedarf an technischen Komponenten. \\
+Ein Beispiel dieser Herangehensweise ist der Bildschirm in der Einstiegsleiste. Die genaue Größe einer möglichen Serienimplementierung muss nicht gleich des Prototypen sein, aber sie muss eine Größe haben, die für die Darstellung der Inhalte geeignet ist.\\
 Die Kriterien für den Einbau und die spätere Analyse basieren zum Einen auf einer selbstständigen Recherche über die Komponenten und den relevanten Bedingungen. Zum Anderen wurden Informationen von Experten in den einzelnen Fachgebieten der Karosserieinnenentwicklung, Individualisierung, After-Sales-Produktentwicklung herangezogen.
 \section{Kriterien für den Einbau der Komponenten in Serienfahrzeuge}
 \label{cha:Kriterien}
@@ -11,15 +12,17 @@ Durch den zeitlichen Rahmen dieser Arbeit und dem fachlichen Schwerpunkt in elek
 Nachfolgend werden mit der gleichen Reihenfolge wie oben die Kriterien definiert.
 \subsection{Rechtliche Kriterien}
 Unter rechtlichen Kriterien finden sich alle Bedingungen für die Fahrzeugentwicklung, die auf Basis von Gesetzen und Normen für eine Zulassung erfüllt werden müssen. Diese Kriterien gewährleisten zugleich Rechtssicherheit für den Hersteller. \\
-Aus Gründen des Überblicks wird in der folgenden Arbeit nur auf einzelne Themen von rechtlichen Kriterien eingegangen. Für Lichter am Fahrzeug gilt die europäische Richtlinie ECE R48. Im Innenraum muss die Vermeidung von Fahrerablenkung sichergestellt werden.\\
+Aus Gründen des Überblicks wird in der folgenden Arbeit nur auf einzelne Themen von rechtlichen Kriterien eingegangen. 
+Beispiele für rechtliche Kriterien sind für Lichter am Fahrzeug die europäische Richtlinie ECE R48. Im Innenraum muss die Vermeidung von Fahrerablenkung sichergestellt werden.\\
 Im Rahmen einer weiteren Entwicklung von Komponenten für eine Fahrzeugserie sind die rechtlichen Bedingungen unbedingt frühzeitig von internen oder externen Juristen und Juristinnen zu prüfen.
 \subsection{Wirtschaftliche Kriterien}
-Unter wirtschaftliche Kriterien fallen sowohl betriebswirtschaftliche Betrachtungen als auch kundenspezifische Anforderungen. Diese Kriterien sind Grundvoraussetzungen für eine Erstellung eines Geschäftsplan und sollen somit einen Rahmen in diesem Bereich bieten. Die weiteren Schritte nach Erfüllung dieser Kriterien sind Absprachen mit Produktstrategen, Marketingexperten und Kalkulatoren. \\
+Unter wirtschaftliche Kriterien fallen sowohl betriebswirtschaftliche Betrachtungen als auch kundenspezifische Anforderungen. Diese Kriterien sind Grundvoraussetzungen für eine Erstellung eines positiven Geschäftsplan und sollen somit einen Rahmen in diesem Bereich bieten. Die weiteren Schritte nach Erfüllung dieser Kriterien sind Absprachen mit Produktstrategen, Marketingexperten und Kalkulatoren. \\
 Unter dem betriebswirtschaftlichen Kriterium steht in erster Linie die Gewinnerzielungsabsicht, das heißt die Kosten des Produkts sollen geringer als die möglichen Einnahmen sein. Kosten können neben den Entwicklungskosten und Produktionskosten für die Komponente, auch Verwaltungskosten über den Lebenszyklus des Produkts und Anpassungskosten anderer Bauteile im Fahrzeug sein. \\
 Einnahmen sind neben dem Verkauf der Komponente als Sonderausstattung weitere sekundäre Möglichkeiten durch digitale Produkte spezifisch zu den Komponenten. Daneben können es auch nicht monetäre Einnahmen geben, die das gesamte Produkt und die Marke in ihrem Ansehen stärken.\\
 Um einen Gewinn zu erwirtschaften, muss die Komponente mit ihren Fixkosten wie die Entwicklung und ihren variablen Kosten wie den Produktionskosten gering sein, aber dennoch einen großen Mehrwert für den Kunden liefern, damit die Nachfrage an der Komponente steigt. \\
-Die Entwicklungskosten sind abhängig vom aktuellen Reifegrad vorhandener Technik und der Komplexität der Technik, während Anpassungskosten abhängig sind von dem entstehenden Bedarf an Architekturveränderungen. Die Produktionskosten sind abhängig von den Einkaufspreisen der Komponenten und der Montage. Diese Kriterien werden in dieser Arbeit nach der technischen Analyse gesammelt betrachtet, um einen Vergleich mit den einzelnen Komponenten zu liefern. \\
-Auf der Seite der Einnahmen steht im Mittelpunkt das Kundeninteresse für den Kauf solcher Komponenten. Kriterien für den Kauf von Komponenten durch Kunden können durch Probandenstudien gewonnen werden oder aus Erfahrung von ähnlichen Projekten herangezogen werden.
+Die Entwicklungskosten sind abhängig vom aktuellen Reifegrad vorhandener Technik und der Komplexität der Technik, während Anpassungskosten abhängig sind von dem entstehenden Bedarf an Architekturveränderungen. Die Produktionskosten sind abhängig von den Einkaufspreisen der Komponenten und der Montage. \\
+Auf der Seite der Einnahmen steht im Mittelpunkt das Kundeninteresse für den Kauf solcher Komponenten. Kriterien für den Kauf von Komponenten durch Kunden können durch Probandenstudien gewonnen werden oder aus Erfahrung von ähnlichen Projekten herangezogen werden. \\
+Diese wirtschaftlichen Kriterien werden in dieser Arbeit nach der technischen Analyse gesammelt betrachtet. Das Gesamtkonzept für das Fahrzeug fordert eine ganzheitliche Inszenierung des Fahrzeugs, wofür mehrere Komponenten benötigt werden, um diesen Effekt zu erzielen. Aus diesem Hintergrund ist es sinnvoll die Entwicklung der Komponenten ganzheitlich wirtschaftlich zu bewerten. \\
 \subsection{Technische Kriterien}
 Unter technischen Kriterien fallen alle relevanten Gebiete der Produktentwicklung:
 \begin{enumerate}
@@ -31,6 +34,7 @@ Unter technischen Kriterien fallen alle relevanten Gebiete der Produktentwicklun
 	\item Optik
 	\item Wartungsfähigkeit
 \end{enumerate}
+Je nach Beschaffenheit der Komponenten können diese Gebiete unterschiedlich ins Gewicht fallen.
 \paragraph{Physikalische Dimensionierung}
 Zur Erfolgreichen Integration der Komponente in eine Fahrzeugentwicklung muss an der gewünschten Stelle genügend Bauraum zur Verfügung stehen.
 \paragraph{Stabilität}
@@ -49,23 +53,37 @@ Unter Wartungsfähigkeit fällt der leichte Ein- und Ausbau der Komponente bei B
 \section{Analyse der Exterieur Komponenten}
 Im folgenden werden die Exterieur Komponenten an Hand der oben beschriebenen einzelnen Kriterien geprüft. Die wirtschaftlichen Kriterien werden in einem separaten Abschnitt gesammelt betrachtet. 
 \subsection{E-Papier in der Frontschürze}
-Rechtlich ist zu Prüfen, ob das E-Papier als Leuchte gilt und danach behandelt werden muss. Daneben muss rechtlich abgesichert werden, ob das Ändern der Inhalte nur im Abgestellten Fahrmodus erfolgen darf, oder auch bei Fahrt.\\
-Wirtschaftlich betrachtet ist dies eine vollständige Neuentwickl
-Um ein scharfes Bild für Betrachter aus ein bis zwei Metern Entfernung zu liefern, benötigt das E-Papier bei einer Größe mit einer Breite von 80 cm und einer Höhe von 60cm eine Auflösung von mindestens Full HD.
-Das E-Papier sollte von der Distanz von zwei Metern ein scharfes Bild liefern. Mit der ungefähren Größe mit einer Breite von 80 cm und einer Höhe von 60cm ist das 
+Rechtlich ist zu Prüfen, ob das E-Papier als Leuchte gilt und danach behandelt werden muss. Daneben sind die rechtlichen Grundlagen für das Ändern der Bildschirminhalten in unterschiedlichen Fahrmodi wie Parken oder Fahren zu suchen. \\
+Wirtschaftlich betrachtet ist diese Komponente ein zentraler Bestandteil des Fahrzeugkonzeptes, da durch die Größe und Lage der Kunde die Inhalte stark wahrnimmt. \\
+Mit einer physikalischen Dimensionierung über die Gesamte Breite zwischen den Frontlichtscheinwerfern und somit eine mögliche Breite bei unterschiedlichen Fahrzeugmodellen von 80 cm bis 1 m und einer Höhe von 50 cm bis 60 cm ist die Stabilität des E-Papier zu prüfen, da die Lage im Kotflügel besonders transponiert ist. \\ 
+Das zusätzliche Gewicht des Bildschirms ist an der vorderen Kotflügelbefestigung aufzunehmen.\\
+Der Strombedarf des E-Papier ist, wie in \ref{cha:Grundlagen} beschrieben, nur gering. Ein Mikrocontroller zur Steuerung benötigt zum Beispiel eine Spannung von 12V Gleichstrom. \\
+Mit einer Auflösung von 2560 zu 1440 Pixeln und einer Farbtiefe von 16 Stufen benötigt das Display mit der Rechnung \ref{eq:Bilddatenmenge} pro Bild einen Speicher von XX. 
 Durch die Position ist die gezielte Brechung bei Crashs relevant für die Sicherheit von Passanten.
-Die Stromversorgung muss durch eine Verkabelung im Exterieur sichergestellt werden. Dazu benötigt das E-Papier eine Leistung von $ X\,\mathrm{W} $ .
 Daneben ist zu Prüfen, ob die Radarsensorik von dem E-Papier gestört wird.\\
-Wirtschaftlich betrachtet ist dies eine vollständige Neuentwicklung an der der Kotflügel und die Frontlichter mit angepasst werden müssen. Aus Kundensicht kann das E-Papier die Front des Fahrzeug in seiner Optik deutlich verändern. 
 \subsection{LED-Streifen in der Frontschürze}
-Unter den rechtlichen Kriterien gilt bei Lichtern die ECE R48. Farbliche Lichter außerhalb der Zulässigen Verbauten sind dabei nicht gestattet. Eine 
-Daneben ist die pixeldichte.\\
-
-Die LED-Streifen benötigen mit einer Anzahl von 500 LED eine Leistung von $ X\,\mathrm{W} $. Die LED-Streifen benötigen einen Anschluss an das Fahrzeugnetzwerk mit einer Bandbreite von $ X\,\frac{\mathrm{ KBit}}{\mathrm{s}} $
+Unter den rechtlichen Kriterien gilt bei Lichtern die ECE R48. Farbliche Lichter außerhalb der Zulässigen Verbauten sind dabei nicht gestattet. Daher gilt es zu prüfen, welche weitere Möglichkeiten dieser Darstellungsart es gibt. Zum Beispiel von schwarz-weißen Lichtern oder durch Farbliche Bildschirm ohne aktive Beleuchtung. \\
+Für eine Farbtiefe von 256 Stufen pro Farbe benötigt jede einzelne LED 24 Bit an Speicher, da es 3 mal 8 Bit benötigt. Bei 500 LED bedeutet es das einen Speicher pro Bild von 12 KBit. \\
+Eine farbige LED, die pro Pixel vier Dioden (Rot, Grün, Blau und Weiß) enthält hat einen Leistungsaufnahme von $ 320\,\mathrm{mW} $.  
+Die LED-Streifen benötigen mit einer Anzahl von 500 LED eine Leistung von $ 160\,\mathrm{W} $. Im 12 V Bordnetz beträgt die Stromstärke $ 13,3\,\mathrm{A} $. Die LED-Streifen benötigen einen Anschluss an das Fahrzeugnetzwerk mit einer Bandbreite von $ X\,\frac{\mathrm{ KBit}}{\mathrm{s}} $ \\
 Daneben muss eine Ansteuerungslogik dort verbaut werden.
 \subsection{E-Papier Embleme über den vorderen Radkästen}
-Die E-Papier Embleme benötigen mit einer Auflösung von HD 
-Herausforderung: Bauteil Bestromung im Exterierunr
+Rechtliche Kriterien
+Wirtschaftliche Kriterien
+Physikalische Dimensionierung
+Stabilität
+Gewicht
+Elektrischer Energiebedarf
+Informationsbedarf
+Optik
+Wartungsfähigkeit
+Die E-Papiere an den Fahrzeugseiten müssen wie oben erwähnt, geprüft werden, ob sie als Beleuchtung gelten.\\
+Aus Sicht der Kunden ist die Lage neben den Fronttüren ideal, um Dinge anzuzeigen.
+Das Gewicht des E-Papiers ist relativ gering und zu vernachlässigen.
+Da das E-Papier nur bei Änderung des Inhaltes Strom verbraucht, muss nur eine geringe Leistungsaufnahme von xx sichergestellt werden.
+
+Die E-Papier Embleme benötigen mit einer Auflösung von 1600 Pixeln zu 1200 Pixeln einen Speicher pro Bild von XX.
+Herausforderung: Bauteil Bestromung im Exterieur und
 Folie besteht DBL-Testing nicht 
 \subsection{LED-Streifen in den Radkästen}
 Die Verschmutzung des Lichtleiters ist ein Kriterium.
@@ -90,9 +108,9 @@ Bereitstellung Vernetzungsschnittstelle und Ansteuerungslogik
 \subsection{LED-Streifen im Interieur}
 Herausforderung:
 Ansteuerung
-\subsection{Matrix LED Türtafeln}
-Rechtlich gesehen ist zu prüfen, ab welchem Helligkeitsgrad und Farbinszenierungsdynamik der Fahrer oder die Fahrerin durch die Matrix LED zu stark abgelenkt werden.\\
-Die Matrix LED benötigt bei der aktuellen 
+\subsection{LED Türtafeln}
+Rechtlich gesehen ist zu prüfen, ab welchem Helligkeitsgrad und Farbinszenierungsdynamik der Fahrer oder die Fahrerin durch die LED zu stark abgelenkt werden.\\
+Die LED benötigt bei der aktuellen 
 \subsection{Bildschirme in der Einstiegsleiste}
 
 Die technische Umsetzbarkeit fiel in Voruntersuchungen (wie Kugelfalltest, Bauraum, Shaker) positiv aus.
