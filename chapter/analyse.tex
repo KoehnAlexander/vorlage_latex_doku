@@ -58,16 +58,54 @@ Wirtschaftlich betrachtet ist diese Komponente ein zentraler Bestandteil des Fah
 Mit einer physikalischen Dimensionierung über die Gesamte Breite zwischen den Frontlichtscheinwerfern und somit eine mögliche Breite bei unterschiedlichen Fahrzeugmodellen von 80 cm bis 1 m und einer Höhe von 50 cm bis 60 cm ist die Stabilität des E-Papier zu prüfen, da die Lage im Kotflügel besonders transponiert ist. \\ 
 Das zusätzliche Gewicht des Bildschirms ist an der vorderen Kotflügelbefestigung aufzunehmen.\\
 Der Strombedarf des E-Papier ist, wie in \ref{cha:Grundlagen} beschrieben, nur gering. Ein Mikrocontroller zur Steuerung benötigt zum Beispiel eine Spannung von 12V Gleichstrom. \\
-Mit einer Auflösung von 2560 zu 1440 Pixeln und einer Farbtiefe von 16 Stufen benötigt das Display mit der Rechnung \ref{eq:Bilddatenmenge} pro Bild einen Speicher von XX. 
+Mit einer Auflösung von 2560 zu 1440 Pixeln und einer Farbtiefe von 16 Stufen benötigt das Display mit der Rechnung \ref{eq:Bilddatenmenge} pro Bild einen Speicher von $ 307,2\,\mathrm{kByte} $. 
 Durch die Position ist die gezielte Brechung bei Crashs relevant für die Sicherheit von Passanten.
 Daneben ist zu Prüfen, ob die Radarsensorik von dem E-Papier gestört wird.\\
 \subsection{LED-Streifen in der Frontschürze}
 Unter den rechtlichen Kriterien gilt bei Lichtern die ECE R48. Farbliche Lichter außerhalb der Zulässigen Verbauten sind dabei nicht gestattet. Daher gilt es zu prüfen, welche weitere Möglichkeiten dieser Darstellungsart es gibt. Zum Beispiel von schwarz-weißen Lichtern oder durch Farbliche Bildschirm ohne aktive Beleuchtung. \\
 Für eine Farbtiefe von 256 Stufen pro Farbe benötigt jede einzelne LED 24 Bit an Speicher, da es 3 mal 8 Bit benötigt. Bei 500 LED bedeutet es das einen Speicher pro Bild von 12 KBit. \\
 Eine farbige LED, die pro Pixel vier Dioden (Rot, Grün, Blau und Weiß) enthält hat einen Leistungsaufnahme von $ 320\,\mathrm{mW} $.  
-Die LED-Streifen benötigen mit einer Anzahl von 500 LED eine Leistung von $ 160\,\mathrm{W} $. Im 12 V Bordnetz beträgt die Stromstärke $ 13,3\,\mathrm{A} $. Die LED-Streifen benötigen einen Anschluss an das Fahrzeugnetzwerk mit einer Bandbreite von $ X\,\frac{\mathrm{ KBit}}{\mathrm{s}} $ \\
+Die LED-Streifen benötigen mit einer Anzahl von 500 LED eine Leistung von $ 160\,\mathrm{W} $. Im 12 V Bordnetz beträgt die Stromstärke $ 13,3\,\mathrm{A} $. 
+Die LED-Streifen benötigen einen Anschluss an das Fahrzeugnetzwerk mit einer Bandbreite von $ X\,\frac{\mathrm{KBit}}{\mathrm{s}} $ \\
 Daneben muss eine Ansteuerungslogik dort verbaut werden.
 \subsection{E-Papier Embleme über den vorderen Radkästen}
+Die E-Papiere an den Fahrzeugseiten müssen wie oben erwähnt, geprüft werden, ob sie als Beleuchtung gelten.\\
+Aus Sicht der Kunden ist die Lage neben den Fronttüren ideal, um Dinge anzuzeigen.
+Da auf diesen E-Papieren vorwiegend Text angezeigt wird, ist ein breites und in der Höhe schmales Display von Vorteil, da dort eine Zeile leserlich angezeigt werden kann. \\
+Um bei Beschädigung oder bei Defekt das E-Papier auszutauschen, ist die Möglichkeit über den Zugriff vom Motorraum aus zu prüfen. \\
+Das Gewicht des E-Papiers ist relativ gering und zu vernachlässigen.
+Da das E-Papier nur bei Änderung des Inhaltes Strom verbraucht, muss nur eine geringe Leistungsaufnahme von $ x\,\mathrm{mW} $ sichergestellt werden.
+Die E-Papier Embleme benötigen mit einer Auflösung von 1600 Pixeln zu 1200 Pixeln einen Speicher pro Bild von $ XX\,\mathrm{kBit} $. \\
+Herausforderung: Bauteil Bestromung im Exterieur und
+Folie besteht DBL-Testing nicht 
+\subsection{LED-Streifen in den Radkästen}
+Wie bei den anderen Leuchteinrichtungen im Exterieur gelten hier die Marktregularien zu prüfen. Bei Möglichkeit kann auch ein eingeschränkter Modus von schwarz-weißen Licht oder nur die Anzeige im abgestellten Zustand des Fahrzeuges gewählt werden. \\
+Die Verschmutzung des Lichtleiters ist durch eine geeignete Konstruktion zu verhindern und daneben auch der Beschädigung durch geschleuderte Steine oder ähnliches. \\
+Daneben muss aus Kundensicht geprüft werden, ob die Betonung des Schmutzfänger Bereichs gewünscht ist, oder nur in besten Situationen.
+Bei einer Anzahl von 200 LED pro Radkasten benötigt ein LED Streifen eine Leistung von $ XX\,\mathrm{W} $.
+Ein dynamisches Lichtspiel für 10 Sekunden benötigt pro Radkasten bei einer Bildwiederholungsrate von $ 30\,\mathrm{Fps} $ einen Speicher von $ XX\,\mathrm{kByte}$. \\
+Die Vernetzung an dieser Stelle ist eine Herausforderung.
+\subsection{Videoprojektoren in den Außenspiegeln}
+Die Verfügbarkeit des Bauraums in dem Außenspiegel ist zu prüfen, indem der Bauraum von aktuellen Standbildprojektoren mit den benötigten Videoprojektoren verglichen wird. 
+Daneben ist die Zulässigkeit von solchen Projektionen und deren Lichtaustrittsfläche rechtlich abzuprüfen. \\
+Die angestrahlte Fläche auf dem Boden reicht im besten Fall über die gesamten Seitentüren und bis zu $ 2\,\mathrm{m} $ weg vom Fahrzeug.
+Der Betrachter soll bei unterschiedlichen Lichtverhältnissen noch ein möglichst kontrastreiches und helles Bild erkennen. \\
+Der Strombedarf pro Videoprojektor liegt im Bereich zwischen $ XX\,\mathrm{W} $ und $ XX\,\mathrm{W} $.
+Ein Standbild benötigt bei einer Pixelanzahl pro Zeile von $ 1280 $ und von $ 800 $ Zeilen ein Speichergröße von ca. $ 85\,\mathrm{kByte}$. Für eine Animation von 10 Sekunden Länge benötigt eine Videoprojektor einen Speicher von $ XX\,\mathrm{kByte}$.
+\subsection{Bildschirme in den hinteren Seitenfenstern}
+Rechtlich ist die Zulässigkeit wegen möglicher Ablenkungen von Straßenverkehrsteilnehmern zu prüfen.
+Das Verkleinern der Fensterfläche ist abzuprüfen, ob dies mit Kundeninteressen vereinbar ist.
+Die Crashsicherheit an dieser Stelle und die Stabilität ist wichtig, da sich diese Komponente. in unmittelbarer Nähe zu den Fahrzeuginsassen befindet.
+Jedes Display hat eine ungefähre Leistung von $ XX\,\mathrm{W} $. 
+Ein Standbild benötigt bei einer Pixelanzahl pro Zeile von $ 1280 $ und von $ 800 $ Zeilen ein Speichergröße von ca. $ 85\,\mathrm{kByte}$. Für eine Animation von 10 Sekunden Länge benötigt eine Videoprojektor einen Speicher von $ XX\,\mathrm{kByte}$.
+Vernetzung
+\subsection{LED-Streifen in der Heckleuchte}
+Wie bei den LED-Streifen in der Frontschürze sind die rechtlichen und wirtschaftlichen Fragestellungen gleich. \\
+Grundsätzlich gilt es zu prüfen, ob die Vorhandenen Steuergeräte für die Lichter Kapazitäten für dynamische Lichtstreifen frei haben.
+Die weiteren technischen Kriterien verhalten sich wie oben erläutert.
+\subsection{E-Papier in der Heckleuchte}
+Ähnliche Anforderungen wie die E-Papier Embleme über den vorderen Radkästen haben diese E-Papiere in der Heckleuchte
+\section{Analyse der Interieur Komponenten}
 Rechtliche Kriterien
 Wirtschaftliche Kriterien
 Physikalische Dimensionierung
@@ -77,34 +115,6 @@ Elektrischer Energiebedarf
 Informationsbedarf
 Optik
 Wartungsfähigkeit
-Die E-Papiere an den Fahrzeugseiten müssen wie oben erwähnt, geprüft werden, ob sie als Beleuchtung gelten.\\
-Aus Sicht der Kunden ist die Lage neben den Fronttüren ideal, um Dinge anzuzeigen.
-Das Gewicht des E-Papiers ist relativ gering und zu vernachlässigen.
-Da das E-Papier nur bei Änderung des Inhaltes Strom verbraucht, muss nur eine geringe Leistungsaufnahme von xx sichergestellt werden.
-
-Die E-Papier Embleme benötigen mit einer Auflösung von 1600 Pixeln zu 1200 Pixeln einen Speicher pro Bild von XX.
-Herausforderung: Bauteil Bestromung im Exterieur und
-Folie besteht DBL-Testing nicht 
-\subsection{LED-Streifen in den Radkästen}
-Die Verschmutzung des Lichtleiters ist ein Kriterium.
-Daneben muss aus Kundensicht geprüft werden, ob die Betonung des Schmutzfänger Bereichs gewünscht ist, oder nur in besten Situationen.
-Daneben bestehen wie bei den anderen Licht Leisten im Exterieur Marktregularien wegen der farbigen Beleuchtung. Die Vernetzung an dieser Stelle ist eine Herausforderung.
-\subsection{Videoprojektoren in den Außenspiegeln}
-Die Verfügbarkeit des Bauraums in dem Außenspiegel ist zu prüfen. Daneben ist die Zulässigkeit von solchen Projektionen und deren Lichtaustrittsfläche rechtlich abzuprüfen.
-\subsection{Bildschirme in den hinteren Seitenfenstern}
-Rechtlich ist die Zulässigkeit wegen möglicher Ablenkungen von Straßenverkehrsteilnehmern zu prüfen.
-Der Bauraum an dieser Stelle und das Verkleinern der Fenster Fläche ist abzuprüfen.
-Die Crashsicherheit an dieser Stelle ist abzuprüfen.
-
-Vernetzung
-\subsection{LED-Streifen in der Heckleuchte}
-Herausforderungen:
-Wie bei Frontlichtband im Scheinwerfer
-Bereitstellung Vernetzungsschnittstelle und Ansteuerungslogik
-
-\subsection{E-Papier in der Heckleuchte}
-
-\section{Analyse der Interieur Komponenten}
 \subsection{LED-Streifen im Interieur}
 Herausforderung:
 Ansteuerung
@@ -141,6 +151,36 @@ Lichtleiterkonzepte
 \subsection{Duftflakons im Innenraum}
 \subsection{Bildschirmoberflächen im Cockpit}
 \subsection{Soundplayer im Innenraum}
+\subsection{Gesamttechnische Zusammenfassung}
+\begin{table}[hbt]	
+	\centering
+	\renewcommand{\arraystretch}{1.5}	% Skaliert die Zeilenhöhe der Tabelle
+	\captionabove[Liste der Komponenten mit den oben festgestellten Werten]{Liste der Komponenten mit den oben festgestellten Werte}
+	\label{tab:Werte}
+	\begin{tabular}{c|ccc}
+		\textbf{Komponente} & \parbox[t]{0.16\linewidth}{\centering Leistungs-\\bedarf\\in Watt} & \parbox[t]{0.16\linewidth}{\centering Speicher-\\größe\\in MByte} & \parbox[t]{0.16\linewidth}{\centering Echtzeit-\\anbindung} \\ 
+		\hline 
+		\hline 
+		\parbox[t]{0.4\linewidth}{\centering E-Papier in der Frontschürze} & X & X & X \\
+		\parbox[t]{0.4\linewidth}{\centering LED-Streifen in der Frontschürze} & X & X & X \\
+		\parbox[t]{0.4\linewidth}{\centering E-Papier Embleme über\\den vorderen Radkästen} & X & X & X \\
+		\parbox[t]{0.4\linewidth}{\centering LED-Streifen in den Radkästen} & X & X & X \\
+		\parbox[t]{0.4\linewidth}{\centering Videoprojektoren in\\den Außenspiegeln} & X & X & X \\
+		\parbox[t]{0.4\linewidth}{\centering Bildschirme in den\\hinteren Seitenfenstern} & X & X & X \\
+		\parbox[t]{0.4\linewidth}{\centering LED-Streifen in der Heckleuchte} &  & X & X \\
+		\parbox[t]{0.4\linewidth}{\centering E-Papier in der Heckleuchte} & X & X & X \\
+		\parbox[t]{0.4\linewidth}{\centering LED-Streifen im Interieur} &  & X & X \\
+		\parbox[t]{0.4\linewidth}{\centering Matrix LED Türtafeln} &  & X & X \\
+		\parbox[t]{0.4\linewidth}{\centering Bildschirme in der Einstiegsleiste} &  & X & X \\
+		\parbox[t]{0.4\linewidth}{\centering Videoprojektoren im Fußraum} &  & X & X \\
+		\parbox[t]{0.4\linewidth}{\centering Morphende Oberfläche\\in der Mittelkonsole} &  & X & X \\
+		\parbox[t]{0.4\linewidth}{\centering Durchsichtiger Bildschirm\\im Dachfenster} &  & X & X \\
+		LED Matrix im Dachhimmel & X & X & X \\
+		\parbox[t]{0.4\linewidth}{\centering Bildschirmoberflächen im Cockpit} &  &  & X \\
+		\parbox[t]{0.4\linewidth}{\centering Soundplayer im Innenraum} &  & X & X \\
+		\parbox[t]{0.4\linewidth}{\centering Duftflakons im Innenraum} &  & X & X \\
+	\end{tabular} 
+\end{table}
 \section{Gesamtwirtschaftliche Analyse}
 In diesem Abschnitt werden die Komponenten als Gesamtes unter den wirtschaftlichen Kriterien betrachtet, weil die Komponenten nicht als einzelne Sonderausstattung, sondern als Ganzes oder Gebündelt vertrieben werden soll. Daher ist eine Gesamtbetrachtung der wirtschaftlichen Kriterien sinnvoll. \\
 In Tabelle \ref{tab:Entwicklung} werden alle Komponenten mit den nötigen Anpassungen in der Serienentwicklung in den bestimmten Bereichen auf Basis der vorherigen technischen Analyse. 
@@ -153,24 +193,24 @@ In Tabelle \ref{tab:Entwicklung} werden alle Komponenten mit den nötigen Anpass
 		\textbf{Komponente} & \textbf{Karosserie} & \textbf{E/E Architektur} & \textbf{Software} \\ 
 		\hline 
 		\hline 
-		E-Papier in der Frontschürze & X & X & X \\
-		LED-Streifen in der Frontschürze & X & X & X \\
-		E-Papier Embleme über den vorderen Radkästen & X & X & X \\
-		LED-Streifen in den Radkästen & X & X & X \\
-		Videoprojektoren in den Außenspiegeln & X & X & X \\
-		Bildschirme in den hinteren Seitenfenstern & X & X & X \\
-		LED-Streifen in der Heckleuchte &  & X & X \\
-		E-Papier in der Heckleuchte & X & X & X \\
-		LED-Streifen im Interieur &  & X & X \\
-		Matrix LED Türtafeln &  & X & X \\
-		Bildschirme in der Einstiegsleiste &  & X & X \\
-		Videoprojektoren im Fußraum &  & X & X \\
-		Morphende Oberfläche in der Mittelkonsole &  & X & X \\
-		Durchsichtiger Bildschirm im Dachfenster &  & X & X \\
+		\parbox[t]{0.4\linewidth}{\centering E-Papier in der Frontschürze} & X & X & X \\
+		\parbox[t]{0.4\linewidth}{\centering LED-Streifen in der Frontschürze} & X & X & X \\
+		\parbox[t]{0.4\linewidth}{\centering E-Papier Embleme über\\den vorderen Radkästen} & X & X & X \\
+		\parbox[t]{0.4\linewidth}{\centering LED-Streifen in den Radkästen} & X & X & X \\
+		\parbox[t]{0.4\linewidth}{\centering Videoprojektoren in\\den Außenspiegeln} & X & X & X \\
+		\parbox[t]{0.4\linewidth}{\centering Bildschirme in den\\hinteren Seitenfenstern} & X & X & X \\
+		\parbox[t]{0.4\linewidth}{\centering LED-Streifen in der Heckleuchte} &  & X & X \\
+		\parbox[t]{0.4\linewidth}{\centering E-Papier in der Heckleuchte} & X & X & X \\
+		\parbox[t]{0.4\linewidth}{\centering LED-Streifen im Interieur} &  & X & X \\
+		\parbox[t]{0.4\linewidth}{\centering Matrix LED Türtafeln} &  & X & X \\
+		\parbox[t]{0.4\linewidth}{\centering Bildschirme in der Einstiegsleiste} &  & X & X \\
+		\parbox[t]{0.4\linewidth}{\centering Videoprojektoren im Fußraum} &  & X & X \\
+		\parbox[t]{0.4\linewidth}{\centering Morphende Oberfläche\\in der Mittelkonsole} &  & X & X \\
+		\parbox[t]{0.4\linewidth}{\centering Durchsichtiger Bildschirm\\im Dachfenster} &  & X & X \\
 		LED Matrix im Dachhimmel & X & X & X \\
-		Bildschirmoberflächen im Cockpit &  &  & X \\
-		Soundplayer im Innenraum &  & X & X \\
-		Duftflakons im Innenraum &  & X & X \\
+		\parbox[t]{0.4\linewidth}{\centering Bildschirmoberflächen im Cockpit} &  &  & X \\
+		\parbox[t]{0.4\linewidth}{\centering Soundplayer im Innenraum} &  & X & X \\
+		\parbox[t]{0.4\linewidth}{\centering Duftflakons im Innenraum} &  & X & X \\
 	\end{tabular} 
 \end{table}
 		%Der parbox-Befehl ist erforderlich, damit ein Zeilenumbruch erzeugt werden kann. c-Spalten (zentriert) erlauben nicht automatisch einen Zeilenumpruch. Linksbündig gesetzte p-Spalten erlauben automatisch den Zeilenumbruch.%
