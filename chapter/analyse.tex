@@ -44,46 +44,74 @@ Das Fahrzeug muss das zusätzliche Gewicht der Komponenten an dieser Stelle aufn
 \paragraph{Elektrischer Energiebedarf}
 Die Komponente soll einen möglichst geringen Strombedarf haben, während das Fahrzeug diesen an der Stelle zur Verfügung stellen muss.
 \paragraph{Informationsbedarf}
-Zur Steuerung der Komponente muss an der Stelle eine Möglichkeit vorhanden sein mit dem Gesamtfahrzeug zu kommunizieren. Kriterien sind zum einen die benötigte Bandbreite der Komponenten und die Geschwindigkeit des Informationsaustausches.
+Zur Steuerung der Komponente muss an der Stelle eine Möglichkeit vorhanden sein mit dem Gesamtfahrzeug zu kommunizieren. Kriterien sind zum einen die benötigte Bandbreite der Komponenten und die Geschwindigkeit des Informationsaustausches. \\
+In der folgenden Arbeit wird bei Videos mit einer Frame-Rate von 24 Bilder pro Sekunde ausgegangen und einer Farbtiefe pro Farbe von einem Byte. Bei Bildern wird ein Kompressionsfaktor von zwölf genutzt. Wie bei \ref{cha:Prototyp} erwähnt sollen zehn Kollektionen mit fünf Inhalten im System gespeichert sein. Ein Inhalt kann ein Bild oder ein Video mit einer Länge von zehn Sekunden sein.
+Die Berechnung des Speicherbedarfes dient als erste Abschätzung für die Speicherdimensionierung und kann vom tatsächlichen Bedarf abweichen, da die Rechnung Prüf- und Steuerdaten nicht beachtet.
 \paragraph{Optische Kriterien}
 Unter optischen Kriterien fallen alle allgemein gültige Designprinzipien in der Produktentstehung. Darunter versteht sich die Harmonie der Komponenten in der Umgebung, die Vermeidung von Bildschirmrändern, usw.
 \paragraph{Wartungsfähigkeit}
 Unter Wartungsfähigkeit fällt der leichte Ein- und Ausbau der Komponente bei Bedarf und der Austausch von Verschleißgegenständen.
-
 \section{Analyse der Exterieur Komponenten}
 Im folgenden werden die Exterieur Komponenten an Hand der oben beschriebenen einzelnen Kriterien geprüft. Die wirtschaftlichen Kriterien werden in einem separaten Abschnitt gesammelt betrachtet. 
 \subsection{E-Papier in der Frontschürze}
-Rechtlich ist zu Prüfen, ob das E-Papier als Leuchte gilt und danach behandelt werden muss. Daneben sind die rechtlichen Grundlagen für das Ändern der Bildschirminhalten in unterschiedlichen Fahrmodi wie Parken oder Fahren zu suchen. \\
+Rechtlich ist zu Prüfen, ob das E-Papier als Leuchte gilt und danach behandelt werden muss. Daneben sind die rechtlichen Grundlagen für das Ändern der Bildschirminhalten in unterschiedlichen Fahrmodi, wie zum Beispiel Parken oder Fahren, zu analysieren. \\
 Wirtschaftlich betrachtet ist diese Komponente ein zentraler Bestandteil des Fahrzeugkonzeptes, da durch die Größe und Lage der Kunde die Inhalte stark wahrnimmt. \\
-Mit einer physikalischen Dimensionierung über die Gesamte Breite zwischen den Frontlichtscheinwerfern und somit eine mögliche Breite bei unterschiedlichen Fahrzeugmodellen von 80 cm bis 1 m und einer Höhe von 50 cm bis 60 cm ist die Stabilität des E-Papier zu prüfen, da die Lage im Kotflügel besonders transponiert ist. \\ 
+Mit einer physikalischen Dimensionierung über die gesamte Breite zwischen den Frontlichtscheinwerfern und somit eine mögliche Breite bei unterschiedlichen Fahrzeugmodellen von 80 cm bis 1 m und einer Höhe von 50 cm bis 60 cm ist die Stabilität des E-Papiers zu prüfen, da die Lage im Kotflügel besonders transponiert ist. \\ 
 Das zusätzliche Gewicht des Bildschirms ist an der vorderen Kotflügelbefestigung aufzunehmen.\\
 Der Strombedarf des E-Papier ist, wie in \ref{cha:Grundlagen} beschrieben, nur gering. Ein Mikrocontroller zur Steuerung benötigt zum Beispiel eine Spannung von 12V Gleichstrom. \\
-Mit einer Auflösung von 2560 zu 1440 Pixeln und einer Farbtiefe von 16 Stufen benötigt das Display mit der Rechnung \ref{eq:Bilddatenmenge} pro Bild einen Speicher von $ 307,2\,\mathrm{kByte} $. 
+Mit einer Auflösung von 2560 Pixel pro Zeile zu 1440 Zeilen und einer Farbtiefe von 16 Stufen benötigt das Display mit der Formel \ref{eq:Bilddatenmenge} pro Bild einen Speicher S von $ 307,2\,\mathrm{kByte} $. 
+\begin{align}
+	S &= \frac{2560\,\frac{\mathrm{Pixel}}{\mathrm{Zeile}}\times 1440\,\mathrm{Zeilen} \times 8\,\frac{\mathrm{Bit}}{\mathrm{Pixel}}}{12} \\
+	&= 2.457.600\,\mathrm{Bit} = 2,2567\,\mathrm{MBit} = 307,2\,\mathrm{KByte}
+\end{align}
+Bei zehn Kollektionen mit jeweils fünf Bildern benötigt man einen Speicher von $ 15,36\,\mathrm{MByte} $. \\
 Durch die Position ist die gezielte Brechung bei Crashs relevant für die Sicherheit von Passanten.
 Daneben ist zu Prüfen, ob die Radarsensorik von dem E-Papier gestört wird.\\
 \subsection{LED-Streifen in der Frontschürze}
-Unter den rechtlichen Kriterien gilt bei Lichtern die ECE R48. Farbliche Lichter außerhalb der Zulässigen Verbauten sind dabei nicht gestattet. Daher gilt es zu prüfen, welche weitere Möglichkeiten dieser Darstellungsart es gibt. Zum Beispiel von schwarz-weißen Lichtern oder durch Farbliche Bildschirm ohne aktive Beleuchtung. \\
-Für eine Farbtiefe von 256 Stufen pro Farbe benötigt jede einzelne LED 24 Bit an Speicher, da es 3 mal 8 Bit benötigt. Bei 500 LED bedeutet es das einen Speicher pro Bild von 12 KBit. \\
-Eine farbige LED, die pro Pixel vier Dioden (Rot, Grün, Blau und Weiß) enthält hat einen Leistungsaufnahme von $ 320\,\mathrm{mW} $.  
+Unter den rechtlichen Kriterien gilt bei Lichtern die europäische Richtlinie ECE R48. Farbliche Lichter außerhalb der zulässigen Verbauten sind dabei nicht gestattet. Daher gilt es zu prüfen, welche weitere Möglichkeiten dieser Darstellungsart es gibt. Optionen sind beispielsweise schwarz-weiße Lichter oder farbliche Bildschirme ohne aktive Beleuchtung. \\
+Für eine Farbtiefe von 256 Stufen pro Farbe benötigt jede einzelne LED 24 Bit an Speicher, da es drei mal acht Bit benötigt. Bei 332 LEDs bedeutet das einen Speicher pro Bild von circa einem Kilobit. 
+\begin{align}
+	S &= \frac{332\,\mathrm{Pixel} \times 24\,\frac{\mathrm{Bit}}{\mathrm{Pixel}}}{12} \cdot \\
+	&= 1.000\,\mathrm{Bit} = 1\,\mathrm{kBit} = 125\,\mathrm{Byte}
+\end{align}
+Für ein 10 Sekunden Video wird ein Speicher S von 
+\begin{align}
+	S &= 1\,\mathrm{kBit} \cdot 24\,\mathrm{fps} \cdot 10\,\mathrm{s}\\
+	&= 240\,\mathrm{kBit} = 30\,\mathrm{kByte}
+\end{align}
+benötigt. Bei insgesamt 50 Inhalten bedeutet das $ 1,5\,\mathrm{MByte} $ an Speicherbedarf. \\
+Eine farbige LED, die pro Pixel vier Dioden (Rot, Grün, Blau und Weiß) enthält, hat einen Leistungsaufnahme von $ 320\,\mathrm{mW} $.  
 Die LED-Streifen benötigen mit einer Anzahl von 500 LED eine Leistung von $ 160\,\mathrm{W} $. Im 12 V Bordnetz beträgt die Stromstärke $ 13,3\,\mathrm{A} $. 
 Die LED-Streifen benötigen einen Anschluss an das Fahrzeugnetzwerk mit einer Bandbreite von $ X\,\frac{\mathrm{KBit}}{\mathrm{s}} $ \\
 Daneben muss eine Ansteuerungslogik dort verbaut werden.
 \subsection{E-Papier Embleme über den vorderen Radkästen}
-Die E-Papiere an den Fahrzeugseiten müssen wie oben erwähnt, geprüft werden, ob sie als Beleuchtung gelten.\\
+Die E-Papiere an den Fahrzeugseiten müssen, wie oben erwähnt, geprüft werden, ob sie als Beleuchtung gelten.\\
 Aus Sicht der Kunden ist die Lage neben den Fronttüren ideal, um Dinge anzuzeigen.
 Da auf diesen E-Papieren vorwiegend Text angezeigt wird, ist ein breites und in der Höhe schmales Display von Vorteil, da dort eine Zeile leserlich angezeigt werden kann. \\
 Um bei Beschädigung oder bei Defekt das E-Papier auszutauschen, ist die Möglichkeit über den Zugriff vom Motorraum aus zu prüfen. \\
 Das Gewicht des E-Papiers ist relativ gering und zu vernachlässigen.
-Da das E-Papier nur bei Änderung des Inhaltes Strom verbraucht, muss nur eine geringe Leistungsaufnahme von $ x\,\mathrm{mW} $ sichergestellt werden.
-Die E-Papier Embleme benötigen mit einer Auflösung von 1600 Pixeln zu 1200 Pixeln einen Speicher pro Bild von $ XX\,\mathrm{kBit} $. \\
-Herausforderung: Bauteil Bestromung im Exterieur und
-Folie besteht DBL-Testing nicht 
+Da das E-Papier nur bei Änderung des Inhaltes Strom verbraucht, muss nur eine geringe Leistungsaufnahme von $ x\,\mathrm{mW} $ sichergestellt werden. \\
+Die E-Papier Embleme benötigen mit einer Auflösung von 1600 Pixel pro Zeile zu 1200 Zeilen einen Speicher pro Bild von $ 160\,\mathrm{kByte} $.
+\begin{align}
+	S &= \frac{1600\,\frac{\mathrm{Pixel}}{\mathrm{Zeile}} \times 1200\,\mathrm{Zeilen} \times 8\,\frac{\mathrm{Bit}}{\mathrm{Pixel}}}{12} \cdot \\
+	&= 1.280.000\,\mathrm{Bit} = 1,28\,\mathrm{MBit} = 160\,\mathrm{kByte}
+\end{align}
+Insgesamt benötigt der Speicher eine Größe von $ 8\,\mathrm{MByte} $ für 50 Bilder.
 \subsection{LED-Streifen in den Radkästen}
-Wie bei den anderen Leuchteinrichtungen im Exterieur gelten hier die Marktregularien zu prüfen. Bei Möglichkeit kann auch ein eingeschränkter Modus von schwarz-weißen Licht oder nur die Anzeige im abgestellten Zustand des Fahrzeuges gewählt werden. \\
+Wie bei den anderen Leuchteinrichtungen im Exterieur sind hier die Marktregularien zu prüfen. Bei Möglichkeit kann auch ein eingeschränkter Modus von schwarz-weißem Licht oder nur die Anzeige im abgestellten Zustand des Fahrzeuges gewählt werden. \\
 Die Verschmutzung des Lichtleiters ist durch eine geeignete Konstruktion zu verhindern und daneben auch der Beschädigung durch geschleuderte Steine oder ähnliches. \\
-Daneben muss aus Kundensicht geprüft werden, ob die Betonung des Schmutzfänger Bereichs gewünscht ist, oder nur in besten Situationen.
-Bei einer Anzahl von 200 LED pro Radkasten benötigt ein LED Streifen eine Leistung von $ XX\,\mathrm{W} $.
-Ein dynamisches Lichtspiel für 10 Sekunden benötigt pro Radkasten bei einer Bildwiederholungsrate von $ 30\,\mathrm{Fps} $ einen Speicher von $ XX\,\mathrm{kByte}$. \\
+Daneben muss aus Kundensicht geprüft werden, ob die Betonung des Schmutzfänger Bereichs gewünscht ist, oder nur in bestimmten Situationen.
+Bei einer Anzahl von 200 LED pro Radkasten benötigt ein LED Streifen eine Leistung von $ 64\,\mathrm{W} $.
+Ein dynamisches Lichtspiel für 10 Sekunden benötigt pro Radkasten bei einer Bildwiederholungsrate von $ 24\,\mathrm{fps} $ einen Speicher von $ 12\,\mathrm{kByte}$. \\
+\begin{align}
+	S &= \frac{200\,\mathrm{Pixel} \times 24\,\frac{\mathrm{Bit}}{\mathrm{Pixel}}}{12} \cdot \\
+	&= 400\,\mathrm{Bit} = 50\,\mathrm{Byte}
+\end{align}
+\begin{align}
+	S &= 400\,\mathrm{Bit} \cdot 24\,\mathrm{fps} \cdot 10\,\mathrm{s}\\
+	&= 96\,\mathrm{kBit} = 12\,\mathrm{kByte}
+\end{align}
+Für 50 Videos beträgt die Speichergröße $ 600\,\mathrm{kByte} $.
 Die Vernetzung an dieser Stelle ist eine Herausforderung.
 \subsection{Videoprojektoren in den Außenspiegeln}
 Die Verfügbarkeit des Bauraums in dem Außenspiegel ist zu prüfen, indem der Bauraum von aktuellen Standbildprojektoren mit den benötigten Videoprojektoren verglichen wird. 
@@ -91,20 +119,53 @@ Daneben ist die Zulässigkeit von solchen Projektionen und deren Lichtaustrittsf
 Die angestrahlte Fläche auf dem Boden reicht im besten Fall über die gesamten Seitentüren und bis zu $ 2\,\mathrm{m} $ weg vom Fahrzeug.
 Der Betrachter soll bei unterschiedlichen Lichtverhältnissen noch ein möglichst kontrastreiches und helles Bild erkennen. \\
 Der Strombedarf pro Videoprojektor liegt im Bereich zwischen $ XX\,\mathrm{W} $ und $ XX\,\mathrm{W} $.
-Ein Standbild benötigt bei einer Pixelanzahl pro Zeile von $ 1280 $ und von $ 800 $ Zeilen ein Speichergröße von ca. $ 85\,\mathrm{kByte}$. Für eine Animation von 10 Sekunden Länge benötigt eine Videoprojektor einen Speicher von $ XX\,\mathrm{kByte}$.
+Ein Standbild benötigt bei einer Pixelanzahl pro Zeile von $ 1280 $ und $ 800 $ Zeilen ein Speichergröße von ca. $ 256\,\mathrm{kByte}$. 
+\begin{align}
+	S &= \frac{1280\,\frac{\mathrm{Pixel}}{\mathrm{Zeile}} \times 800\,\mathrm{Zeilen} \times 24\,\frac{\mathrm{Bit}}{\mathrm{Pixel}}}{12} \\
+	&= 2.048.000\,\mathrm{Bit} = 2,048\,\mathrm{MBit} = 256\,\mathrm{KByte}
+\end{align}
+Für eine Animation von zehn Sekunden Länge benötigt eine Videoprojektor einen Speicher von $ 20,48\,\mathrm{GByte}$.
+\begin{align}
+	S &= 2,048\,\mathrm{kBit} \cdot 24\,\mathrm{fps} \cdot 10\,\mathrm{s}\\
+	&= 491,52\,\mathrm{MBit} = 61,44\,\mathrm{MByte}
+\end{align}
 \subsection{Bildschirme in den hinteren Seitenfenstern}
 Rechtlich ist die Zulässigkeit wegen möglicher Ablenkungen von Straßenverkehrsteilnehmern zu prüfen.
 Das Verkleinern der Fensterfläche ist abzuprüfen, ob dies mit Kundeninteressen vereinbar ist.
 Die Crashsicherheit an dieser Stelle und die Stabilität ist wichtig, da sich diese Komponente. in unmittelbarer Nähe zu den Fahrzeuginsassen befindet.
 Jedes Display hat eine ungefähre Leistung von $ XX\,\mathrm{W} $. 
-Ein Standbild benötigt bei einer Pixelanzahl pro Zeile von $ 1280 $ und von $ 800 $ Zeilen ein Speichergröße von ca. $ 85\,\mathrm{kByte}$. Für eine Animation von 10 Sekunden Länge benötigt eine Videoprojektor einen Speicher von $ XX\,\mathrm{kByte}$.
+Ein Standbild benötigt bei einer Pixelanzahl pro Zeile von $ 1280 $ und von $ 800 $ Zeilen ein Speichergröße von ca. $ 256\,\mathrm{kByte}$. 
+\begin{align}
+	S &= \frac{1280\,\frac{\mathrm{Pixel}}{\mathrm{Zeile}}\times 800\,\mathrm{Zeilen} \times 24\,\frac{\mathrm{Bit}}{\mathrm{Pixel}}}{12} \\
+	&= 2.048.000\,\mathrm{Bit} = 2,048\,\mathrm{MBit} = 256\,\mathrm{KByte}
+\end{align}
+Für eine Animation von zehn Sekunden Länge benötigt das Display einen Speicher von $ 61,44\,\mathrm{MByte}$.
+\begin{align}
+	S &= 2,048\,\mathrm{kBit} \cdot 24\,\mathrm{fps} \cdot 10\,\mathrm{s}\\
+	&= 491,52\,\mathrm{MBit} = 61,44\,\mathrm{MByte}
+\end{align}
 Vernetzung
 \subsection{LED-Streifen in der Heckleuchte}
 Wie bei den LED-Streifen in der Frontschürze sind die rechtlichen und wirtschaftlichen Fragestellungen gleich. \\
-Grundsätzlich gilt es zu prüfen, ob die Vorhandenen Steuergeräte für die Lichter Kapazitäten für dynamische Lichtstreifen frei haben.
-Die weiteren technischen Kriterien verhalten sich wie oben erläutert.
+Grundsätzlich gilt es zu prüfen, ob die vorhandenen Steuergeräte für die Lichter Kapazitäten für dynamische Lichtstreifen frei haben.
+Die weiteren technischen Kriterien verhalten sich wie oben erläutert. \\
+Für ein Bild benötigt man einen Speicher von $ 98\,\mathrm{Byte} $.
+\begin{align}
+	S &= \frac{391\,\mathrm{Pixel} \times 24\,\frac{\mathrm{Bit}}{\mathrm{Pixel}}}{12} \cdot \\
+	&= 782\,\mathrm{Bit} = 98\,\mathrm{Byte}
+\end{align}
+Für eine zehn sekündige Inszenierung sind $ 23,46\,\mathrm{kByte} $ erforderlich.
+\begin{align}
+	S &= 782\,\mathrm{Bit} \cdot 24\,\mathrm{fps} \cdot 10\,\mathrm{s}\\
+	&= 187,68\,\mathrm{kBit} = 23,46\,\mathrm{kByte}
+\end{align}
 \subsection{E-Papier in der Heckleuchte}
 Ähnliche Anforderungen wie die E-Papier Embleme über den vorderen Radkästen haben diese E-Papiere in der Heckleuchte
+Diese E-Papiere in der Heckleuchte haben ähnliche Eigenschaften, wie die E-Papier Embleme über den vorderen Seitenkästen, in Bezug auf die rechtlichen Kriterien. Durch die Position in der Nähe der Heckleuchten kann von dort die Stromversorgung und Busanbindung bezogen werden. Der Strombedarf und Datenspeicherbedarf von $ 160\,\mathrm{kByte} $ pro Bild sind gleich mit dem anderen E-Papier. 
+\begin{align}
+	S &= \frac{1600\,\mathrm{Pixel pro Zeile} \times 1200\,\mathrm{Zeilen} \times 8\,\frac{\mathrm{Bit}}{\mathrm{Pixel}}}{12} \cdot \\
+	&= 1.280.000\,\mathrm{Bit} = 1,28\,\mathrm{MBit} = 160\,\mathrm{kByte}
+\end{align}
 \section{Analyse der Interieur Komponenten}
 Rechtliche Kriterien
 Wirtschaftliche Kriterien
@@ -116,6 +177,7 @@ Informationsbedarf
 Optik
 Wartungsfähigkeit
 \subsection{LED-Streifen im Interieur}
+Für eine Inszenierung von zehn Sekunden Länge benötigt der LED-Streifen Speicherplatz in der Höhe von $ \,\mathrm{kByte}$.
 Herausforderung:
 Ansteuerung
 \subsection{LED Türtafeln}
@@ -142,7 +204,7 @@ Herausforderung:
 Regularien zu licht Transmission bei Nacht nach außen
 Verbindung/ Kontaktierung
 Temperatur
-\subsection{LED Matrix im Dachhimmel}
+\subsection{LED-Matrix im Dachhimmel}
 Herausforderungen:
 Absicherung/ Crash Test, ideale Verbauposition
 Hitzeentwicklung auf Dach
@@ -155,30 +217,49 @@ Lichtleiterkonzepte
 \begin{table}[hbt]	
 	\centering
 	\renewcommand{\arraystretch}{1.5}	% Skaliert die Zeilenhöhe der Tabelle
+	\captionabove[Berechnung des Speicherbedarfes für ein Bild]{Berechnung des Speicherbedarfes für ein Bild}
+	\label{tab:Werte}
+	\begin{tabular}{c|cccc}
+		\textbf{Komponente} & \parbox[t]{0.16\linewidth}{\centering Pixel} & \parbox[t]{0.16\linewidth}{\centering Bitanzahl \\pro Pixel} & \parbox[t]{0.16\linewidth}{\centering Kompressionsfaktor} & \parbox[t]{0.16\linewidth}{\centering Speicher} \\ 
+		\hline 
+		\hline 
+		\parbox[t]{0.4\linewidth}{\centering E-Papier in der Frontschürze} & $ 2560 \times 1440 $ & $ 8 $ & $ 12 $ & $ 307,2\,\mathrm{kByte} $\\ \parbox[t]{0.4\linewidth}{\centering E-Papier Embleme über\\den vorderen Radkästen} & $ 1600 \times 1200 $ & $ 8 $ & 12 & $ 160\,\mathrm{kByte} $ \\
+		\parbox[t]{0.4\linewidth}{\centering E-Papier in der Heckleuchte} & $ 1600 \times 1200 $ & $ 8 $ & $ 12 $ & $ 160\,\mathrm{kByte} $ \\
+		\parbox[t]{0.4\linewidth}{\centering LED-Streifen in der Frontschürze} & $ 332 \times 1 $ & $ 24 $ & $ 12 $ & $ 83\,\mathrm{Byte} $ \\
+		\parbox[t]{0.4\linewidth}{\centering LED-Streifen in den Radkästen} & $ 200 \times 1 $ & $ 24 $ & $ 12 $ & $ 50,\mathrm{Byte} $\\ \parbox[t]{0.4\linewidth}{\centering LED-Streifen in der Heckleuchte} & $ 391 \times 1 $ & $ 24 $ & $ 12 $ & $ 98,\mathrm{Byte} $ \\ 
+		\parbox[t]{0.4\linewidth}{\centering LED-Streifen im Interieur} & $ X\,\mathrm{W} $ & $ X\,\mathrm{Byte} $ & X \\
+		\parbox[t]{0.4\linewidth}{\centering LED Türtafeln} & $ X\,\mathrm{W} $ & $ X\,\mathrm{Byte} $ & X \\
+		\parbox[t]{0.4\linewidth}{\centering Videoprojektoren in\\den Außenspiegeln} & $ X\,\mathrm{W} $ & $ X\,\mathrm{Byte} $ & X \\ \parbox[t]{0.4\linewidth}{\centering Videoprojektoren im Fußraum} & $ X\,\mathrm{W} $ & $ X\,\mathrm{Byte} $ & X \\
+		\parbox[t]{0.4\linewidth}{\centering Bildschirme in den\\hinteren Seitenfenstern} &$ X\,\mathrm{W} $ & $ X\,\mathrm{Byte} $ & X \\
+		\parbox[t]{0.4\linewidth}{\centering Bildschirme in der Einstiegsleiste} & $ X\,\mathrm{W} $ & $ X\,\mathrm{Byte} $ & X \\
+		\parbox[t]{0.4\linewidth}{\centering Durchsichtiger Bildschirm\\im Dachfenster} & $ X\,\mathrm{W} $ & $ X\,\mathrm{Byte} $ & X \\
+		LED-Matrix im Dachhimmel & $ X\,\mathrm{W} $ & $ X\,\mathrm{Byte} $ & X \\
+		\parbox[t]{0.4\linewidth}{\centering Morphende Oberfläche\\in der Mittelkonsole} & $ X\,\mathrm{W} $ & $ X\,\mathrm{Byte} $ & X \\
+		\parbox[t]{0.4\linewidth}{\centering Bildschirmoberflächen im Cockpit} & $ X\,\mathrm{W} $ & $ X\,\mathrm{Byte} $ & X \\
+	\end{tabular} 
+\end{table}
+\begin{table}[hbt]	
+	\centering
+	\renewcommand{\arraystretch}{1.5}	% Skaliert die Zeilenhöhe der Tabelle
 	\captionabove[Liste der Komponenten mit den oben festgestellten Werten]{Liste der Komponenten mit den oben festgestellten Werte}
 	\label{tab:Werte}
 	\begin{tabular}{c|ccc}
-		\textbf{Komponente} & \parbox[t]{0.16\linewidth}{\centering Leistungs-\\bedarf\\in Watt} & \parbox[t]{0.16\linewidth}{\centering Speicher-\\größe\\in MByte} & \parbox[t]{0.16\linewidth}{\centering Echtzeit-\\anbindung} \\ 
+		\textbf{Komponente} & \parbox[t]{0.16\linewidth}{\centering Leistungs-\\bedarf} & \parbox[t]{0.16\linewidth}{\centering Speicher-\\größe} & \parbox[t]{0.16\linewidth}{\centering Echtzeit-\\anbindung} \\ 
 		\hline 
 		\hline 
-		\parbox[t]{0.4\linewidth}{\centering E-Papier in der Frontschürze} & X & X & X \\
-		\parbox[t]{0.4\linewidth}{\centering LED-Streifen in der Frontschürze} & X & X & X \\
-		\parbox[t]{0.4\linewidth}{\centering E-Papier Embleme über\\den vorderen Radkästen} & X & X & X \\
-		\parbox[t]{0.4\linewidth}{\centering LED-Streifen in den Radkästen} & X & X & X \\
-		\parbox[t]{0.4\linewidth}{\centering Videoprojektoren in\\den Außenspiegeln} & X & X & X \\
-		\parbox[t]{0.4\linewidth}{\centering Bildschirme in den\\hinteren Seitenfenstern} & X & X & X \\
-		\parbox[t]{0.4\linewidth}{\centering LED-Streifen in der Heckleuchte} &  & X & X \\
-		\parbox[t]{0.4\linewidth}{\centering E-Papier in der Heckleuchte} & X & X & X \\
-		\parbox[t]{0.4\linewidth}{\centering LED-Streifen im Interieur} &  & X & X \\
-		\parbox[t]{0.4\linewidth}{\centering Matrix LED Türtafeln} &  & X & X \\
-		\parbox[t]{0.4\linewidth}{\centering Bildschirme in der Einstiegsleiste} &  & X & X \\
-		\parbox[t]{0.4\linewidth}{\centering Videoprojektoren im Fußraum} &  & X & X \\
-		\parbox[t]{0.4\linewidth}{\centering Morphende Oberfläche\\in der Mittelkonsole} &  & X & X \\
-		\parbox[t]{0.4\linewidth}{\centering Durchsichtiger Bildschirm\\im Dachfenster} &  & X & X \\
-		LED Matrix im Dachhimmel & X & X & X \\
-		\parbox[t]{0.4\linewidth}{\centering Bildschirmoberflächen im Cockpit} &  &  & X \\
-		\parbox[t]{0.4\linewidth}{\centering Soundplayer im Innenraum} &  & X & X \\
-		\parbox[t]{0.4\linewidth}{\centering Duftflakons im Innenraum} &  & X & X \\
+		\parbox[t]{0.4\linewidth}{\centering E-Papier in der Frontschürze} & $ X\,\mathrm{W} $ & $ X\,\mathrm{Byte} $ & X \\ \parbox[t]{0.4\linewidth}{\centering E-Papier Embleme über\\den vorderen Radkästen} & $ X\,\mathrm{W} $ & $ X\,\mathrm{Byte} $ & X \\\parbox[t]{0.4\linewidth}{\centering E-Papier in der Heckleuchte} & $ X\,\mathrm{W} $ & $ X\,\mathrm{Byte} $ & X \\
+		\parbox[t]{0.4\linewidth}{\centering LED-Streifen in der Frontschürze} & $ X\,\mathrm{W} $ & $ X\,\mathrm{Byte} $ & X \\
+		\parbox[t]{0.4\linewidth}{\centering LED-Streifen in den Radkästen} & $ X\,\mathrm{W} $ & $ X\,\mathrm{Byte} $ & X \\ \parbox[t]{0.4\linewidth}{\centering LED-Streifen in der Heckleuchte} & $ X\,\mathrm{W} $ & $ X\,\mathrm{Byte} $ & X \\ \parbox[t]{0.4\linewidth}{\centering LED-Streifen im Interieur} & $ X\,\mathrm{W} $ & $ X\,\mathrm{Byte} $ & X \\
+		\parbox[t]{0.4\linewidth}{\centering LED Türtafeln} & $ X\,\mathrm{W} $ & $ X\,\mathrm{Byte} $ & X \\
+		\parbox[t]{0.4\linewidth}{\centering Videoprojektoren in\\den Außenspiegeln} & $ X\,\mathrm{W} $ & $ X\,\mathrm{Byte} $ & X \\ \parbox[t]{0.4\linewidth}{\centering Videoprojektoren im Fußraum} & $ X\,\mathrm{W} $ & $ X\,\mathrm{Byte} $ & X \\
+		\parbox[t]{0.4\linewidth}{\centering Bildschirme in den\\hinteren Seitenfenstern} &$ X\,\mathrm{W} $ & $ X\,\mathrm{Byte} $ & X \\
+		\parbox[t]{0.4\linewidth}{\centering Bildschirme in der Einstiegsleiste} & $ X\,\mathrm{W} $ & $ X\,\mathrm{Byte} $ & X \\
+		\parbox[t]{0.4\linewidth}{\centering Durchsichtiger Bildschirm\\im Dachfenster} & $ X\,\mathrm{W} $ & $ X\,\mathrm{Byte} $ & X \\
+		LED-Matrix im Dachhimmel & $ X\,\mathrm{W} $ & $ X\,\mathrm{Byte} $ & X \\
+		\parbox[t]{0.4\linewidth}{\centering Morphende Oberfläche\\in der Mittelkonsole} & $ X\,\mathrm{W} $ & $ X\,\mathrm{Byte} $ & X \\
+		\parbox[t]{0.4\linewidth}{\centering Bildschirmoberflächen im Cockpit} & $ X\,\mathrm{W} $ & $ X\,\mathrm{Byte} $ & X \\
+		\parbox[t]{0.4\linewidth}{\centering Soundplayer im Innenraum} & $ X\,\mathrm{W} $ & $ X\,\mathrm{Byte} $ & X \\
+		\parbox[t]{0.4\linewidth}{\centering Duftflakons im Innenraum} & $ X\,\mathrm{W} $ & $ X\,\mathrm{Byte} $ & X \\
 	\end{tabular} 
 \end{table}
 \section{Gesamtwirtschaftliche Analyse}
@@ -202,12 +283,12 @@ In Tabelle \ref{tab:Entwicklung} werden alle Komponenten mit den nötigen Anpass
 		\parbox[t]{0.4\linewidth}{\centering LED-Streifen in der Heckleuchte} &  & X & X \\
 		\parbox[t]{0.4\linewidth}{\centering E-Papier in der Heckleuchte} & X & X & X \\
 		\parbox[t]{0.4\linewidth}{\centering LED-Streifen im Interieur} &  & X & X \\
-		\parbox[t]{0.4\linewidth}{\centering Matrix LED Türtafeln} &  & X & X \\
+		\parbox[t]{0.4\linewidth}{\centering LED Türtafeln} &  & X & X \\
 		\parbox[t]{0.4\linewidth}{\centering Bildschirme in der Einstiegsleiste} &  & X & X \\
 		\parbox[t]{0.4\linewidth}{\centering Videoprojektoren im Fußraum} &  & X & X \\
 		\parbox[t]{0.4\linewidth}{\centering Morphende Oberfläche\\in der Mittelkonsole} &  & X & X \\
 		\parbox[t]{0.4\linewidth}{\centering Durchsichtiger Bildschirm\\im Dachfenster} &  & X & X \\
-		LED Matrix im Dachhimmel & X & X & X \\
+		LED-Matrix im Dachhimmel & X & X & X \\
 		\parbox[t]{0.4\linewidth}{\centering Bildschirmoberflächen im Cockpit} &  &  & X \\
 		\parbox[t]{0.4\linewidth}{\centering Soundplayer im Innenraum} &  & X & X \\
 		\parbox[t]{0.4\linewidth}{\centering Duftflakons im Innenraum} &  & X & X \\

@@ -1,7 +1,46 @@
 \addchap{Anhang A}
 \setcounter{chapter}{1}
+\section{Einheiten von Bit und Byte}
+\begin{table}[hbt]	
+	\centering
+	\renewcommand{\arraystretch}{1.5}	% Skaliert die Zeilenhöhe der Tabelle
+	\captionabove[Liste der Einheiten von Bit und Byte]{Liste der Einheiten von Bit und Byte}
+	\label{tab:EinheitenBitByte}
+	\begin{tabular}{c|cccc}
+		\textbf{Einheit} & \parbox[t]{0.17\linewidth}{\centering Anzahl an Bit} & \parbox[t]{0.17\linewidth}{\centering Anzahl an Byte }  & \parbox[t]{0.17\linewidth}{\centering Anzahl an Kilobit} & \parbox[t]{0.17\linewidth}{\centering Anzahl an Kilobyte}\\ 
+		\hline 
+		\hline
+		1 Bit & 1 & - & - & - \\
+		1 Byte & 8 & 1 & - & - \\
+		1 kBit & 1.000 & 125 & 1 & - \\
+		1 kByte & 8.000 & 1.000 & 8 & 1 \\
+		1 MBit & 1.000.000 & 125.000 & 1.000 & 125 \\
+		1 MByte & 8.000.000 & 1.000.000 & 8.000 & 1.000 \\
+		1 Gbit & 1.000.000.000 & 125.000.000 & 1.000.000 & 125.000 \\
+		1 GByte & 8.000.000.000 & 1.000.000.000 & 8.000.000 & 1.000.000 \\
+	\end{tabular} 
+\end{table}
+\section{Einheiten}
 
-\section{Details zu bestimmten theoretischen Grundlagen}
+\begin{table}[hbt]	
+	\centering
+	\renewcommand{\arraystretch}{1.5}	% Skaliert die Zeilenhöhe der Tabelle
+	\captionabove[Liste physikalischer Größen]{Liste physikalischer Größen}
+	\label{tab:physikalGroessen}
+	\begin{tabular}{c|ccc}
+		\parbox[t]{0.17\linewidth}{\centering Größe} & \parbox[t]{0.17\linewidth}{\centering Formelzeichen} & \parbox[t]{0.17\linewidth}{\centering Einheitszeichen}  & \parbox[t]{0.17\linewidth}{\centering Berechnung} \\ 
+		\hline 
+		\hline
+		Länge & $ \vec{s} $ & m & - \\
+		Zeit & $ t $  & s & - \\
+		Masse & $ m $ & kg & - \\
+		Geschwindigkeit & $ \vec{v} $ &  $ \frac{\mathrm{m}}{\mathrm{s}} $ & $ \vec{v} = \frac{\Delta \vec{s}}{\Delta t} $ \\
+		Beschleunigung & $ \vec{a} $ & $ \frac{\mathrm{m}}{\mathrm{s}^{2}} $ & $ \vec{a} = \frac{\Delta \vec{s}}{(\Delta t)^{2}} $ \\
+		Kraft & $ \vec{F} $ & N & $ \vec{F} = m \cdot \vec{a} $ \\
+		Arbeit & $ W $ & J & $ W = \vec{F} \cdot \vec{s} $ \\
+		Leistung & $ P $ & W & $ P = \frac{W}{t} = \vec{F} \cdot \vec{v} $ \\
+	\end{tabular} 
+\end{table}
 
 \section{Weitere Details, welche im Hauptteil den Lesefluss behindern}
 
