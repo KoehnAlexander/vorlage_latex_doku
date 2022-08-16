@@ -3,7 +3,8 @@
 Nachfolgend werden alle Komponenten unter den von \ref{cha:Kriterien} genannten Kriterien analysiert. Im Zuge der Analyse werden im nächsten Kapitel Entwürfe für die Weiterentwicklung der Komponenten dargestellt.\\
 Die Analyse basiert auf den Komponenten des Prototypen, aber beschränkt sich nicht auf die einzeln verbaute Technologie, sondern geht auf den Gesamtkontext der Komponente ein. Grundlegend richtet sich die Analyse nach dem sinnlichen Darstellungszweck und dessen Bedarf an technischen Komponenten. \\
 Ein Beispiel dieser Herangehensweise ist der Bildschirm in der Einstiegsleiste. Die genaue Größe einer möglichen Serienimplementierung muss nicht gleich des Prototypen sein, aber sie muss eine Größe haben, die für die Darstellung der Inhalte geeignet ist.\\
-Die Kriterien für den Einbau und die spätere Analyse basieren zum Einen auf einer selbstständigen Recherche über die Komponenten und den relevanten Bedingungen. Zum Anderen wurden Informationen von Experten in den einzelnen Fachgebieten der Karosserieinnenentwicklung, Individualisierung, After-Sales-Produktentwicklung herangezogen.
+Die Kriterien für den Einbau und die spätere Analyse basieren zum Einen auf einer selbstständigen Recherche über die Komponenten und den relevanten Bedingungen. Zum Anderen wurden Informationen von Experten in den einzelnen Fachgebieten der Karosserieinnenentwicklung, Individualisierung, After-Sales-Produktentwicklung herangezogen, um die Kriterien im Bereich rechtlich, wirtschaftlich und technische anzuwenden. \\
+Für einen Überblick über die Erkenntnisse fasst das Unterkapitel XX die Analyse zusammen
 \section{Kriterien für den Einbau der Komponenten in Serienfahrzeuge}
 \label{cha:Kriterien}
 Die folgenden Kriterien richten sich zum Einen an die Komponenten und zum Anderen an die Fahrzeugentwicklung. Anhand der Kriterien kann eine Analyse des Ist-Zustandes angewendet werden.\\
@@ -154,7 +155,7 @@ Für ein Bild benötigt man einen Speicher von $ 98\,\mathrm{Byte} $.
 	S &= \frac{391\,\mathrm{Pixel} \times 24\,\frac{\mathrm{Bit}}{\mathrm{Pixel}}}{12} \cdot \\
 	&= 782\,\mathrm{Bit} = 98\,\mathrm{Byte}
 \end{align}
-Für eine zehn sekündige Inszenierung sind $ 23,46\,\mathrm{kByte} $ erforderlich.
+Für eine zehn Sekunden Inszenierung sind $ 23,46\,\mathrm{kByte} $ erforderlich.
 \begin{align}
 	S &= 782\,\mathrm{Bit} \cdot 24\,\mathrm{fps} \cdot 10\,\mathrm{s}\\
 	&= 187,68\,\mathrm{kBit} = 23,46\,\mathrm{kByte}
@@ -167,75 +168,110 @@ Diese E-Papiere in der Heckleuchte haben ähnliche Eigenschaften, wie die E-Papi
 	&= 1.280.000\,\mathrm{Bit} = 1,28\,\mathrm{MBit} = 160\,\mathrm{kByte}
 \end{align}
 \section{Analyse der Interieur Komponenten}
-Rechtliche Kriterien
-Wirtschaftliche Kriterien
-Physikalische Dimensionierung
-Stabilität
-Gewicht
-Elektrischer Energiebedarf
-Informationsbedarf
-Optik
-Wartungsfähigkeit
+Im folgenden werden die einzelnen Interieur Komponenten unter den Kriterien analysiert.
 \subsection{LED-Streifen im Interieur}
+Rechtlich ist bei den Animationen im LED-Streifen die Vermeidung von Ablenkung vom Fahrer oder Fahrerin zu gewährleisten.
+Durch die Länge des Streifens muss für die Crashsicherheit eventuelle Sollbruchstellen sichergestellt werden. \\
+Bei einer Anzahl von 719 LED pro Radkasten benötigt ein LED Streifen eine Leistung von $ XX\,\mathrm{W} $.
 Für eine Inszenierung von zehn Sekunden Länge benötigt der LED-Streifen Speicherplatz in der Höhe von $ \,\mathrm{kByte}$.
-Herausforderung:
-Ansteuerung
+\begin{align}
+	S &= \frac{719\,\mathrm{Pixel} \times 24\,\frac{\mathrm{Bit}}{\mathrm{Pixel}}}{12} \cdot \\
+	&= 400\,\mathrm{Bit} = 50\,\mathrm{Byte}
+\end{align}
+\begin{align}
+	S &= 400\,\mathrm{Bit} \cdot 24\,\mathrm{fps} \cdot 10\,\mathrm{s}\\
+	&= 96\,\mathrm{kBit} = 12\,\mathrm{kByte}
+\end{align}
+Für 50 Videos beträgt die Speichergröße $ 600\,\mathrm{kByte} $.
 \subsection{LED Türtafeln}
-Rechtlich gesehen ist zu prüfen, ab welchem Helligkeitsgrad und Farbinszenierungsdynamik der Fahrer oder die Fahrerin durch die LED zu stark abgelenkt werden.\\
-Die LED benötigt bei der aktuellen 
+Rechtlich gesehen ist zu prüfen, ab welchem Helligkeitsgrad und Farbinszenierung der Fahrer oder die Fahrerin durch die LED zu stark abgelenkt werden. \\
+Im Moment wird nur eine LED pro Türtafel genutzt, wodurch Möglichkeiten der Inszenierung im Vergleich zu einer LED-Matrix nicht genutzt werden. 
+Die LEDs benötigen eine Leistung von $ XX\,\mathrm{W} $ pro Türe.
+Die Ansteuerung der Türtafeln kann durch die Nähe zu den LED-Streifen im Interieur zusammen gesteuert werden.
 \subsection{Bildschirme in der Einstiegsleiste}
-
-Die technische Umsetzbarkeit fiel in Voruntersuchungen (wie Kugelfalltest, Bauraum, Shaker) positiv aus.
-Kriterien an dieser Stelle sind Feuchtigkeiten, Temperaturen, und die Kratzfestigkeit.
-Da an dieser Stelle eine Echtzeitfähigkeit gegeben sein muss
-Feuchtigkeit, Temperatur, Kratzfest
-Datensicherheit, Schnittstellen
-Fahrzeuganbindung, Ansteuerung
-
+Unter den rechtlichen Aspekten gibt es in einer ersten Untersuchung keine Beschränkungen, da der Bildschirm nur bei geöffneter Türe und dementsprechend im Stand betrachtet werden kann.
+Die technische Umsetzbarkeit ist durch Bestätigung in ersten Voruntersuchungen (wie Kugelfalltest, Bauraum, Shaker) positiv.
+Technische Herausforderungen an dieser Stelle sind Feuchtigkeitsschutz, Temperaturempfindlichkeit, und die Kratzfestigkeit. \\
+Jedes Display hat eine ungefähre Leistung von $ XX\,\mathrm{W} $. 
+Ein Standbild benötigt bei einer Pixelanzahl pro Zeile von $ 1280 $ und von $ 1024 $ Zeilen ein Speichergröße von ca. $ 256\,\mathrm{kByte}$. 
+\begin{align}
+	S &= \frac{1280\,\frac{\mathrm{Pixel}}{\mathrm{Zeile}}\times 1024\,\mathrm{Zeilen} \times 24\,\frac{\mathrm{Bit}}{\mathrm{Pixel}}}{12} \\
+	&= 2.048.000\,\mathrm{Bit} = 2,048\,\mathrm{MBit} = 256\,\mathrm{KByte}
+\end{align}
+Für eine Animation von zehn Sekunden Länge benötigt das Display einen Speicher von $ 61,44\,\mathrm{MByte}$.
+Insgesamt bei 50 Videos beträgt der benötigte Speicher $ 61,44\,\mathrm{MByte}$.
 \subsection{Videoprojektoren im Fußraum}
-Herausforderung:
-Bauraum, Wackeln im Fahrbetrieb, Temperaturentwicklung
+Unter den rechtlichen Fragestellungen ergibt sich die Vermeidung von Ablenkung für den Fahrer oder die Fahrerin.
+Aus Kundenperspektive ist die angestrahlte Oberfläche eventuell nicht geeignet, da diese stärker verschmutzt sein kann. \\
+Unter den technischen Kriterien ist die Verfügbarkeit des Bauraums mit der benötigten Kühlung zu prüfen. Eine Herausforderung ist die Befestigung des Videoprojektors, da dieser sich bei Fahrt relativ zum Auto nicht bewegen darf.
+Jeder Videoprojektor hat eine ungefähre Leistung von $ XX\,\mathrm{W} $. 
+Ein Standbild benötigt bei einer Pixelanzahl pro Zeile von $ 1280 $ und von $ 800 $ Zeilen ein Speichergröße von ca. $ 256\,\mathrm{kByte}$. 
+\begin{align}
+	S &= \frac{1280\,\frac{\mathrm{Pixel}}{\mathrm{Zeile}}\times 800\,\mathrm{Zeilen} \times 24\,\frac{\mathrm{Bit}}{\mathrm{Pixel}}}{12} \\
+	&= 2.048.000\,\mathrm{Bit} = 2,048\,\mathrm{MBit} = 256\,\mathrm{KByte}
+\end{align}
+Für eine Animation von zehn Sekunden Länge benötigt das Display einen Speicher von $ 61,44\,\mathrm{MByte}$.
+Insgesamt bei 50 Videos beträgt der benötigte Speicher $ 61,44\,\mathrm{MByte}$.
 \subsection{Morphende Oberfläche in der Mittelkonsole}
-Herausforderung:
-Materialfestigkeit, Spannungen,
-
+Die tatsächlich verwendete technische Realisierung der morphenden Oberfläche ist eine Übergangslösung für eine neue Technik, die einzelne Element auf einer Fläche gesteuert hoch und herunterfahren kann. Diese Technik ist derzeit in der Entwicklung. Wie die Farbtiefe bei einem Bildschirm kann die Höhe der einzelnen Punkte eingestellt werden. \\
+Mit 8 Höheneinstellungen und somit 3 Bit Höhentiefe benötigt ein Feld mit 20 auf 20 einzelnen Punkten einen Speicher in der Größe von $ 61,44\,\mathrm{MByte}$.
+Eine weitere technische Weiterentwicklung kann Animationen auf der Mittelkonsole abspielen. Die Datenmenge steigert sich dementsprechend mit der Bildwiederholungsrate und der Dauer der Animation. Bei einer Bildwiederholungsrate von $ 4\,\mathrm{fps} $ und 20 Sekunden Dauer beträgt der benötigte Speicher $ 61,44\,\mathrm{MByte}$.
 \subsection{Durchsichtiger Bildschirm im Dachfenster}
-Herausforderung:
-Regularien zu licht Transmission bei Nacht nach außen
-Verbindung/ Kontaktierung
-Temperatur
+Rechtlich betrachtet ist die 
+Technische Herausforderungen sind die Temperaturentwicklung durch Sonneneinstrahlung und die Kontaktierung bei Bewegung des Glasdaches.
+Das Display hat eine ungefähre Leistung von $ XX\,\mathrm{W} $. 
+Ein Standbild benötigt bei einer Pixelanzahl pro Zeile von $ 1920 $ und von $ 1080 $ Zeilen ein Speichergröße von ca. $ 256\,\mathrm{kByte}$. 
+\begin{align}
+	S &= \frac{1920\,\frac{\mathrm{Pixel}}{\mathrm{Zeile}}\times 1080\,\mathrm{Zeilen} \times 24\,\frac{\mathrm{Bit}}{\mathrm{Pixel}}}{12} \\
+	&= 2.048.000\,\mathrm{Bit} = 2,048\,\mathrm{MBit} = 256\,\mathrm{KByte}
+\end{align}
+Für eine Animation von zehn Sekunden Länge benötigt das Display einen Speicher von $ 61,44\,\mathrm{MByte}$.
+Insgesamt bei 50 Videos beträgt der benötigte Speicher $ 61,44\,\mathrm{MByte}$.
 \subsection{LED-Matrix im Dachhimmel}
 Herausforderungen:
 Absicherung/ Crash Test, ideale Verbauposition
 Hitzeentwicklung auf Dach
 Ansteuerung, Montage/ Konstruktion
 Lichtleiterkonzepte
+Die LED-Matrix hat eine ungefähre Leistung von $ XX\,\mathrm{W} $. 
+Ein Standbild benötigt bei einer Pixelanzahl pro Zeile von $ 192 $ und von $ 96 $ Zeilen ein Speichergröße von ca. $ 256\,\mathrm{kByte}$. 
+\begin{align}
+	S &= \frac{192\,\frac{\mathrm{Pixel}}{\mathrm{Zeile}}\times 96\,\mathrm{Zeilen} \times 24\,\frac{\mathrm{Bit}}{\mathrm{Pixel}}}{12} \\
+	&= 2.048.000\,\mathrm{Bit} = 2,048\,\mathrm{MBit} = 256\,\mathrm{KByte}
+\end{align}
+Für eine Animation von zehn Sekunden Länge benötigt das Display einen Speicher von $ 61,44\,\mathrm{MByte}$.
+Insgesamt bei 50 Videos beträgt der benötigte Speicher $ 61,44\,\mathrm{MByte}$.
 \subsection{Duftflakons im Innenraum}
+Eine technische Verbreitung unterschiedlicher individueller Düfte ist in diesem Konzept nicht realisiert. Ein aktueller technischer Aufbau besteht aus einem Set mit unterschiedlichen Duftflakons, die einzeln geöffnet werden. Dadurch ist die Anzahl der Düfte beschränkt auf die Set-Größe.
 \subsection{Bildschirmoberflächen im Cockpit}
+Das Anzeigen individualisierter Bildschirmoberflächen auf vorhandenen Displays ist unter den oben beschrieben Kriterien schon im Fahrzeug möglich und benötigt keine weitere Analyse.
 \subsection{Soundplayer im Innenraum}
-\subsection{Gesamttechnische Zusammenfassung}
+Das Abspielen individualisierter Sounds durch vorhandene Lautsprecher ist unter den oben beschrieben Kriterien schon im Fahrzeug möglich und benötigt keine weitere Analyse.
+\subsection{Gesamt-technische Zusammenfassung}
+In der Tabelle \ref{tab:Speicherbedarf} werden die Komponenten, die visuelle oder haptische Anzeigen sind, mit dem benötigten Speicher für die Anzeige eines Bildes dargestellt. Die Berechnung erfolgt mit der Gleichung \ref{eq:Bilddatenmenge}.
 \begin{table}[hbt]	
 	\centering
 	\renewcommand{\arraystretch}{1.5}	% Skaliert die Zeilenhöhe der Tabelle
 	\captionabove[Berechnung des Speicherbedarfes für ein Bild]{Berechnung des Speicherbedarfes für ein Bild}
-	\label{tab:Werte}
+	\label{tab:Speicherbedarf}
 	\begin{tabular}{c|cccc}
-		\textbf{Komponente} & \parbox[t]{0.16\linewidth}{\centering Pixel} & \parbox[t]{0.16\linewidth}{\centering Bitanzahl \\pro Pixel} & \parbox[t]{0.16\linewidth}{\centering Kompressionsfaktor} & \parbox[t]{0.16\linewidth}{\centering Speicher} \\ 
+		\textbf{Komponente} & \parbox[t]{0.16\linewidth}{\centering Pixel} & \parbox[t]{0.16\linewidth}{\centering Bitanzahl \\pro Pixel} & \parbox[t]{0.16\linewidth}{\centering Kompressions-\\faktor} & \parbox[t]{0.16\linewidth}{\centering Speicher} \\ 
 		\hline 
 		\hline 
 		\parbox[t]{0.4\linewidth}{\centering E-Papier in der Frontschürze} & $ 2560 \times 1440 $ & $ 8 $ & $ 12 $ & $ 307,2\,\mathrm{kByte} $\\ \parbox[t]{0.4\linewidth}{\centering E-Papier Embleme über\\den vorderen Radkästen} & $ 1600 \times 1200 $ & $ 8 $ & 12 & $ 160\,\mathrm{kByte} $ \\
 		\parbox[t]{0.4\linewidth}{\centering E-Papier in der Heckleuchte} & $ 1600 \times 1200 $ & $ 8 $ & $ 12 $ & $ 160\,\mathrm{kByte} $ \\
 		\parbox[t]{0.4\linewidth}{\centering LED-Streifen in der Frontschürze} & $ 332 \times 1 $ & $ 24 $ & $ 12 $ & $ 83\,\mathrm{Byte} $ \\
 		\parbox[t]{0.4\linewidth}{\centering LED-Streifen in den Radkästen} & $ 200 \times 1 $ & $ 24 $ & $ 12 $ & $ 50,\mathrm{Byte} $\\ \parbox[t]{0.4\linewidth}{\centering LED-Streifen in der Heckleuchte} & $ 391 \times 1 $ & $ 24 $ & $ 12 $ & $ 98,\mathrm{Byte} $ \\ 
-		\parbox[t]{0.4\linewidth}{\centering LED-Streifen im Interieur} & $ X\,\mathrm{W} $ & $ X\,\mathrm{Byte} $ & X \\
-		\parbox[t]{0.4\linewidth}{\centering LED Türtafeln} & $ X\,\mathrm{W} $ & $ X\,\mathrm{Byte} $ & X \\
-		\parbox[t]{0.4\linewidth}{\centering Videoprojektoren in\\den Außenspiegeln} & $ X\,\mathrm{W} $ & $ X\,\mathrm{Byte} $ & X \\ \parbox[t]{0.4\linewidth}{\centering Videoprojektoren im Fußraum} & $ X\,\mathrm{W} $ & $ X\,\mathrm{Byte} $ & X \\
-		\parbox[t]{0.4\linewidth}{\centering Bildschirme in den\\hinteren Seitenfenstern} &$ X\,\mathrm{W} $ & $ X\,\mathrm{Byte} $ & X \\
-		\parbox[t]{0.4\linewidth}{\centering Bildschirme in der Einstiegsleiste} & $ X\,\mathrm{W} $ & $ X\,\mathrm{Byte} $ & X \\
-		\parbox[t]{0.4\linewidth}{\centering Durchsichtiger Bildschirm\\im Dachfenster} & $ X\,\mathrm{W} $ & $ X\,\mathrm{Byte} $ & X \\
-		LED-Matrix im Dachhimmel & $ X\,\mathrm{W} $ & $ X\,\mathrm{Byte} $ & X \\
-		\parbox[t]{0.4\linewidth}{\centering Morphende Oberfläche\\in der Mittelkonsole} & $ X\,\mathrm{W} $ & $ X\,\mathrm{Byte} $ & X \\
-		\parbox[t]{0.4\linewidth}{\centering Bildschirmoberflächen im Cockpit} & $ X\,\mathrm{W} $ & $ X\,\mathrm{Byte} $ & X \\
+		\parbox[t]{0.4\linewidth}{\centering LED-Streifen im Interieur} & $ 391 \times 1 $ & $ 24 $ & $ 12 $ & $ X\,\mathrm{Byte} $ \\
+		\parbox[t]{0.4\linewidth}{\centering LED Türtafeln} & $ 4 \times 1 $ & $ 24 $ & $ 12 $ &  $ X\,\mathrm{Byte} $ \\
+		\parbox[t]{0.4\linewidth}{\centering Videoprojektoren in\\den Außenspiegeln} & $ 1280 \times 800 $ & $ 24 $ & $ 12 $ &   $ X\,\mathrm{Byte} $ \\ 
+		\parbox[t]{0.4\linewidth}{\centering Videoprojektoren im Fußraum} & $ 1280 \times 800 $ & $ 24 $ & $ 12 $ & $ X\,\mathrm{Byte} $ \\
+		\parbox[t]{0.4\linewidth}{\centering Bildschirme in den\\hinteren Seitenfenstern} & $ 1280 \times 800 $ & $ 24 $ & $ 12 $ & $ X\,\mathrm{Byte} $ \\
+		\parbox[t]{0.4\linewidth}{\centering Bildschirme in der Einstiegsleiste} &  $ 1280 \times 1024 $ & $ 24 $ & $ 12 $ & $ X\,\mathrm{Byte} $ \\
+		\parbox[t]{0.4\linewidth}{\centering Durchsichtiger Bildschirm\\im Dachfenster} & $ 1920 \times 1080 $ & $ 24 $ & $ 12 $ & $ X\,\mathrm{Byte} $ \\
+		LED-Matrix im Dachhimmel & $ 192 \times 96 $ & $ 24 $ & $ 12 $ & $ X\,\mathrm{Byte} $ \\
+		\parbox[t]{0.4\linewidth}{\centering Morphende Oberfläche\\in der Mittelkonsole} & $ X \times X $ & $ 8 $ & $ 1 $ & $ X\,\mathrm{Byte} $ \\
+		\parbox[t]{0.4\linewidth}{\centering Bildschirmoberflächen im Cockpit} & $ X \times X $ & $ 24 $ & $ 12 $ & $ X\,\mathrm{Byte} $ \\
 	\end{tabular} 
 \end{table}
 \begin{table}[hbt]	
