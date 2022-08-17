@@ -4,6 +4,7 @@
 	\node[draw, rectangle, text width=3cm, align=center, rounded corners] (Mainboard) at (0, 0) {Mainboard};
 	\node[draw, rectangle, text width=3cm, align=center, rounded corners] (Grafikkarten) at (0, -2) {Grafikkarten};
 	\node[draw, rectangle, text width=3cm, align=center, rounded corners] (LAN Switch) at (0, 3) {LAN Switch};
+	\node[draw, rectangle, text width=2cm, align=center, rounded corners] (WLAN Router) at (1.5, 2) {WLAN Router};
 	\node[draw, rectangle, text width=3cm, align=center, draw=blue] (E-Papier Frontschürze) at (5, 4) {E-Papier Frontschürze};
 	\node[draw, rectangle, text width=3cm, align=center, draw=blue] (LED-Streifen Frontschürze) at (-7, -2) {LED-Streifen Frontschürze};
 	\node[draw, rectangle, text width=3cm, align=center, draw=blue] (E-Papier Embleme Radkästen) at (-1, 5.5) {E-Papier Embleme Radkästen};
@@ -19,12 +20,12 @@
 	\node[draw, rectangle, text width=3cm, align=center, draw=red] (Morphende Oberfläche Mittelkonsole) at (5, 0.5) {Morphende Oberfläche Mittelkonsole};
 	\node[draw, rectangle, text width=3cm, align=center, draw=red] (Durchsichtiger Bildschirm Dachfenster) at (-2.5, -6) {Durchsichtiger Bildschirm Dachfenster};
 	\node[draw, rectangle, text width=3cm, align=center, draw=red] (LED-Matrix Dachhimmel) at (5, -1) {LED-Matrix Dachhimmel};
-	\node[draw, rectangle, text width=3cm, align=center, draw=red] (Bildschirmoberflächen Cockpit) at (5, 2.25) {Bildschirm-oberflächen Cockpit};
 	\node[draw, rectangle, text width=3cm, align=center, rounded corners] (Soundplayer Innenraum) at (-3, 4) {Soundplayer Innenraum};
 	\node[draw, rectangle, text width=3cm, align=center, rounded corners] (USB Hub) at (-5, 0) {USB Hub};
 	\node[draw, rectangle, text width=3cm, align=center, rounded corners] (Verstärker) at (-5.5, 5) {Verstärker};
 	\node[draw, rectangle, text width=3cm, align=center, draw=red] (Lautsprecher) at (-7, 6) {Lautsprecher};
 	\draw[->] (Mainboard) -> (LAN Switch);
+	\draw[->] (LAN Switch) -> (WLAN Router);
 	\draw[->] (Mainboard) -> (Soundplayer Innenraum);
 	\draw[->] (Mainboard) -> (USB Hub);
 	\draw[->] (Grafikkarten) -> (Bildschirme Seitenfenstern);
@@ -42,5 +43,6 @@
 	\draw[->] (USB Hub) -> (LED Türtafeln);
 	\draw[->] (Soundplayer Innenraum) -> (Verstärker);
 	\draw[->] (Verstärker) -> (Lautsprecher);
-	\node[font=\Large] (N2) at (3,-1) {\faWifi};
+	\node[font=\Large] (N2) at (3.2,-1) {\faWifi};
+	\node[font=\Large] (N3) at (2.8,2) {\faWifi};
 \end{tikzpicture}

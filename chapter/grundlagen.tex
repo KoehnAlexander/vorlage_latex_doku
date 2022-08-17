@@ -87,6 +87,6 @@ Da bei E-Papieren vorwiegend Bilder dargestellt werden, soll im folgenden die Be
 Als Beispiel dient ein Schwarz-Weiß E-Papier mit einer Farbtiefe von 16 Stufen. Die Farbtiefe $ FT $\nomenclature{FT}{Farbtiefe} beträgt bei 16 Stufen zwar nur 5 Bit, um aber auf gängige Datengrößen zu kommen, sollte für die Berechnung 8 Bit pro Pixel und damit 1 Byte angenommen werden. Das Dateiformat JPEG \nomenclature{JPEG}{Joint Photographic Experts Group} nutzt 8 Bit Pro Farbkanal. Die Pixelanzahl pro Zeile $ P $ \nomenclature{P}{Pixelanzahl pro Zeile}beträgt 1920 Pixel und Zeilenanzahl $ Z $\nomenclature{Z}{Zeilenanzahl} 1080 Pixel. Der Komprimierungsfaktor $ KF $\nomenclature{KF}{Komprimierungsfaktor} ist eine Zahl, die angibt wie stark die reine Datenmenge des Bildes noch durch digitale Komprimierungsverfahren reduziert werden kann. Wir benutzen hier einen Komprimierungsfaktor von 12. \cite[Vgl. Seite 22]{Buhler.2018}
 \begin{align}
 		Datenmenge &= \frac{P \times PZ \times FT}{KF} \label{eq:Bilddatenmenge}\\
-		&= \frac{1920\,\mathrm{Pixel pro Zeile}\times 1080\,\mathrm{Zeilen} \times 8\,\frac{\mathrm{Bit}}{\mathrm{Pixel}}}{12} \\
+		&= \frac{1920\,\frac{\mathrm{Pixel}}{\mathrm{Zeile}}\times 1080\,\mathrm{Zeilen} \times 8\,\frac{\mathrm{Bit}}{\mathrm{Pixel}}}{12} \\
 		&= 1382400\,\mathrm{Bit} = 1,3824\,\mathrm{MBit} = 172,8\,\mathrm{KByte}
 \end{align}
