@@ -1,7 +1,27 @@
 \chapter{Konzeptentwurf für eine elektrische und informationstechnische Anbindung der Komponenten} \label{cha:Konzeptentwurf}
 Auf Basis der unter \ref{cha:Analyse} gewonnenen Erkenntnissen zum Strombedarf und Informationsbedarf der Komponenten werden in diesem Kapitel Entwürfe erarbeitet, wie die Komponenten in eine Fahrzeugarchitektur implementiert werden können.
-Im ersten Schritt werden die durch die Analyse gewonnen Erkenntnisse genutzt, um Komponenten nach ihren Eigenschaften zu sortieren.
-Abweichend von der Betrachtungsweise der verwendeten Technologie und des Einbauortes, ist es sinnvoll nach den Art der Informationsbedarfes zu unterteilen.
+\section{Einteilung}
+Im ersten Schritt werden die durch die Analyse gewonnenen Erkenntnisse genutzt, um Komponenten nach ihren Eigenschaften zu sortieren.
+Die erste Gruppe an Komponenten benötigt einen Speicher für 50 Inhalten von weniger als $ 50\,\mathrm{MByte} $.
+Die zweite Gruppe an Komponenten benötigt einen Speicher von weniger als $ 1\,\mathrm{GByte} $.
+Die letzte Gruppe benötigt einen Speicher von mehr als $ 1\,\mathrm{GByte} $.
+
+Eine weitere Unterscheidung ist die Einteilung der Komponenten nach der Darstellungsart zwischen Bildern und Videos.
+
+\section{Bordnetz}
+Heutige Fahrzeuge besitzen an allen Stellen des Fahrzeuges Steuergeräte, die miteinander kommunizieren. Dazu werden Bussysteme genutzt, um die Informationen zu tauschen.
+Im folgenden werden kurz die gängigen Bussysteme in der Fahrzeugtechnik vorgestellt.
+Zuerst werden die draht-gebundenen und danach die drahtlosen Techniken vorgestellte
+\subsection{LIN-Bus}
+\subsection{CAN-Bus}
+\subsection{FlexRay}
+\subsection{MOST}
+\subsection{Automotive Ethernet}
+\subsection{WLAN}
+\subsection{Bluetooth}
+
+
+Abweichend von der Betrachtungsweise der verwendeten Technologie und des Einbauortes, ist es sinnvoll nach den Art der Informationsbedarfes zu unterteilen. Die Unterteilung 
 Die Anforderungen an die Komponenten sind gleich. Jede Komponente muss in Echtzeit auf mindestens 10 Kollektionen umschalten können.
 
 Eine Komponente besteht in diesem Fall immer aus einer Anzeigefläche mit einer dazugehörigen Steuerung, die aus Bild oder Videodateien die einzelnen Bildpunkte setzt.
@@ -23,3 +43,9 @@ Ein weiterer wichtiges Merkmal ist die Geschwindigkeit zum
 
 
 Architekturdiagramm einer Möglichen Variante:
+\begin{figure}[hbt]
+	\centering
+	\input{tikz/architektur1.tex}
+	\caption[Netzwerkarchitektur Ansteuerung Komponenten]{Netzwerkarchitektur Ansteuerung Komponenten}
+	\label{fig:architektur1}
+\end{figure}
