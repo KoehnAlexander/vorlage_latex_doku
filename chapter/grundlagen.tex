@@ -90,3 +90,38 @@ Als Beispiel dient ein Schwarz-Weiß E-Papier mit einer Farbtiefe von 16 Stufen.
 		&= \frac{1920\,\frac{\mathrm{Pixel}}{\mathrm{Zeile}}\times 1080\,\mathrm{Zeilen} \times 8\,\frac{\mathrm{Bit}}{\mathrm{Pixel}}}{12} \\
 		&= 1382400\,\mathrm{Bit} = 1,3824\,\mathrm{MBit} = 172,8\,\mathrm{KByte}
 \end{align}
+\section{Bordnetz}
+Moderne Fahrzeuge besitzen an allen Stellen des Fahrzeuges Steuergeräte. Zur Kommunikation zwischen den Steuergeräten werden Bussysteme genutzt, um die Informationen auszutauschen.
+Im folgenden werden die gängigen Bussysteme in der Fahrzeugtechnik vorgestellt.
+Zuerst werden die draht-gebundenen und danach die drahtlosen Techniken vorgestellt. Im Anschluss erfolgt ein Vergleich zwischen den Merkmalen der einzelnen Bussysteme.
+\subsection{Controller Area Network (CAN \nomenclature{CAN}{Controller Area Network})}
+CAN wird zum Austausch von Mess-, Steuer- und Regelsignalen genutzt. Er ist ein bitstrom-orientiertes System. Er basiert auf Differenzsignalübertragung und benutzt dazu verdrillte Leiterpaare.
+Der High-Speed CAN besitzt Bitrate von $ 250\,\frac{\mathrm{kBit}}{\mathrm{s}} $ bis zu $ 1\,\frac{\mathrm{MBit}}{\mathrm{s}}$.
+Der Low-Speed CAN besitzt Bitraten kleiner als $ 125\,\frac{\mathrm{kBit}}{\mathrm{s}} $. Der CAN verfügt über Fehlererkennung und Sicherungssysteme. Das Senden von Nachrichten erfolgt über eine Priorisierung der Nachrichten. \cite[Vgl. Seite 57 ff.]{Zimmermann.2014}
+\paragraph{Performance}
+Je nach Ausschöpfung der Nutzdatenmenge pro Botschaft liegt die maximale Übertragungsgeschwindigkeit zwischen $ 7,7\,\frac{\mathrm{kByte}}{\mathrm{s}} $ bei einem Byte Nutzdaten pro Botschaft und $ 29,6\,\frac{\mathrm{kByte}}{\mathrm{s}} $ bei acht Byte Nutzdaten. Die Latenz einer Botschaft ist nicht deterministisch bestimmbar und ist abhängig von der aktuellen Buslast und der Priorität der Botschaft. Die Übertragungsdauer einer Botschaft mit maximaler Nutzdatenmenge bei $ 500\,\frac{\mathrm{kBit}}{\mathrm{s}} $ Bittakt liegt bei $ 270\,\mathrm{\mu s}$.
+Durch den Einsatz von der weiterentwickelten CAN-Version CAN FD (CAN with Flexible Data Rate) kann die Übertragungsgeschwindigkeit durch größere Nutzdatenmengen und höherer Bittakte auf bis zu $ 260\,\frac{\mathrm{kByte}}{\mathrm{s}} $ gesteigert werden. \cite[Vgl. Seite 76 ff.]{Zimmermann.2014}
+\subsection{Local Interconnect Network (LIN\nomenclature{LIN}{Local Interconnect Network})} 
+Der LIN soll mit einem einfacheren Aufbau eine kostengünstige Alternative zum CAN für Low Speed Sensor Aktor Anwendungen bieten.
+LIN ist ein Master-Slave gesteuertes Netzwerk, worin der Master die gesamte Kommunikation steuert. Die Bitrate beträgt üblicherweise $ 19,2\,\frac{\mathrm{kBit}}{\mathrm{s}} $
+\cite[Vgl. Seite 79 ff.]{Zimmermann.2014}
+\paragraph{Performance}
+Für Botschaften mit acht Byte Nutzdaten werden Sendezeitraster von 10 ms benötigt. \cite[Vgl. Seite 94 f.]{Zimmermann.2014}
+\subsection{FlexRay}
+Mit dem Hintergrund, dass bei bei CAN keine deterministischen Aussagen zur Latenz getroffen werden können, wurde der FlexRay zum Austausch zeitkritischer Mess-, Steuer- und Regelsignalen mit hoher Fehlersicherheit. Die Bitraten beim FlexRay betragen zwischen $ 2,5\,\frac{\mathrm{MBit}}{\mathrm{s}} $ und $ 10\,\frac{\mathrm{MBit}}{\mathrm{s}} $.
+\cite[Vgl. Seite 96 ff.]{Zimmermann.2014}
+\subsection{Media Oriented Systems Transport (MOST \nomenclature{MOST}{Media Oriented Systems Transport})}
+MOST ist für Telematik- und Multimedia- Anwendungen mit hohen Übertragungsbandbreiten konzipiert worden.
+Die Bitraten betragen in unterschiedlichen Stufen $ 25 $, $ 50 $ und $ 150\,\frac{\mathrm{MBit}}{\mathrm{s}} $.
+\paragraph{Performance}
+Nutzdatenrate bei MOST25 bei $ 2,6\,\frac{\mathrm{MByte}}{\mathrm{s}} $, MOST50 $ 5,6\,\frac{\mathrm{MByte}}{\mathrm{s}} $  und MOST150 bei $ 17,8\,\frac{\mathrm{MByte}}{\mathrm{s}} $.
+
+\cite[Vgl. Seite 119 ff.]{Zimmermann.2014}
+\subsection{Automotive Ethernet}
+Paar ungeschirmt verdrillte Drahtleitungen.
+Bis zu 1500 Byte Nutzdaten pro Frame möglich
+\cite[Vgl. Seite 138 ff.]{Zimmermann.2014}
+\subsection{WLAN}
+
+\subsection{Bluetooth}
+\subsection{Vergleich der einzelnen Bussysteme}
