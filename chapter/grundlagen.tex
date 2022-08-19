@@ -88,57 +88,73 @@ Videoprojektoren können auf Basis unterschiedlicher Technologien für die Situa
 Zu Unterscheidung von Projektionsverfahren können diese wieder in aktive und passive Systeme eingeteilt werden. Heutzutage werden vorwiegend passive Systeme, sogenannte Lichtventilprojektoren, eingesetzt. \cite[Vgl. Seite 551]{Schmidt.2021} \\
 Für die Auswahl des richtigen Projektors ist die Einsatzumgebung von Bedeutung. Je nach Helligkeit des Raumes ist die Helligkeit und der Kontrast unterschiedlich auszuwählen. Bei hoher Umgebungshelligkeit ist ein Projektor mit hoher Helligkeit vorzuziehen. Dabei ist ein niedrigerer Kontrast durch die Aufhellung der dunklen Bildbereiche durch das Umgebungslicht nicht negativ. \cite[Vgl. Seite 562]{Schmidt.2021}
 \subsection{Elektronisches Papier}
-Elektronisches Papier (E-Papier\nomenclature{E-Papier}{Elektronisches Papier}) sind Bildschirme deren visuelle Anmutung Papier entspricht und deren Inhalt durch Elektronik gesteuert wird. Häufig sind diese Displays passiv, also reflektieren nur Licht und erzeugen keines. Bei manchen E-Papieren ist seitlich eine Hintergrundbeleuchtung, die über eine Folie das Display beleuchtet. Im folgenden wird die häufig verwendete Technologie der Elektrophorese für die Displays erläutert. \\
+Elektronisches Papier (E-Papier\nomenclature{E-Papier}{Elektronisches Papier}) ist eine Bezeichnung für Bildschirme, deren visuelle Anmutung Papier entspricht und deren Inhalt durch Elektronik gesteuert wird. Häufig sind diese Displays passiv, also reflektieren nur Licht und erzeugen keines. Bei manchen E-Papieren ist seitlich eine Hintergrundbeleuchtung, die über eine Folie das Display beleuchtet. Im folgenden wird die häufig verwendete Technologie der Elektrophorese für die Displays erläutert. \\
 \glqq Elektronisches Papier lässt sich vereinfacht als dünne, flexible Folie beschreiben, in der in Flüssigkeit eingelagerte, elektrisch geladene Partikel (als elektronische Tinte bezeichnet) ein schwarz-weißes oder allgemein zweifarbiges Bild ergeben. Dies wird ermöglicht, indem über Elektroden elektrische Felder auf die Partikel wirken, die sich entsprechend der Ladung des angelegten Feldes ausrichten. \grqq \cite[Seite 568]{Schryen.2002} \\
+%TODO Bild der schichten einbauen%
 Pro Pixel eines Bildes wird eine Mikrokapsel genutzt in der sich mehrere positiv geladene weiße Partikel und negativ geladene schwarze Partikel befinden. Auf beiden Seiten der Folie befinden sich Elektroden, wovon eine auf der Betrachtungsseite transparent ist. Wird auf der transparenten Elektrode eine negative Spannung und auf der inneren Elektrode eine positive, richten sich die Mikrokapseln dementsprechend aus, dass die positiven Partikel nach außen zeigen. Das Bild ist dementsprechend weiß. \cite[Vgl. Seite 567 f.]{Schryen.2002} \\
-E-Papier benötigt nur beim ändern der Polarität der Pixel elektrische Energie, wodurch der Strombedarf bei seltene Bildschirmänderungen gering ist.
+E-Papiere benötigen nur beim Ändern der Polarität der Pixel elektrische Energie, wodurch der Strombedarf bei seltene Bildschirmänderungen gering ist. \\
 Vorteile gegenüber LCD-Displays sind die niedrigeren Herstellungskosten, geringeres Gewicht und die bessere Lesbarkeit. \cite[Vgl. Seite 569]{Schryen.2002}
 Da bei E-Papieren vorwiegend Bilder dargestellt werden, soll im folgenden die Berechnung der Dateigröße eines Bildes für ein mögliches E-Papier erläutert werden.
-Als Beispiel dient ein Schwarz-Weiß E-Papier mit einer Farbtiefe von 16 Stufen. Die Farbtiefe $ FT $\nomenclature{FT}{Farbtiefe} beträgt bei 16 Stufen zwar nur 5 Bit, um aber auf gängige Datengrößen zu kommen, sollte für die Berechnung 8 Bit pro Pixel und damit 1 Byte angenommen werden. Das Dateiformat JPEG \nomenclature{JPEG}{Joint Photographic Experts Group} nutzt 8 Bit Pro Farbkanal. Die Pixelanzahl pro Zeile $ P $ \nomenclature{P}{Pixelanzahl pro Zeile}beträgt 1920 Pixel und Zeilenanzahl $ Z $\nomenclature{Z}{Zeilenanzahl} 1080 Pixel. Der Komprimierungsfaktor $ KF $\nomenclature{KF}{Komprimierungsfaktor} ist eine Zahl, die angibt wie stark die reine Datenmenge des Bildes noch durch digitale Komprimierungsverfahren reduziert werden kann. Wir benutzen hier einen Komprimierungsfaktor von 12. \cite[Vgl. Seite 22]{Buhler.2018}
+Als Beispiel dient ein Schwarz-Weiß E-Papier mit einer Farbtiefe von 16 Stufen. Die Farbtiefe $ FT $\nomenclature{FT}{Farbtiefe} beträgt bei 16 Stufen zwar nur 5 Bit, um aber auf gängige Datengrößen zu kommen, sollte für die Berechnung 8 Bit pro Pixel und damit 1 Byte angenommen werden. Das Dateiformat JPEG \nomenclature{JPEG}{Joint Photographic Experts Group} nutzt 8 Bit pro Farbkanal. Die Pixelanzahl pro Zeile $ P $ \nomenclature{P}{Pixelanzahl pro Zeile}beträgt 1920 Pixel und Zeilenanzahl $ Z $\nomenclature{Z}{Zeilenanzahl} 1080 Pixel. Der Komprimierungsfaktor $ KF $\nomenclature{KF}{Komprimierungsfaktor} ist eine Zahl, die angibt wie stark die reine Datenmenge des Bildes noch durch digitale Komprimierungsverfahren reduziert werden kann. Wir benutzen hier einen Komprimierungsfaktor von 12. \cite[Vgl. Seite 22]{Buhler.2018}
 \begin{align}
 		Datenmenge &= \frac{P \times PZ \times FT}{KF} \label{eq:Bilddatenmenge}\\
 		&= \frac{1920\,\frac{\mathrm{Pixel}}{\mathrm{Zeile}}\times 1080\,\mathrm{Zeilen} \times 8\,\frac{\mathrm{Bit}}{\mathrm{Pixel}}}{12} \\
 		&= 1382400\,\mathrm{Bit} = 1,3824\,\mathrm{MBit} = 172,8\,\mathrm{KByte}
 \end{align}
 \section{Bordnetz}
-Moderne Fahrzeuge besitzen an allen Stellen des Fahrzeuges Steuergeräte. Zur Kommunikation zwischen den Steuergeräten werden Bussysteme genutzt, um die Informationen auszutauschen.
-Im folgenden werden die gängigen Bussysteme in der Fahrzeugtechnik vorgestellt.
-Zuerst werden die draht-gebundenen und danach die drahtlosen Techniken vorgestellt. Im Anschluss erfolgt ein Vergleich zwischen den Merkmalen der einzelnen Bussysteme.
+Moderne Fahrzeuge besitzen an allen Stellen des Fahrzeuges Steuergeräte. Zur Kommunikation zwischen den Steuergeräten werden Bussysteme genutzt, um die Informationen auszutauschen. \\
+Im folgenden werden die gängigen Bussysteme in der Fahrzeugtechnik vorgestellt. Zuerst werden die draht-gebundenen und danach die drahtlosen Techniken erläutert. Im Anschluss erfolgt ein Vergleich zwischen den Merkmalen der einzelnen Bussysteme.
 \subsection{Controller Area Network (CAN \nomenclature{CAN}{Controller Area Network})}
-CAN wird zum Austausch von Mess-, Steuer- und Regelsignalen genutzt. Er ist ein bitstrom-orientiertes System. Er basiert auf Differenzsignalübertragung und benutzt dazu verdrillte Leiterpaare.
-Der High-Speed CAN besitzt Bitrate von $ 250\,\frac{\mathrm{kBit}}{\mathrm{s}} $ bis zu $ 1\,\frac{\mathrm{MBit}}{\mathrm{s}}$.
-Der Low-Speed CAN besitzt Bitraten kleiner als $ 125\,\frac{\mathrm{kBit}}{\mathrm{s}} $. Der CAN verfügt über Fehlererkennung und Sicherungssysteme. Das Senden von Nachrichten erfolgt über eine Priorisierung der Nachrichten. \cite[Vgl. Seite 57 ff.]{Zimmermann.2014}
+CAN wird zum Austausch von Mess-, Steuer- und Regelsignalen genutzt. Es ist ein bitstrom-orientiertes System. Es basiert auf Differenzsignalübertragung und benutzt dazu verdrillte Leiterpaare. Es ist ein ereignisgesteuertes System, das heißt eine Nachricht wird durch ein Ereignis gesendet. \\
+Der High-Speed CAN besitzt Bitraten von $ 250\,\frac{\mathrm{kBit}}{\mathrm{s}} $ bis zu $ 1\,\frac{\mathrm{MBit}}{\mathrm{s}}$.
+Der Low-Speed CAN besitzt Bitraten kleiner als $ 125\,\frac{\mathrm{kBit}}{\mathrm{s}} $. 
+Der CAN verfügt über Fehlererkennung und Sicherungssysteme. Das Senden von Nachrichten erfolgt über eine Priorisierung der Nachrichten. \cite[Vgl. Seite 57 ff.]{Zimmermann.2014}
 \paragraph{Performance}
 Je nach Ausschöpfung der Nutzdatenmenge pro Botschaft liegt die maximale Übertragungsgeschwindigkeit zwischen $ 7,7\,\frac{\mathrm{kByte}}{\mathrm{s}} $ bei einem Byte Nutzdaten pro Botschaft und $ 29,6\,\frac{\mathrm{kByte}}{\mathrm{s}} $ bei acht Byte Nutzdaten. Die Latenz einer Botschaft ist nicht deterministisch bestimmbar und ist abhängig von der aktuellen Buslast und der Priorität der Botschaft. Die Übertragungsdauer einer Botschaft mit maximaler Nutzdatenmenge bei $ 500\,\frac{\mathrm{kBit}}{\mathrm{s}} $ Bittakt liegt bei $ 270\,\mathrm{\mu s}$.
-Durch den Einsatz von der weiterentwickelten CAN-Version CAN FD (CAN with Flexible Data Rate) kann die Übertragungsgeschwindigkeit durch größere Nutzdatenmengen und höherer Bittakte auf bis zu $ 260\,\frac{\mathrm{kByte}}{\mathrm{s}} $ gesteigert werden. \cite[Vgl. Seite 76 ff.]{Zimmermann.2014}
+Durch den Einsatz der weiterentwickelten CAN-Version CAN FD (CAN with Flexible Data Rate\nomenclature{CAN FD}{CAN with Flexible Data Rate}) kann die Übertragungsgeschwindigkeit durch größere Nutzdatenmengen und höherer Bittakte auf bis zu $ 260\,\frac{\mathrm{kByte}}{\mathrm{s}} $ gesteigert werden. \cite[Vgl. Seite 76 ff.]{Zimmermann.2014}
 \subsection{Local Interconnect Network (LIN\nomenclature{LIN}{Local Interconnect Network})} 
 Der LIN soll mit einem einfacheren Aufbau eine kostengünstige Alternative zum CAN für Low Speed Sensor Aktor Anwendungen bieten.
-LIN ist ein Master-Slave gesteuertes Netzwerk, worin der Master die gesamte Kommunikation steuert. Die Bitrate beträgt üblicherweise $ 19,2\,\frac{\mathrm{kBit}}{\mathrm{s}} $
+LIN ist ein Master-Slave gesteuertes Netzwerk, worin der Master die gesamte Kommunikation steuert, indem er die Slaves nach einem Zeitplan Berechtigungen zum Senden gibt. Die Bitrate beträgt üblicherweise $ 19,2\,\frac{\mathrm{kBit}}{\mathrm{s}} $
 \cite[Vgl. Seite 79 ff.]{Zimmermann.2014}
 \paragraph{Performance}
-Für Botschaften mit acht Byte Nutzdaten werden Sendezeitraster von 10 ms benötigt. \cite[Vgl. Seite 94 f.]{Zimmermann.2014}
+Für Botschaften mit acht Byte Nutzdaten werden Sendezeitraster von 10 ms benötigt. \cite[Vgl. Seite 94 f.]{Zimmermann.2014} Die Nutzdatenmenge beträgt dementsprechend ca. $ 800\,\frac{\mathrm{Byte}}{s} $.
 \subsection{FlexRay}
 Mit dem Hintergrund, dass bei bei CAN keine deterministischen Aussagen zur Latenz getroffen werden können, wurde der FlexRay zum Austausch zeitkritischer Mess-, Steuer- und Regelsignalen mit hoher Fehlersicherheit. Die Bitraten beim FlexRay betragen zwischen $ 2,5\,\frac{\mathrm{MBit}}{\mathrm{s}} $ und $ 10\,\frac{\mathrm{MBit}}{\mathrm{s}} $.
 \cite[Vgl. Seite 96 ff.]{Zimmermann.2014}
+\paragraph{Performance}
+Die Nutzdatenmenge beträgt je nach Bitrate $ X\,\frac{\mathrm{Byte}}{\mathrm{s}} $
 \subsection{Media Oriented Systems Transport (MOST \nomenclature{MOST}{Media Oriented Systems Transport})}
 MOST ist für Telematik- und Multimedia- Anwendungen mit hohen Übertragungsbandbreiten konzipiert worden.
+Die Botschaften werden dabei nach Kanälen gruppiert in denen sich Audio-, Video- oder andere Daten befinden.
 Die Bitraten betragen in unterschiedlichen Stufen $ 25 $, $ 50 $ und $ 150\,\frac{\mathrm{MBit}}{\mathrm{s}} $.
 \paragraph{Performance}
 Nutzdatenrate bei MOST25 bei $ 2,6\,\frac{\mathrm{MByte}}{\mathrm{s}} $, MOST50 $ 5,6\,\frac{\mathrm{MByte}}{\mathrm{s}} $  und MOST150 bei $ 17,8\,\frac{\mathrm{MByte}}{\mathrm{s}} $.
-
 \cite[Vgl. Seite 119 ff.]{Zimmermann.2014}
 \subsection{Automotive Ethernet}
-Paar ungeschirmt verdrillte Drahtleitungen.
-Bis zu 1500 Byte Nutzdaten pro Frame möglich
-\cite[Vgl. Seite 138 ff.]{Zimmermann.2014}
-\subsection{WLAN}
-
+Automotive Ethernet ist standardisiert in der IEEE XX und basiert auf dem normalen Ethernet Protokoll. Der Unterschied besteht im Nutzen von einem Paar ungeschirmt verdrillte Drahtleitungen.
+\paragraph{Performance}
+Es sind bis zu 1500 Byte Nutzdaten pro Frame möglich. Es ergibt sich eine maximal mögliche Nutzdatenmenge von $ X\,\frac{\mathrm{MByte}}{\mathrm{s}} $. \cite[Vgl. Seite 138 ff.]{Zimmermann.2014}
+\subsection{Wireless Local Area Network (WLAN\nomenclature{WLAN}{Wireless Local Area Network})}
+WLAN ist ein drahtloser Kommunikationsstandard.
 \subsection{Bluetooth}
+
 \subsection{Vergleich der einzelnen Bussysteme}
 Im folgenden werden die oben vorgestellten Bussysteme miteinander verglichen.
-Funktionsweise
-Bittakt
-Übertragungsbandbreite
-Latenz
-Jitter
-Fehlerabsicherung
+\begin{table}[hbt]	
+	\centering
+	\renewcommand{\arraystretch}{1.5}	% Skaliert die Zeilenhöhe der Tabelle
+	\captionabove[Berechnung des Speicherbedarfes für ein Bild]{Berechnung des Speicherbedarfes für ein Bild}
+	\label{tab:Speicherbedarf}
+	\begin{tabular}{c|ccccccc}
+		 & \parbox[t]{0.2\linewidth}{\centering CAN} & \parbox[t]{0.2\linewidth}{\centering LIN} & \parbox[t]{0.2\linewidth}{\centering FlexRay} & \parbox[t]{0.2\linewidth}{\centering MOST} & \parbox[t]{0.2\linewidth}{\centering Automotive Ethernet}  & \parbox[t]{0.2\linewidth}{\centering WLAN} & \parbox[t]{0.2\linewidth}{\centering Bluetooth}\\ 
+		\hline 
+		\hline 
+		Funktionsweise &&&&&&& \\
+		Bittakt &&&&&&& \\
+		Übertragungsbandbreite &&&&&&& \\
+		Latenz &&&&&&& \\
+		Jitter &&&&&&& \\
+		Fehlerabsicherung &&&&&&& \\
+	\end{tabular} 
+\end{table}
+%TODO Grundlagenkapitel fertigstellen%
