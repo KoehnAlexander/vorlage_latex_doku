@@ -1,0 +1,24 @@
+\begin{tikzpicture}[first style/.style={rectangle, rounded corners}, steuer style/.style={draw, rectangle, text width=2.8cm, align=center}]
+	\draw (-3, 3) arc (-170:170:12mm);
+	\draw[very thick] (-2.4, 2.25) arc (-120:120:11mm) ;
+	\draw[->, red] (-5, 3.2) -- node[above] {Licht} (-3.5 , 3.2);
+	\node[first style] (A) at (-2, 4.6) {Auge};
+	\node[first style, ultra thick] (P1) at (-4, 5){Physik};
+	\node[first style, ultra thick] (P2) at (0, 5){Physiologie};
+	\node[first style, right=of P2, ultra thick] (P3) at (4, 5) {Psychologie};
+	\node[steuer style] (S6) at (5, 3.5) {Nervöse Filtersteuerung};
+	\node[steuer style, thick] (S1) at (5, 0) {Wahrnehmung};
+	\node[steuer style] (S5) at (1, 1.5) {Nervöse Informationsverarbeitung};
+	\node[steuer style] (S2) at (5, -2)  {Stimmungen und Gefühle};
+	\node[steuer style] (S4) at (1, 0) {Andere Sinnesorgane};
+	\node[steuer style] (S3)  at (1, -2) {Gespeicherte Erfahrung};
+	\draw[very thick] (S5) -- (-0.8, 2.9);
+	\draw (S1) -- (S2);
+	\draw (S1) -- (S3);
+	\draw (S1) -- (S4);
+	\draw (S1) -- (S5);
+	\draw (S1) -- (S6);
+	\draw (S5) -- (S6);
+	\draw (S2) -- (S3);
+	\draw (S4) -- (S3);
+\end{tikzpicture}
