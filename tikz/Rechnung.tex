@@ -1,0 +1,7 @@
+\begin{tikzpicture}[first style/.style={rectangle, draw, rounded corners, align=center}, steuer style/.style={draw, rectangle, align=center}, second/.style={draw, rectangle, align=center, text width=3cm}]
+	\draw (0,0) -- (5,0) -- node[right] {$ x $} (5, 0.5) -- node[above] {$ d $}(0,0);
+	\draw (1.1, 0) arc (0:8:8mm);
+	\node[] (S) at (1, -1) {$ \sin(A) = \frac{x}{d} $};
+	\draw[->] (S) --(0.8, 0.05);
+	\draw[<->] (5.5,0) -- node[right] {$ d_{i} $} (5.5,2);
+\end{tikzpicture}

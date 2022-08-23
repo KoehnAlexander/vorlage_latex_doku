@@ -1,13 +1,56 @@
 \chapter{Konzeptentwurf für eine informationstechnische Anbindung der Komponenten} \label{cha:Konzeptentwurf}
-Auf Basis der unter \ref{cha:Analyse} gewonnenen Erkenntnissen zum Strombedarf und Informationsbedarf der Komponenten werden in diesem Kapitel Entwürfe erarbeitet, wie die Komponenten in eine Fahrzeugarchitektur implementiert werden können.
+Auf Basis der unter \ref{cha:Analyse} gewonnenen Erkenntnissen zum Speicherbedarf der Komponenten werden in diesem Kapitel Entwürfe erarbeitet, wie die Komponenten in eine Fahrzeugarchitektur implementiert werden können.
 \section{Einteilung der Komponenten}
-Im ersten Schritt werden die durch die Analyse gewonnenen Erkenntnisse genutzt, um Komponenten nach ihren Eigenschaften zu sortieren.
-Die erste Gruppe an Komponenten benötigt einen Speicher für 50 Inhalten von weniger als $ 50\,\mathrm{MByte} $.
-Die zweite Gruppe an Komponenten benötigt einen Speicher von weniger als $ 1\,\mathrm{GByte} $.
-Die letzte Gruppe benötigt einen Speicher von mehr als $ 1\,\mathrm{GByte} $.
+Im ersten Schritt werden die durch die Analyse gewonnenen Erkenntnisse genutzt, um Komponenten nach ihren Speichereigenschaften zu sortieren. \\
+Die erste Gruppe benötigt einen Speicher für 50 Inhalte von weniger als $ 30\,\mathrm{MByte} $, die zweite Gruppe von weniger als $ 1\,\mathrm{GByte} $, die dritte Gruppe von weniger als $ 5\,\mathrm{GByte} $. \\
+Tabelle \ref{tab:Einteilung} weist die Komponenten den Gruppen zu. Für die Konzeptentwürfe werden allen Komponenten die maximalen Speichergrößen der Gruppe zugeordnet. 
+\\
+\begin{table}[hbt]	
+	\centering
+	\renewcommand{\arraystretch}{1.5}	% Skaliert die Zeilenhöhe der Tabelle
+	\captionabove[Einteilung der Komponenten nach Speichergröße]{Einteilung der Komponenten nach Speichergröße}
+	\label{tab:Einteilung}
+	\begin{tabular}{c|c|c}
+		\textbf{Erste Gruppe (EG\nomenclature{EG}{Erste Gruppe})} & \textbf{Zweite Gruppe (ZG\nomenclature{ZG}{Zweite Gruppe})} & \textbf{Dritte Gruppe (DG\nomenclature{DG}{Dritte Gruppe})} \\ 
+		$ 30\,\mathrm{MByte} $ & $ 1\,\mathrm{GByte} $ & $ 5\,\mathrm{GByte} $ \\
+		\hline
+		\hline
+		\textbf{Bild-Komponenten} & \textbf{Bild-Komponenten} & \textbf{Bild-Komponenten} \\
+		\parbox[t]{0.3\linewidth}{\centering E-Papier in der Frontschürze} &  &  \\
+		\parbox[t]{0.3\linewidth}{\centering E-Papier über den vorderen Radkästen} &  & \\
+		\parbox[t]{0.3\linewidth}{\centering E-Papier in der Heckleuchte} &  &  \\
+		\textbf{Video-Komponenten} & \textbf{Video-Komponenten} & \textbf{Video-Komponenten} \\
+		\parbox[t]{0.3\linewidth}{\centering LED-Streifen in der Frontschürze} & \parbox[t]{0.3\linewidth}{\centering LED-Matrix im Dachhimmel} & \parbox[t]{0.3\linewidth}{\centering Videoprojektoren im Fußraum} \\
+		\parbox[t]{0.3\linewidth}{\centering LED-Streifen in den Radkästen} &  & \parbox[t]{0.3\linewidth}{\centering Videoprojektoren in\\den Außenspiegeln} \\ 
+		\parbox[t]{0.3\linewidth}{\centering LED-Streifen in der Heckleuchte} &  & \parbox[t]{0.3\linewidth}{\centering Bildschirme in den\\hinteren Seitenfenstern} \\ 
+		\parbox[t]{0.3\linewidth}{\centering LED-Streifen im Interieur} &  & \parbox[t]{0.3\linewidth}{\centering Bildschirme in den\\hinteren Seitenfenstern} \\
+		\parbox[t]{0.3\linewidth}{\centering LED Türtafeln} & & \parbox[t]{0.3\linewidth}{\centering  Bildschirme in der Einstiegsleiste} \\
+		\parbox[t]{0.3\linewidth}{\centering Morphende Oberfläche\\in der Mittelkonsole} & & \parbox[t]{0.3\linewidth}{\centering Durchsichtiger Bildschirm\\im Dachfenster} \\
+	\end{tabular} 
+\end{table}
+Diese erste Einteilung liefert eine Gruppierung mit der Speichergröße. Eine weitere Einteilung nach Komponenten, die statisch Bilder anzeigen oder dynamisch Videos anzeigen, ist relevant für die Dimensionierung der Busanbindung. \\
+Bei Komponenten beträgt die Größe eines Inhalts die Speichergröße der Gruppe durch die 50 Inhalte. Bei Komponenten, die nur Bilder anzeigen ist dieser Betrag gleich des Betrags für ein Bild.
+\begin{align}
+	EG &= \frac{30\,\mathrm{MByte}}{50} = 600\,\mathrm{kByte} \\
+	ZG &= \frac{1\,\mathrm{GByte}}{50} =  20\,\mathrm{MByte} \\
+	DG &= \frac{5\,\mathrm{GByte}}{50} = 100\,\mathrm{MByte}
+\end{align}
+Bei Komponenten, die Videos anzeigen, beträgt die Größe der einzelnen Bilder in den Videos die Größe der oben berechneten Inhalte durch die Anzahl der Bilder pro Videos.
+\begin{align}
+	EG &= \frac{600\,\mathrm{kByte}}{10\,\mathrm{s} \cdot 24\,\mathrm{fps}} = 2,50\,\mathrm{kByte} \\
+	ZG &= \frac{20\,\mathrm{MByte}}{10\,\mathrm{s} \cdot 24\,\mathrm{fps}} = 83,33\,\mathrm{kByte} \\
+	DG &= \frac{100\,\mathrm{MByte}}{10\,\mathrm{s} \cdot 24\,\mathrm{fps}} = 416,67\,\mathrm{kByte}
+\end{align}
+Die Datenrate der Video-Komponenten können berechnet werden, indem die Größe der Inhalt durch die Länge des Videos dividiert wird.
+\begin{align}
+	EG &= \frac{600\,\mathrm{kByte}}{10\,\mathrm{s}} = 60\,\frac{\mathrm{kByte}}{\mathrm{s}}\\
+	ZG &= \frac{20\,\mathrm{MByte}}{10\,\mathrm{s}} = 2.000\,\frac{\mathrm{kByte}}{\mathrm{s}} \\
+	DG &= \frac{100\,\mathrm{MByte}}{10\,\mathrm{s}} = 10.000\,\frac{\mathrm{kByte}}{\mathrm{s}}
+\end{align}
+Die erste Gruppe besteht aus Bild- und Videokomponenten, die zweite und dritte Gruppe nur aus Videokomponenten.
 
-Eine weitere Unterscheidung ist die Einteilung der Komponenten nach der Darstellungsart zwischen Bildern und Videos.
 
+%TODO Ab Hier weitermachen%
 
 Abweichend von der Betrachtungsweise der verwendeten Technologie und des Einbauortes, ist es sinnvoll nach den Art der Informationsbedarfes zu unterteilen. Die Unterteilung 
 Die Anforderungen an die Komponenten sind gleich. Jede Komponente muss in Echtzeit auf mindestens 10 Kollektionen umschalten können.
