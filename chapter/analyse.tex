@@ -3,13 +3,13 @@
 Nachfolgend werden alle Komponenten unter den von \ref{cha:Kriterien} genannten Kriterien analysiert. Im Zuge der Analyse werden im nächsten Kapitel Entwürfe für die Weiterentwicklung der Komponenten dargestellt.\\
 Die Analyse basiert auf den Komponenten des Prototypen, aber beschränkt sich nicht auf die einzeln verbaute Technologie, sondern geht auf den Gesamtkontext der Komponente ein. Grundlegend richtet sich die Analyse nach dem sinnlichen Darstellungszweck und dessen Bedarf an technischen Eigenschaften. \\
 Ein Beispiel dieser Herangehensweise ist der Bildschirm in der Einstiegsleiste. Die genaue Größe einer möglichen Serienimplementierung muss nicht gleich des Prototypen sein, aber sie muss eine Größe haben, die für die Darstellung der Inhalte geeignet ist.\\
-Die Kriterien für den Einbau und die spätere Analyse basieren zum Einen auf einer selbstständigen Recherche über die Komponenten und den relevanten Bedingungen. Zum Anderen wurden Informationen von Experten in den einzelnen Fachgebieten der Karosserieinnenentwicklung, Individualisierung, After-Sales-Produktentwicklung herangezogen, um die Kriterien im Bereich rechtlich, wirtschaftlich und technische anzuwenden. \\
+Die Kriterien für den Einbau und die spätere Analyse basieren zum einen auf einer selbstständigen Recherche über die Komponenten und den relevanten Bedingungen. Zum anderen wurden Informationen von Experten in den einzelnen Fachgebieten der Karosserieinnenentwicklung, Individualisierung, After-Sales-Produktentwicklung herangezogen, um die Kriterien im Bereich rechtlich, wirtschaftlich und technische anzuwenden. \\
 Für einen Überblick über die Erkenntnisse fasst das Unterkapitel \ref{ZusammendassungAnalyse} die Analyse zusammen.
 \section{Kriterien für den Einbau der Komponenten in Serienfahrzeuge}
 \label{cha:Kriterien}
 Die folgenden Kriterien richten sich zum einen an die Komponenten und zum anderen an die Fahrzeugentwicklung. Anhand der Kriterien kann eine Analyse des Ist-Zustandes durchgeführt werden.\\
 Da für den Verkauf und Betrieb von Fahrzeugen die gültigen Gesetze und Normen eingehalten werden müssen, haben die rechtlichen Kriterien die oberste Priorität. Wenn alle rechtlichen Bedingungen erfüllt sind, stellen sich betriebswirtschaftliche Fragestellungen, ob die Komponenten in Ihrer Funktion einen Nutzen für den Kunden und für das Unternehmen haben. Dies können hier besonders auch optische Vorteile sein. Zuletzt müssen technische Kriterien von der Seite der Fahrzeugentwicklung und der Komponenten erfüllt sein, damit die Weiterentwicklung der Komponenten in Erwägung gezogen werden kann. \\
-Durch den zeitlichen Rahmen dieser Arbeit und dem fachlichen Schwerpunkt in elektrotechnischen Systemen, liegt der Fokus der Analyse in der technischen Analyse des Strombedarfs und des Informationsbedarfs. Dennoch soll diese Arbeit die wichtigsten Aspekte und eine Einordnung der anderen Fachbereiche liefern.\\
+Durch den zeitlichen Rahmen dieser Arbeit und dem fachlichen Schwerpunkt in elektrotechnischen Systemen, liegt der Fokus der Analyse in der technischen Analyse des Informationsbedarfs. Dennoch soll diese Arbeit die wichtigsten Aspekte und eine Einordnung der anderen Fachbereiche liefern.\\
 Nachfolgend werden mit der gleichen Reihenfolge wie oben die Kriterien definiert.
 \subsection{Rechtliche Kriterien}
 Unter rechtlichen Kriterien finden sich alle Bedingungen für die Fahrzeugentwicklung, die auf Basis von Gesetzen und Normen für eine Zulassung erfüllt werden müssen. Diese Kriterien gewährleisten zugleich Rechtssicherheit für den Hersteller. \\
@@ -49,7 +49,8 @@ Zur Steuerung der Komponente muss an der Stelle eine Möglichkeit vorhanden sein
 In der folgenden Arbeit wird bei Videos mit einer Frame-Rate von 24 Bilder pro Sekunde ausgegangen und einer Farbtiefe pro Farbe von einem Byte. Bei Bildern wird ein Kompressionsfaktor von zehn genutzt. Wie bei \ref{cha:Prototyp} erwähnt, sollen zehn Kollektionen mit fünf Inhalten im System gespeichert sein und in Echtzeit aufgerufen werden können. Ein Inhalt kann ein Bild oder ein Video mit einer Länge von zehn Sekunden sein.
 Die Berechnung des Speicherbedarfes dient als erste Abschätzung für die Speicherdimensionierung und kann vom tatsächlichen Bedarf abweichen, da die Rechnung Prüf- und Steuerdaten nicht beachtet.
 \paragraph{Optische Kriterien}
-Unter optischen Kriterien fallen alle allgemein gültige Designprinzipien in der Produktentstehung. Darunter versteht sich die Harmonie der Komponenten in der Umgebung, die Vermeidung von Bildschirmrändern, usw.
+Unter optischen Kriterien fallen alle allgemein gültige Designprinzipien in der Produktentstehung. Darunter versteht sich die Harmonie der Komponenten in der Umgebung, die Vermeidung von Bildschirmrändern, usw. \\
+Daneben ist die Einhaltung einer genügend hohen Pixeldichte nach der Formel aus \ref{cha:Grundlagen} zu gewährleisten.
 \paragraph{Wartungsfähigkeit}
 Unter Wartungsfähigkeit fällt der leichte Ein- und Ausbau der Komponente bei Bedarf und der Austausch von Verschleißgegenständen.
 \section{Analyse der Exterieur Komponenten}
@@ -66,13 +67,18 @@ Mit einer Auflösung von 2560 Pixel pro Zeile zu 1440 Zeilen und einer Farbtiefe
 	&=  368,64\,\mathrm{kByte}
 \end{align}
 Bei zehn Kollektionen mit jeweils fünf Bildern benötigt man einen Speicher von $ 18,432\,\mathrm{MByte} $. \\
+Die Pixeldichte des Bildschirms beträgt bei einer Breite von $ 691,2\,\mathrm{mm} $ und einer Höhe von $ 388,8\,\mathrm{mm} $:
+\begin{align}
+	Pixeldichte = \frac{2560\,\mathrm{Pixel}}{27,2\,\mathrm{inch}} = 94,1\,\mathrm{ppi}
+\end{align}
+Mit dieser Pixeldichte wirkt das Bild scharf bis zu einer Entfernung von einem Meter.
 Durch die Position ist die gezielte Brechung bei Crashs relevant für die Sicherheit von Passanten.
 Daneben ist zu Prüfen, ob die Radarsensorik von dem E-Papier gestört wird.\\
 \subsection{LED-Streifen in der Frontschürze}
 Unter den rechtlichen Kriterien gilt bei Lichtern die europäische Richtlinie ECE R48. Farbliche Lichter außerhalb der zulässigen Verbauten sind dabei nicht gestattet. Daher gilt es zu prüfen, welche weitere Möglichkeiten dieser Darstellungsart es gibt. Optionen sind beispielsweise schwarz-weiße Lichter oder farbliche Bildschirme ohne aktive Beleuchtung. \\
 Für eine Farbtiefe von 256 Stufen pro Farbe benötigt jede einzelne LED 24 Bit an Speicher, da es drei mal acht Bit benötigt. Bei 332 LEDs bedeutet das einen Speicher pro Bild von $ 996\,\mathrm{Byte} $.
 \begin{align}
-	S &= \frac{332\,\mathrm{Pixel} \times 24\,\frac{\mathrm{Bit}}{\mathrm{Pixel}}}{1} \cdot \\
+	S &= 332\,\mathrm{Pixel} \times 24\,\frac{\mathrm{Bit}}{\mathrm{Pixel}} \cdot \\
 	&=  996\,\mathrm{Byte}
 \end{align}
 Für ein 10 Sekunden Video wird ein Speicher S von 
@@ -90,13 +96,14 @@ Aus Sicht der Kunden ist die Lage neben den Fronttüren ideal, um Dinge anzuzeig
 Da auf diesen E-Papieren vorwiegend Text angezeigt wird, ist ein breites und in der Höhe schmales Display von Vorteil, da dort eine Zeile leserlich angezeigt werden kann. \\
 Um bei Beschädigung oder bei Defekt das E-Papier auszutauschen, ist die Möglichkeit über den Zugriff vom Motorraum aus zu prüfen. \\
 Das Gewicht des E-Papiers ist relativ gering und zu vernachlässigen.
-Da das E-Papier nur bei Änderung des Inhaltes Strom verbraucht, muss nur eine geringe Leistungsaufnahme von $ x\,\mathrm{mW} $ sichergestellt werden. \\
+Da das E-Papier nur bei Änderung des Inhaltes Strom verbraucht, muss nur eine geringe Leistungsaufnahme sichergestellt werden. \\
 Die E-Papier Embleme benötigen mit einer Auflösung von 1600 Pixel pro Zeile zu 1200 Zeilen einen Speicher pro Bild von $ 192\,\mathrm{kByte} $.
 \begin{align}
 	S &= \frac{1600\,\frac{\mathrm{Pixel}}{\mathrm{Zeile}} \times 1200\,\mathrm{Zeilen} \times 8\,\frac{\mathrm{Bit}}{\mathrm{Pixel}}}{10} \cdot \\
 	&= 192\,\mathrm{kByte}
 \end{align}
-Insgesamt benötigt der Speicher eine Größe von $ 9,6\,\mathrm{MByte} $ für 50 Bilder.
+Insgesamt benötigt der Speicher eine Größe von $ 9,6\,\mathrm{MByte} $ für 50 Bilder. \\
+Die Pixeldichte beträgt bei einer Breite von $ 20\,\mathrm{cm} $ ca. $ 200\,\mathrm{ppi} $. Bis zu einem halben Meter Distanz ist das Bild für den Betrachter scharf.
 \subsection{LED-Streifen in den Radkästen}
 Wie bei den anderen Leuchteinrichtungen im Exterieur sind hier die Marktregularien zu prüfen. Bei Möglichkeit kann auch ein eingeschränkter Modus von schwarz-weißem Licht oder nur die Anzeige im abgestellten Zustand des Fahrzeuges gewählt werden. \\
 Die Verschmutzung des Lichtleiters ist durch eine geeignete Konstruktion zu verhindern und daneben auch der Beschädigung durch geschleuderte Steine oder ähnliches. \\
@@ -104,7 +111,7 @@ Daneben muss aus Kundensicht geprüft werden, ob die Betonung des Schmutzfänger
 Bei einer Anzahl von 200 LED pro Radkasten benötigt ein LED Streifen eine Leistung von $ 64\,\mathrm{W} $.
 Ein dynamisches Lichtspiel für 10 Sekunden benötigt pro Radkasten bei einer Bildwiederholungsrate von $ 24\,\mathrm{fps} $ einen Speicher von $ 144\,\mathrm{kByte}$. \\
 \begin{align}
-	S &= \frac{200\,\mathrm{Pixel} \times 24\,\frac{\mathrm{Bit}}{\mathrm{Pixel}}}{1} \cdot \\
+	S &= 200\,\mathrm{Pixel} \times 24\,\frac{\mathrm{Bit}}{\mathrm{Pixel}} \cdot \\
 	&= 600\,\mathrm{Byte}
 \end{align}
 \begin{align}
@@ -118,7 +125,6 @@ Die Verfügbarkeit des Bauraums in dem Außenspiegel ist zu prüfen, indem der B
 Daneben ist die Zulässigkeit von solchen Projektionen und deren Lichtaustrittsfläche rechtlich abzuprüfen. \\
 Die angestrahlte Fläche auf dem Boden reicht im besten Fall über die gesamten Seitentüren und bis zu $ 2\,\mathrm{m} $ weg vom Fahrzeug.
 Der Betrachter soll bei unterschiedlichen Lichtverhältnissen noch ein möglichst kontrastreiches und helles Bild erkennen. \\
-Der Strombedarf pro Videoprojektor liegt im Bereich zwischen $ XX\,\mathrm{W} $ und $ XX\,\mathrm{W} $.
 Ein Standbild benötigt bei einer Pixelanzahl pro Zeile von $ 1280 $ und $ 800 $ Zeilen ein Speichergröße von ca. $ 256\,\mathrm{kByte}$. 
 \begin{align}
 	S &= \frac{1280\,\frac{\mathrm{Pixel}}{\mathrm{Zeile}} \times 800\,\mathrm{Zeilen} \times 24\,\frac{\mathrm{Bit}}{\mathrm{Pixel}}}{10} \\
@@ -129,12 +135,12 @@ Für eine Animation von zehn Sekunden Länge benötigt eine Videoprojektor einen
 	S &= 307,2\,\mathrm{kByte} \cdot 24\,\mathrm{fps} \cdot 10\,\mathrm{s}\\
 	&= 73,728\,\mathrm{MByte} 
 \end{align}
-Insgesamt wird ein Speicher in Höhe von $ 3,6864\,\mathrm{GByte} $ benötigt.
+Insgesamt wird ein Speicher in Höhe von $ 3,6864\,\mathrm{GByte} $ benötigt. \\
+Die Projektionsfläche auf dem Boden beträgt in der Breite ca. $ 1,20\,\mathrm{m} $ und in der Höhe $ 0,75\,\mathrm{m} $. Damit ergibt sich eine Pixeldichte von $ 27,1\,\mathrm{ppi} $. Die Pixeldichte reicht bis zu einer Entfernung von ca. drei Metern aus.
 \subsection{Bildschirme in den hinteren Seitenfenstern}
 Rechtlich ist die Zulässigkeit wegen möglicher Ablenkungen von Straßenverkehrsteilnehmern zu prüfen.
 Das Verkleinern der Fensterfläche ist abzuprüfen, ob dies mit Kundeninteressen vereinbar ist.
 Die Crashsicherheit an dieser Stelle und die Stabilität ist wichtig, da sich diese Komponente. in unmittelbarer Nähe zu den Fahrzeuginsassen befindet.
-Jedes Display hat eine ungefähre Leistung von $ XX\,\mathrm{W} $. 
 Ein Standbild benötigt bei einer Pixelanzahl pro Zeile von $ 1280 $ und von $ 800 $ Zeilen ein Speichergröße von ca. $ 307,2\,\mathrm{kByte}$. 
 \begin{align}
 	S &= \frac{1280\,\frac{\mathrm{Pixel}}{\mathrm{Zeile}}\times 800\,\mathrm{Zeilen} \times 24\,\frac{\mathrm{Bit}}{\mathrm{Pixel}}}{10} \\
@@ -145,14 +151,15 @@ Für eine Animation von zehn Sekunden Länge benötigt das Display einen Speiche
 	S &= 307,2\,\mathrm{kByte} \cdot 24\,\mathrm{fps} \cdot 10\,\mathrm{s}\\
 	&= 73,728\,\mathrm{MByte}
 \end{align}
-Insgesamt wird ein Speicher pro Bildschirm von $ 3,6864\,\mathrm{GByte} $ benötigt.
+Insgesamt wird ein Speicher pro Bildschirm von $ 3,6864\,\mathrm{GByte} $ benötigt. \\
+Mit einer Breite von $ 30\,\mathrm{cm} $ besitzt das Display eine Pixeldichte von $ 108,4\,\mathrm{ppi} $ und bildet bis zu einer Distanz von ca. einem Meter ein scharfes Bild ab.
 \subsection{LED-Streifen in der Heckleuchte}
 Wie bei den LED-Streifen in der Frontschürze sind die rechtlichen und wirtschaftlichen Fragestellungen gleich. \\
 Grundsätzlich gilt es zu prüfen, ob die vorhandenen Steuergeräte für die Lichter Kapazitäten für dynamische Lichtstreifen frei haben.
 Die weiteren technischen Kriterien verhalten sich wie oben erläutert. \\
 Für ein Bild benötigt man einen Speicher von $ 1,173\,\mathrm{kByte} $.
 \begin{align}
-	S &= \frac{391\,\mathrm{Pixel} \times 24\,\frac{\mathrm{Bit}}{\mathrm{Pixel}}}{1} \cdot \\
+	S &= 391\,\mathrm{Pixel} \times 24\,\frac{\mathrm{Bit}}{\mathrm{Pixel}} \cdot \\
 	&= 1,173\,\mathrm{kByte}
 \end{align}
 Für eine zehn Sekunden Inszenierung sind $ 281,52\,\mathrm{kByte} $ erforderlich.
@@ -169,6 +176,7 @@ Diese E-Papiere in der Heckleuchte haben ähnliche Eigenschaften, wie die E-Papi
 	&= 192\,\mathrm{kByte}
 \end{align}
 Für 50 Bilder sind es dementsprechend $ 9,6\,\mathrm{MByte} $.
+Die Pixeldichte beträgt das Gleiche wie beim Emblem am Radkasten.
 \section{Analyse der Interieur Komponenten}
 Im folgenden werden die einzelnen Interieur Komponenten mit den Kriterien analysiert.
 \subsection{LED-Streifen im Interieur}
@@ -177,7 +185,7 @@ Durch die Länge des Streifens muss für die Crashsicherheit eventuelle Sollbruc
 Bei einer Anzahl von 719 LED pro Radkasten benötigt ein LED Streifen eine Leistung von $ XX\,\mathrm{W} $.
 Für eine Inszenierung von zehn Sekunden Länge benötigt der LED-Streifen Speicherplatz in der Höhe von $ 25,884\,\mathrm{MByte}$.
 \begin{align}
-	S &= \frac{719\,\mathrm{Pixel} \times 24\,\frac{\mathrm{Bit}}{\mathrm{Pixel}}}{1} \cdot \\
+	S &= 719\,\mathrm{Pixel} \times 24\,\frac{\mathrm{Bit}}{\mathrm{Pixel}} \cdot \\
 	&= 2,157\,\mathrm{kByte}
 \end{align}
 \begin{align}
@@ -201,7 +209,8 @@ Ein Standbild benötigt bei einer Pixelanzahl pro Zeile von $ 1280 $ und von $ 1
 	&= 393,216\,\mathrm{KByte}
 \end{align}
 Für eine Animation von zehn Sekunden Länge benötigt das Display einen Speicher von $ 94,37184\,\mathrm{MByte}$.
-Insgesamt bei 50 Videos beträgt der benötigte Speicher $ 4,718592\,\mathrm{GByte}$.
+Insgesamt bei 50 Videos beträgt der benötigte Speicher $ 4,718592\,\mathrm{GByte}$. \\
+Bei einer Breite von $ 30\,\mathrm{cm} $ beträgt die Pixeldichte $ 108,4\,\mathrm{ppi} $. Damit ist die Betrachtung von bis zu einem Meter scharf.
 \subsection{Videoprojektoren im Fußraum}
 Unter den rechtlichen Fragestellungen ergibt sich die Vermeidung von Ablenkung für den Fahrer oder die Fahrerin.
 Aus Kundenperspektive ist die angestrahlte Oberfläche eventuell nicht geeignet, da diese stärker verschmutzt sein kann. \\
@@ -214,14 +223,14 @@ Ein Standbild benötigt bei einer Pixelanzahl pro Zeile von $ 1280 $ und von $ 8
 \end{align}
 Für eine Animation von zehn Sekunden Länge benötigt das Display einen Speicher von $ 73,728\,\mathrm{MByte}$.
 Insgesamt bei 50 Videos beträgt der benötigte Speicher $ 3,6864\,\mathrm{GByte}$.
+Die Pixeldichte beträgt bei einer Breite von $ 30\,\mathrm{cm} $ $ 108,4\,\mathrm{ppi} $. Damit ist die Betrachtung von bis zu einem Meter scharf.
 \subsection{Morphende Oberfläche in der Mittelkonsole}
 Die tatsächlich verwendete technische Realisierung der morphenden Oberfläche ist eine Übergangslösung für eine neue Technik, die einzelne Element auf einer Fläche gesteuert hoch und herunterfahren kann. Diese Technik ist derzeit in der Entwicklung. Wie die Farbtiefe bei einem Bildschirm kann die Höhe der einzelnen Punkte eingestellt werden. \\
 Mit 8 Bit Höhentiefe benötigt ein Feld mit 20 auf 20 einzelnen Punkten einen Speicher in der Größe von $ 400\,\mathrm{Byte}$.
 Eine weitere technische Weiterentwicklung kann Animationen auf der Mittelkonsole abspielen. Die Datenmenge steigert sich dementsprechend mit der Bildwiederholungsrate und der Dauer der Animation. Bei einer Bildwiederholungsrate von $ 24\,\mathrm{fps} $ und 10 Sekunden Dauer beträgt der benötigte Speicher $ 96\,\mathrm{kByte}$.
 \subsection{Durchsichtiger Bildschirm im Dachfenster}
 Rechtlich betrachtet ist die 
-Technische Herausforderungen sind die Temperaturentwicklung durch Sonneneinstrahlung und die Kontaktierung bei Bewegung des Glasdaches.
-Das Display hat eine ungefähre Leistung von $ XX\,\mathrm{W} $. 
+Technische Herausforderungen sind die Temperaturentwicklung durch Sonneneinstrahlung und die Kontaktierung bei Bewegung des Glasdaches. 
 Ein Standbild benötigt bei einer Pixelanzahl pro Zeile von $ 1920 $ und von $ 1080 $ Zeilen ein Speichergröße von ca. $ 207,36\,\mathrm{kByte}$. 
 \begin{align}
 	S &= \frac{1920\,\frac{\mathrm{Pixel}}{\mathrm{Zeile}}\times 1080\,\mathrm{Zeilen} \times 8\,\frac{\mathrm{Bit}}{\mathrm{Pixel}}}{10} \\
@@ -229,11 +238,12 @@ Ein Standbild benötigt bei einer Pixelanzahl pro Zeile von $ 1920 $ und von $ 1
 \end{align}
 Für eine Animation von zehn Sekunden Länge benötigt das Display einen Speicher von $ 49,7664\,\mathrm{MByte}$.
 Insgesamt bei 50 Videos beträgt der benötigte Speicher $ 2,488320\,\mathrm{GByte}$.
+Mit einer Breite von $ 80\,\mathrm{cm} $ und $ 1920 $ Pixel pro Zeile beträgt die Pixeldichte $ 61,0\,\mathrm{ppi} $. Das Bild ist bis zu ca. $ 1,5\,\mathrm{m} $ scharf.
 \subsection{LED-Matrix im Dachhimmel}
 Die LED-Matrix hat eine ungefähre Leistung von $ XX\,\mathrm{W} $. 
 Ein Standbild benötigt bei einer Pixelanzahl pro Zeile von $ 192 $ und von $ 96 $ Zeilen ein Speichergröße von ca. $ 55,296\,\mathrm{kByte}$. 
 \begin{align}
-	S &= \frac{192\,\frac{\mathrm{Pixel}}{\mathrm{Zeile}}\times 96\,\mathrm{Zeilen} \times 24\,\frac{\mathrm{Bit}}{\mathrm{Pixel}}}{1} \\
+	S &= 192\,\frac{\mathrm{Pixel}}{\mathrm{Zeile}}\times 96\,\mathrm{Zeilen} \times 24\,\frac{\mathrm{Bit}}{\mathrm{Pixel}} \\
 	&= 55,296\,\mathrm{kByte}
 \end{align}
 Für eine Animation von zehn Sekunden Länge benötigt das Display einen Speicher von $ 13,27104\,\mathrm{MByte}$.

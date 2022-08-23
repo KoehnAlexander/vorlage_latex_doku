@@ -185,29 +185,27 @@ Die Bitraten betragen in unterschiedlichen Stufen $ 25 $, $ 50 $ und $ 150\,\fra
 Nutzdatenrate bei MOST25 bei $ 2,6\,\frac{\mathrm{MByte}}{\mathrm{s}} $, MOST50 $ 5,6\,\frac{\mathrm{MByte}}{\mathrm{s}} $  und MOST150 bei $ 17,8\,\frac{\mathrm{MByte}}{\mathrm{s}} $.
 \cite[Vgl. Seite 119 ff.]{Zimmermann.2014}
 \subsection{Automotive Ethernet}
-Automotive Ethernet ist standardisiert in der IEEE XX und basiert auf dem normalen Ethernet Protokoll. Der Unterschied besteht im Nutzen von einem Paar ungeschirmt verdrillte Drahtleitungen.
+Automotive Ethernet ist standardisiert in der IEEE 802.3 und basiert auf dem normalen Ethernet Protokoll. Der Unterschied besteht im Nutzen von einem Paar ungeschirmt verdrillte Drahtleitungen durch eine
 \paragraph{Performance}
-Es sind bis zu 1500 Byte Nutzdaten pro Frame möglich. Es ergibt sich eine maximal mögliche Nutzdatenmenge von ca. $ 10\,\frac{\mathrm{MByte}}{\mathrm{s}} $. \cite[Vgl. Seite 138 ff.]{Zimmermann.2014}
-
+Es sind bis zu 1500 Byte Nutzdaten pro Frame möglich. Es ergibt sich eine maximal mögliche Nutzdatenmenge bei einem Bittakt von $ 10\,\frac{\mathrm{MBit}}{\mathrm{s}} $ von ca. $ 10\,\frac{\mathrm{MByte}}{\mathrm{s}} $. \cite[Vgl. Seite 138 ff.]{Zimmermann.2014}
 \subsection{Vergleich der einzelnen Bussysteme}
-Im folgenden werden die oben vorgestellten Bussysteme miteinander verglichen.
+Im folgenden werden die oben vorgestellten Bussysteme miteinander verglichen in Tabelle \ref{tab:Bussysteme} anhand der Bittakt- und Nutzdatenrate.
 \begin{table}[hbt]	
 	\centering
 	\renewcommand{\arraystretch}{1.5}	% Skaliert die Zeilenhöhe der Tabelle
-	\captionabove[Berechnung des Speicherbedarfes für ein Bild]{Berechnung des Speicherbedarfes für ein Bild}
-	\label{tab:Speicherbedarf}
-	\begin{tabular}{c|ccc}
-		 \parbox[t]{0.2\linewidth}{\centering Bussystem} & \parbox[t]{0.2\linewidth}{\centering Bittakt} & \parbox[t]{0.2\linewidth}{\centering Nutzdatenrate} & \parbox[t]{0.2\linewidth}{\centering Latenz} \\ 
+	\captionabove[Vergleich der Bittakt- und Nutzdatenraten der Bussysteme]{Vergleich der Bittakt- und Nutzdatenraten der Bussysteme}
+	\label{tab:Bussysteme}
+	\begin{tabular}{c|cc}
+		 \parbox[t]{0.2\linewidth}{\centering Bussystem} & \parbox[t]{0.2\linewidth}{\centering Bittakt} & \parbox[t]{0.2\linewidth}{\centering Nutzdatenrate}  \\ 
 		\hline 
 		\hline
-		LIN & $ 19,2\,\frac{\mathrm{kBit}}{\mathrm{s}} $ & $ 800\,\frac{\mathrm{Byte}}{\mathrm{s}} $ & $ \,\mathrm{s} $ \\
-		CAN Low-Speed & $ 125\,\frac{\mathrm{kBit}}{\mathrm{s}} $ & $ 7,4\,\frac{\mathrm{kByte}}{\mathrm{s}} $ & $ \,\mathrm{s} $ \\
-		CAN High Speed & $ 500\,\frac{\mathrm{kBit}}{\mathrm{s}} $ & $ 29\,\frac{\mathrm{kByte}}{\mathrm{s}} $ & $ \,\mathrm{s} $ \\
-		FlexRay & $ \,\frac{\mathrm{Bit}}{\mathrm{s}} $ & $ \,\frac{\mathrm{Byte}}{\mathrm{s}} $ & $ \,\mathrm{s} $ \\
-		MOST25 & $ \,\frac{\mathrm{Bit}}{\mathrm{s}} $ & $ \,\frac{\mathrm{Byte}}{\mathrm{s}} $ & $ \,\mathrm{s} $ \\
-		MOST50 & $ \,\frac{\mathrm{Bit}}{\mathrm{s}} $ & $ \,\frac{\mathrm{Byte}}{\mathrm{s}} $ & $ \,\mathrm{s} $ \\
-		MOST150 & $ \,\frac{\mathrm{Bit}}{\mathrm{s}} $ & $ \,\frac{\mathrm{Byte}}{\mathrm{s}} $ & $ \,\mathrm{s} $ \\
-		Automotive Ethernet & $ \,\frac{\mathrm{Bit}}{\mathrm{s}} $ & $ \,\frac{\mathrm{Byte}}{\mathrm{s}} $ & $ \,\mathrm{s} $ \\
+		LIN & $ 19,2\,\frac{\mathrm{kBit}}{\mathrm{s}} $ & $ 800\,\frac{\mathrm{Byte}}{\mathrm{s}} $  \\
+		CAN Low-Speed & $ 125\,\frac{\mathrm{kBit}}{\mathrm{s}} $ & $ 7,4\,\frac{\mathrm{kByte}}{\mathrm{s}} $ \\
+		CAN High Speed & $ 500\,\frac{\mathrm{kBit}}{\mathrm{s}} $ & $ 29\,\frac{\mathrm{kByte}}{\mathrm{s}} $  \\
+		FlexRay & $ 10\,\frac{\mathrm{MBit}}{\mathrm{s}} $ & $ 1 \,\frac{\mathrm{MByte}}{\mathrm{s}} $  \\
+		MOST25 & $ 25\,\frac{\mathrm{MBit}}{\mathrm{s}} $ & $ 2,6\,\frac{\mathrm{MByte}}{\mathrm{s}} $  \\
+		MOST50 & $ 50\,\frac{\mathrm{MBit}}{\mathrm{s}} $ & $ 5,6\,\frac{\mathrm{MByte}}{\mathrm{s}} $  \\
+		MOST150 & $ 150\,\frac{\mathrm{MBit}}{\mathrm{s}} $ & $ 17,8\,\frac{\mathrm{MByte}}{\mathrm{s}} $  \\
+		Automotive Ethernet & $ 100\,\frac{\mathrm{MBit}}{\mathrm{s}} $ & $ 10\,\frac{\mathrm{MByte}}{\mathrm{s}} $  \\
 	\end{tabular} 
 \end{table}
-%TODO Grundlagenkapitel fertigstellen%
