@@ -3,9 +3,9 @@
 	\node[second, red] (C) at (0,3) {Anbindung Internet};
 	\node[second, green] (D) at (0,-3) {Anbindung App};
 	\node[first, blue] (K) at (10,0) {Komponente};
-	\node[second] (S) at (2.24,0) {Speicherort};
+	\node[second] (S) at (7.76,0) {Speicherort};
 	\draw[<-] (Z) -- node[right,text width=2.5cm] {Herunterladen Kollektionen} (C);
 	\draw[<->] (Z) -- node[right,text width=2.5cm] {Steuerbotschaften} (D);
-	%\draw[<->] (Z) -- node[above] {Bussystem 1} (S);
-	\draw[<->] (S) -- node[above] {Bussystem 2} (K);
+	\draw[<->] (Z) -- node[above] {Bussystem 1} (S);
+	%\draw[<->] (S) -- node[above] {Bussystem 2} (K);
 \end{tikzpicture}

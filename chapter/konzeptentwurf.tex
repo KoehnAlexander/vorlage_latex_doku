@@ -1,5 +1,6 @@
 \chapter{Konzeptentwurf für eine informationstechnische Anbindung der Komponenten} \label{cha:Konzeptentwurf}
 Auf Basis der unter \ref{cha:Analyse} gewonnenen Erkenntnissen zum Speicherbedarf der Komponenten werden in diesem Kapitel Entwürfe erarbeitet, wie die Komponenten in eine Fahrzeugarchitektur implementiert werden können.
+%TODO Vorgehensweise beschreiben%
 \section{Einteilung der Komponenten}
 Im ersten Schritt werden die durch die Analyse gewonnenen Erkenntnisse genutzt, um Komponenten nach ihren Speichereigenschaften zu sortieren. \\
 Die erste Gruppe benötigt einen Speicher für 50 Inhalte von weniger als $ 30\,\mathrm{MByte} $, die zweite Gruppe von weniger als $ 1\,\mathrm{GByte} $, die dritte Gruppe von weniger als $ 5\,\mathrm{GByte} $. \\
@@ -28,7 +29,7 @@ Tabelle \ref{tab:Einteilung} weist die Komponenten den Gruppen zu. Für die Konz
 		\parbox[t]{0.3\linewidth}{\centering Morphende Oberfläche\\in der Mittelkonsole} & & \parbox[t]{0.3\linewidth}{\centering Durchsichtiger Bildschirm\\im Dachfenster} \\
 	\end{tabular} 
 \end{table}
-Diese erste Einteilung liefert eine Gruppierung mit der Speichergröße. Eine weitere Einteilung nach Komponenten, die statisch Bilder anzeigen oder dynamisch Videos anzeigen, ist relevant für die Dimensionierung der Busanbindung. \\
+Diese erste Einteilung liefert eine Gruppierung mit der Speichergröße. Eine weitere Einteilung nach Komponenten, die statisch Bilder anzeigen oder dynamisch Videos anzeigen, ist relevant für die Dimensionierung der Busanbindung. Diese Einteilung ist ebenfalls in der Tabelle \ref{tab:Einteilung} integriert. \\
 Bei Komponenten beträgt die Größe eines Inhalts die Speichergröße der Gruppe durch die 50 Inhalte. Bei Komponenten, die nur Bilder anzeigen ist dieser Betrag gleich des Betrags für ein Bild.
 \begin{align}
 	EG &= \frac{30\,\mathrm{MByte}}{50} = 600\,\mathrm{kByte} \\
@@ -47,42 +48,70 @@ Die Datenrate der Video-Komponenten können berechnet werden, indem die Größe 
 	ZG &= \frac{20\,\mathrm{MByte}}{10\,\mathrm{s}} = 2.000\,\frac{\mathrm{kByte}}{\mathrm{s}} \\
 	DG &= \frac{100\,\mathrm{MByte}}{10\,\mathrm{s}} = 10.000\,\frac{\mathrm{kByte}}{\mathrm{s}}
 \end{align}
-Die erste Gruppe besteht aus Bild- und Videokomponenten, die zweite und dritte Gruppe nur aus Videokomponenten.
-
-
-%TODO Ab Hier weitermachen%
-
-Abweichend von der Betrachtungsweise der verwendeten Technologie und des Einbauortes, ist es sinnvoll nach den Art der Informationsbedarfes zu unterteilen. Die Unterteilung 
-Die Anforderungen an die Komponenten sind gleich. Jede Komponente muss in Echtzeit auf mindestens 10 Kollektionen umschalten können.
-\section{Lösungsansätze unterschiedlicher Konzeptentwurf}
-Eine Komponente besteht in diesem Fall immer aus einer Anzeigefläche mit einer dazugehörigen Steuerung, die aus Bild oder Videodateien die einzelnen Bildpunkte setzt.
-
-Die Kollektionen werden über eine Drahtlose Verbindung zwischen einem zentralen Steuergerät aus dem Internet geladen und müssen auf den Komponenten im Fahrzeug dargestellt werden. 
-Das zentrale Abspeichern der Daten und anzeigen der Daten bei Auswahl ist eine mögliche Option.
-Die Daten können auch über das Fahrzeugnetzwerk vom zentralen Steuergerät auf verteilte Steuergeräte, die direkt an den Komponenten sind, geladen werden, wenn die Daten zu dem Zeitpunkt nicht angezeigt werden sollen. Bei Aktivierung der Kollektion müssen dann nur Steuersignale den Steuergeräten die Information zur Aussendung der Kollektion geben.
-Relevant für die möglichen Optionen, sind die Latenz eines Steuersignals und der Dauer eines kompletten Downloads der Daten.
-Der Anschluss der Komponenten an eine bestimmte Architektur ist unter unterschiedlichen Gesichtspunkten zu bewerten.
-
-Es gibt unterschiedliche Varianten die Geräte anzuschliessen.
-
-Die erste Form von Komponenten sind diejenigen, die nicht dafür ausgelegt sind neue Inhalte in Echtzeit vom zentralen System herunterzuladen.
-Die zweite Form sind Komponenten, die in Echtzeit neu Inhalte vom System herunterladen müssen und direkt anzeigen.
-
-Echtzeit bedeutet in diesem Fall, dass das System neue Inhalte anzeigt, die der Benutzer über das Zentraldisplay oder Drittgerät ausgewählt hat.
-Durch diese Unterscheidung kann die zur Verfügung gestellte Bandbreite deutlich unterschiedlich sein. 
-Ein weiterer wichtiges Merkmal ist die Geschwindigkeit zum 
-
-
-Architekturdiagramm einer Möglichen Variante:
+Die erste Gruppe besteht aus Bild- und Videokomponenten, die zweite und dritte Gruppe nur aus Videokomponenten. Daraus folgt die Klassifizierung der Komponenten in vier Bereiche, die Tabelle \ref{tab:Einteilung2} darstellt. \\
+Der erste Bereich sind Bild-Komponenten mit einem Speicherbedarf pro Inhalt von weniger als $ 600\,\mathrm{kByte} $. Der zweite Bereich sind Video-Komponenten mit einem Speicherbedarf pro Inhalt von weniger als $ 600\,\mathrm{kByte} $ und einer Datenrate beim Abspielen eines Videos von mit einem Speicherbedarf pro Inhalt von weniger als $ 60\,\frac{\mathrm{kByte}}{\mathrm{s}} $. Der dritte Bereich sind Video-Komponenten mit einem Speicherbedarf pro Inhalt von weniger als $ 20\,\mathrm{MByte} $ und einer Datenrate beim Abspielen eines Videos von mit einem Speicherbedarf pro Inhalt von weniger als $ 2.000\,\frac{\mathrm{kByte}}{\mathrm{s}} $. Der vierte Bereich sind Video-Komponenten mit einem Speicherbedarf pro Inhalt von weniger als $ 100\,\mathrm{MByte} $ und einer Datenrate beim Abspielen eines Videos von mit einem Speicherbedarf pro Inhalt von weniger als $ 10.000\,\frac{\mathrm{kByte}}{\mathrm{s}} $. \\
+\begin{table}[hbt]	
+	\centering
+	\renewcommand{\arraystretch}{1.5}	% Skaliert die Zeilenhöhe der Tabelle
+	\captionabove[Einteilung der Komponenten in die vier Bereiche]{Einteilung der Komponenten in die vier Bereiche}
+	\label{tab:Einteilung2}
+	\begin{tabular}{c|c}
+		\hline
+		\textbf{Erster Bereich} & \textbf{Zweiter Bereich} \\
+		$ 30\,\mathrm{MByte} $ & $ 30\,\mathrm{MByte} $ \\
+		\hline
+		\textbf{Bild-Komponenten} & \textbf{Video-Komponenten} \\
+		\hline
+		\hline
+		\parbox[t]{0.3\linewidth}{\centering E-Papier in der Frontschürze} & \parbox[t]{0.3\linewidth}{\centering LED-Streifen in der Frontschürze}  \\
+		\parbox[t]{0.3\linewidth}{\centering E-Papier über den vorderen Radkästen} & \parbox[t]{0.3\linewidth}{\centering LED-Streifen in den Radkästen} \\
+		\parbox[t]{0.3\linewidth}{\centering E-Papier in der Heckleuchte} & \parbox[t]{0.3\linewidth}{\centering LED-Streifen in der Heckleuchte} \\
+		& \parbox[t]{0.3\linewidth}{\centering LED-Streifen im Interieur} \\
+		& \parbox[t]{0.3\linewidth}{\centering LED Türtafeln} \\
+		& \parbox[t]{0.3\linewidth}{\centering Morphende Oberfläche\\in der Mittelkonsole} \\
+		\hline
+		\textbf{Dritter Bereich} & \textbf{Vierter Bereich} \\
+		$ 1\,\mathrm{GByte} $ & $ 5\,\mathrm{GByte} $ \\
+		\hline
+		\textbf{Video-Komponenten} & \textbf{Video-Komponenten} \\
+		\hline
+		\hline
+		\parbox[t]{0.3\linewidth}{\centering LED-Matrix im Dachhimmel} & \parbox[t]{0.3\linewidth}{\centering Videoprojektoren im Fußraum} \\
+		& \parbox[t]{0.3\linewidth}{\centering Videoprojektoren in\\den Außenspiegeln} \\ 
+		& \parbox[t]{0.3\linewidth}{\centering Bildschirme in den\\hinteren Seitenfenstern} \\ 
+		& \parbox[t]{0.3\linewidth}{\centering Bildschirme in den\\hinteren Seitenfenstern} \\
+		& \parbox[t]{0.3\linewidth}{\centering  Bildschirme in der Einstiegsleiste} \\
+		& \parbox[t]{0.3\linewidth}{\centering Durchsichtiger Bildschirm\\im Dachfenster} \\
+	\end{tabular} 
+\end{table}
+Der Speicherbedarf für eine gesamte Kollektion beträgt die Summe des Datenbedarfes von fünf Inhalten aller Kollektionen. Der Bedarf liegt bei $ 3,127\,\mathrm{GByte} $. Der Gesamtspeicherbedarf für zehn Kollektionen liegt bei $ 31,27\,\mathrm{GByte} $.
+\section{Anforderungen an Konzeptentwürfe}
+Die Anforderungen an die Konzeptentwürfe sind zum einen die oben beschrieben Speichergrößen für Bild und Videodateien. Diese sind direkt aus der Anzahl der Inhalte und den dafür benötigten Dateigrößen berechnet. \\
+Zum anderen sollen die Benutzer zwischen zehn Kollektionen in Echtzeit umschalten können. Echtzeit bedeutet in diesem Fall, dass der Benutzer keine längere Verzögerung hinnehmen muss. Es wird für das Umschalten eine maximale Verzögerung von $ 1\,\mathrm{s} $ gesetzt.
+Das Anzeigen einer neuen Kollektion, die noch nicht im Fahrzeug gespeichert ist, soll nach dem ersten Herunterladen aus dem Internet in unter zehn Sekunden angezeigt werden können.
+\section{Implementierungsoptionen}
+Jede Komponente besteht aus einer Anzeigefläche mit einer dazugehörigen Steuerung, die aus Bild oder Videodateien die einzelnen Bildpunkte setzt. Diese Komponente kann sich überall im Fahrzeug befinden.
+Das Fahrzeug verfügt über ein zentrales Steuergerät, dass neue Kollektion aus dem Internet herunterladen kann und die Bedienbefehle der App erhält.
+\paragraph{Speicherort}
+Der Speicherort der Daten kann an unterschiedlichen Stellen im Fahrzeug liegen. Entweder die Daten sind direkt bei den Komponenten gespeichert oder die Daten sind gesammelt in einem Steuergerät gespeichert. Eine dritte Option ist die Bündelung der Daten von Komponenten, die sich der Nähe befinden.
+Nachfolgend werden die drei mögliche Varianten in den Diagrammen \ref{fig:architektur1}, \ref{fig:architektur2}  und \ref{fig:architektur3} skizziert.
 \begin{figure}[hbt]
 	\centering
 	\input{tikz/architektur1.tex}
-	\caption[Netzwerkarchitektur Ansteuerung Komponenten]{Netzwerkarchitektur Ansteuerung Komponenten}
+	\caption[Positionierung Dateispeicher im zentralen Steuergerät]{Positionierung Dateispeicher im zentralen Steuergerät}
 	\label{fig:architektur1}
 \end{figure}
+\begin{figure}[hbt]
+	\centering
+	\input{tikz/architektur2.tex}
+	\caption[Positionierung Dateispeicher lokal an der Komponente]{Positionierung Dateispeicher lokal an der Komponente}
+	\label{fig:architektur2}
+\end{figure}
+\begin{figure}[hbt]
+	\centering
+	\input{tikz/architektur3.tex}
+	\caption[Positionierung Dateispeicher zwischen zentralen Steuergerät und Komponente]{Positionierung Dateispeicher zwischen zentralen Steuergerät und Komponente}
+	\label{fig:architektur3}
+\end{figure}
+
 \section{Vergleich der unterschiedlichen Lösungsansätze}
-
-
-
-
-
