@@ -89,11 +89,24 @@ Der Speicherbedarf für eine gesamte Kollektion beträgt die Summe des Datenbeda
 Die Anforderungen an die Konzeptentwürfe sind zum einen die oben beschrieben Speichergrößen für Bild und Videodateien. Diese sind direkt aus der Anzahl der Inhalte und den dafür benötigten Dateigrößen berechnet. \\
 Zum anderen sollen die Benutzer zwischen zehn Kollektionen in Echtzeit umschalten können. Echtzeit bedeutet in diesem Fall, dass der Benutzer keine längere Verzögerung hinnehmen muss. Es wird für das Umschalten eine maximale Verzögerung von $ 1\,\mathrm{s} $ gesetzt.
 Das Anzeigen einer neuen Kollektion, die noch nicht im Fahrzeug gespeichert ist, soll nach dem ersten Herunterladen aus dem Internet in unter zehn Sekunden angezeigt werden können.
+Nachfolgend werden die zwei Anforderungen grafisch dargestellt:
+\begin{figure}[hbt]
+	\centering
+	\input{tikz/anforderung1.tex}
+	\caption[Anforderung 1: Umschalten zwischen Kollektionen in unter einer Sekunde]{Anforderung 1: Umschalten zwischen Kollektionen in unter einer Sekunde}
+	\label{fig:anforderung1}
+\end{figure}
+\begin{figure}[hbt]
+	\centering
+	\input{tikz/anforderung2.tex}
+	\caption[Anforderung 2: Anzeigen einer neuen Kollektion in unter zehn Sekunde]{Anforderung 2: Anzeigen einer neuen Kollektion in unter zehn Sekunde}
+	\label{fig:anforderung2}
+\end{figure}
 \section{Implementierungsoptionen}
 Jede Komponente besteht aus einer Anzeigefläche mit einer dazugehörigen Steuerung, die aus Bild oder Videodateien die einzelnen Bildpunkte setzt. Diese Komponente kann sich überall im Fahrzeug befinden.
 Das Fahrzeug verfügt über ein zentrales Steuergerät, dass neue Kollektion aus dem Internet herunterladen kann und die Bedienbefehle der App erhält.
 \paragraph{Speicherort}
-Der Speicherort der Daten kann an unterschiedlichen Stellen im Fahrzeug liegen. Entweder die Daten sind direkt bei den Komponenten gespeichert oder die Daten sind gesammelt in einem Steuergerät gespeichert. Eine dritte Option ist die Bündelung der Daten von Komponenten, die sich der Nähe befinden.
+Der Speicherort der Daten kann an unterschiedlichen Stellen im Fahrzeug liegen. Entweder die Daten sind gesammelt in dem zentralen Steuergerät gespeichert oder die Daten sind direkt bei den Komponenten gespeichert. Eine dritte Option ist die Bündelung der Daten von Komponenten, die sich in der Nähe befinden.
 Nachfolgend werden die drei mögliche Varianten in den Diagrammen \ref{fig:architektur1}, \ref{fig:architektur2}  und \ref{fig:architektur3} skizziert.
 \begin{figure}[hbt]
 	\centering
@@ -113,5 +126,6 @@ Nachfolgend werden die drei mögliche Varianten in den Diagrammen \ref{fig:archi
 	\caption[Positionierung Dateispeicher zwischen zentralen Steuergerät und Komponente]{Positionierung Dateispeicher zwischen zentralen Steuergerät und Komponente}
 	\label{fig:architektur3}
 \end{figure}
+Abhängig vom Speicherort müssen die Bussysteme eine genügend hohe Bandbreite besitzen, um die Anforderungen einzuhalten. 
 
 \section{Vergleich der unterschiedlichen Lösungsansätze}

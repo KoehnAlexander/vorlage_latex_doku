@@ -1,0 +1,11 @@
+\begin{tikzpicture}[first/.style={draw, text width=3cm, align=center, rounded corners}, second/.style={draw, text width=2.5cm, align=center}]
+	\node[first, cyan] (Z) at (0,0) {Zentrales Steuergerät};
+	\node[second, red] (C) at (0,3) {Anbindung Internet};
+	\node[second, green] (D) at (0,-3) {Anbindung App};
+	\node[first, blue] (K1) at (10.8,0) {Komponente};
+	\node[second] (S1) at (5.4,0) {Speicherort};
+	\draw[<-] (Z) -- node[left,text width=3cm] {Herunterladen Kollektionen} (C);
+	\draw[<->] (Z) -- node[left,text width=3cm] {Steuer-\\botschaften} (D);
+	\draw[<->] (Z) -- node[above] {Bussystem 1} (S1);
+	\draw[<->] (S1) -- node[above] {Bussystem 2} (K1.west);
+\end{tikzpicture}

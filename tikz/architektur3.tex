@@ -1,11 +1,22 @@
-\begin{tikzpicture}[first/.style={draw, text width=2cm, align=center, rounded corners}, second/.style={draw, text width=2cm, align=center}]
+\begin{tikzpicture}[first/.style={draw, text width=3cm, align=center, rounded corners}, second/.style={draw, text width=2.5cm, align=center}]
 	\node[first, cyan] (Z) at (0,0) {Zentrales Steuergerät};
 	\node[second, red] (C) at (0,3) {Anbindung Internet};
 	\node[second, green] (D) at (0,-3) {Anbindung App};
-	\node[first, blue] (K) at (10,0) {Komponente};
-	\node[second] (S) at (5,0) {Speicherort};
-	\draw[<-] (Z) -- node[right,text width=2.5cm] {Herunterladen Kollektionen} (C);
-	\draw[<->] (Z) -- node[right,text width=2.5cm] {Steuerbotschaften} (D);
-	\draw[<->] (Z) -- node[above] {Bussystem 1} (S);
-	\draw[<->] (S) -- node[above] {Bussystem 2} (K);
+	\node[first, blue] (K1) at (10.8,2) {Komponente};
+	\node[first, blue] (K2) at (10.8,1) {Komponente};
+	\node[first, blue] (K3) at (10.8,0) {Komponente};
+	\node[first, blue] (K4) at (10.8,-1) {Komponente};
+	\node[first, blue] (K5) at (10.8,-2) {Komponente};
+	\node[second] (S1) at (5.4,0.5) {Speicherort};
+	\node[second] (S2) at (5.4,-0.5) {Speicherort};
+	\draw[<-] (Z) -- node[left,text width=3cm] {Herunterladen Kollektionen} (C);
+	\draw[<->] (Z) -- node[left,text width=3cm] {Steuer-\\botschaften} (D);
+	\draw[<->] (Z) -- node[above] {Bussystem 1} (S1);
+	\draw[<->] (Z) -- (S2);
+	\node at (8, 2.5) {Bussystem 2};
+ 	\draw[<->] (S1) -- (K1.west);
+	\draw[<->] (S1) -- (K2.west);
+	\draw[<->] (S1) -- (K3.west);
+	\draw[<->] (S2) -- (K4.west);
+	\draw[<->] (S2) -- (K5.west);
 \end{tikzpicture}
