@@ -29,8 +29,9 @@ Tabelle \ref{tab:Einteilung} weist die Komponenten den Gruppen zu. Für die Konz
 		\parbox[t]{0.3\linewidth}{\centering Morphende Oberfläche\\in der Mittelkonsole} & & \parbox[t]{0.3\linewidth}{\centering Durchsichtiger Bildschirm\\im Dachfenster} \\
 	\end{tabular} 
 \end{table}
+
 Diese erste Einteilung liefert eine Gruppierung mit der Speichergröße. Eine weitere Einteilung nach Komponenten, die statisch Bilder anzeigen oder dynamisch Videos anzeigen, ist relevant für die Dimensionierung der Busanbindung. Diese Einteilung ist ebenfalls in der Tabelle \ref{tab:Einteilung} integriert. \\
-Bei Komponenten beträgt die Größe eines Inhalts die Speichergröße der Gruppe durch die 50 Inhalte. Bei Komponenten, die nur Bilder anzeigen ist dieser Betrag gleich des Betrags für ein Bild.
+Bei Komponenten beträgt die Größe eines Inhalts die Speichergröße der Gruppe durch die 50 Inhalte. Bei Komponenten, die nur Bilder anzeigen, ist dieser Betrag gleich des Betrags für ein Bild.
 \begin{align}
 	EG &= \frac{30\,\mathrm{MByte}}{50} = 600\,\mathrm{kByte} \\
 	ZG &= \frac{1\,\mathrm{GByte}}{50} =  20\,\mathrm{MByte} \\
@@ -42,90 +43,165 @@ Bei Komponenten, die Videos anzeigen, beträgt die Größe der einzelnen Bilder 
 	ZG &= \frac{20\,\mathrm{MByte}}{10\,\mathrm{s} \cdot 24\,\mathrm{fps}} = 83,33\,\mathrm{kByte} \\
 	DG &= \frac{100\,\mathrm{MByte}}{10\,\mathrm{s} \cdot 24\,\mathrm{fps}} = 416,67\,\mathrm{kByte}
 \end{align}
-Die Datenrate der Video-Komponenten können berechnet werden, indem die Größe der Inhalt durch die Länge des Videos dividiert wird.
-\begin{align}
-	EG &= \frac{600\,\mathrm{kByte}}{10\,\mathrm{s}} = 60\,\frac{\mathrm{kByte}}{\mathrm{s}}\\
-	ZG &= \frac{20\,\mathrm{MByte}}{10\,\mathrm{s}} = 2.000\,\frac{\mathrm{kByte}}{\mathrm{s}} \\
-	DG &= \frac{100\,\mathrm{MByte}}{10\,\mathrm{s}} = 10.000\,\frac{\mathrm{kByte}}{\mathrm{s}}
-\end{align}
-Die erste Gruppe besteht aus Bild- und Videokomponenten, die zweite und dritte Gruppe nur aus Videokomponenten. Daraus folgt die Klassifizierung der Komponenten in vier Bereiche, die Tabelle \ref{tab:Einteilung2} darstellt. \\
-Der erste Bereich sind Bild-Komponenten mit einem Speicherbedarf pro Inhalt von weniger als $ 600\,\mathrm{kByte} $. Der zweite Bereich sind Video-Komponenten mit einem Speicherbedarf pro Inhalt von weniger als $ 600\,\mathrm{kByte} $ und einer Datenrate beim Abspielen eines Videos von mit einem Speicherbedarf pro Inhalt von weniger als $ 60\,\frac{\mathrm{kByte}}{\mathrm{s}} $. Der dritte Bereich sind Video-Komponenten mit einem Speicherbedarf pro Inhalt von weniger als $ 20\,\mathrm{MByte} $ und einer Datenrate beim Abspielen eines Videos von mit einem Speicherbedarf pro Inhalt von weniger als $ 2.000\,\frac{\mathrm{kByte}}{\mathrm{s}} $. Der vierte Bereich sind Video-Komponenten mit einem Speicherbedarf pro Inhalt von weniger als $ 100\,\mathrm{MByte} $ und einer Datenrate beim Abspielen eines Videos von mit einem Speicherbedarf pro Inhalt von weniger als $ 10.000\,\frac{\mathrm{kByte}}{\mathrm{s}} $. \\
-\begin{table}[hbt]	
+Die erste Gruppe besteht aus Bild- und Videokomponenten, die zweite und dritte Gruppe nur aus Videokomponenten. Daraus folgt die Klassifizierung der Komponenten in vier Bereiche, die Tabelle \ref{tab:Einteilung2} darstellt. Die angegebene Anzahl gibt die reale Anzahl der Komponenten an, da es zum Beispiel vier mal die LED-Streifen im Radkasten gibt.
+\begin{table}[]	
 	\centering
 	\renewcommand{\arraystretch}{1.5}	% Skaliert die Zeilenhöhe der Tabelle
 	\captionabove[Einteilung der Komponenten in die vier Bereiche]{Einteilung der Komponenten in die vier Bereiche}
 	\label{tab:Einteilung2}
-	\begin{tabular}{c|c}
+	\begin{tabular}{|c|c|}
 		\hline
-		\textbf{Erster Bereich} & \textbf{Zweiter Bereich} \\
-		$ 30\,\mathrm{MByte} $ & $ 30\,\mathrm{MByte} $ \\
-		\hline
+		\textbf{Erster Bereich} & \textbf{Dritter Bereich} \\
+		Speichergröße $ 30\,\mathrm{MByte} $ &  Speichergröße $ 1\,\mathrm{GByte} $ \\
+		Kollektionsgröße $ 3\,\mathrm{MByte} $ & Kollektionsgröße $ 100\,\mathrm{MByte} $ \\
+		Anzahl 5 & Anzahl 1 \\
 		\textbf{Bild-Komponenten} & \textbf{Video-Komponenten} \\
+		\parbox[t]{0.3\linewidth}{\centering E-Papier in der Frontschürze} & \parbox[t]{0.3\linewidth}{\centering LED-Matrix im Dachhimmel}  \\
+		\parbox[t]{0.3\linewidth}{\centering E-Papier über den vorderen Radkästen} &  \\
+		\parbox[t]{0.3\linewidth}{\centering E-Papier in der Heckleuchte} &  \\
 		\hline
-		\hline
-		\parbox[t]{0.3\linewidth}{\centering E-Papier in der Frontschürze} & \parbox[t]{0.3\linewidth}{\centering LED-Streifen in der Frontschürze}  \\
-		\parbox[t]{0.3\linewidth}{\centering E-Papier über den vorderen Radkästen} & \parbox[t]{0.3\linewidth}{\centering LED-Streifen in den Radkästen} \\
-		\parbox[t]{0.3\linewidth}{\centering E-Papier in der Heckleuchte} & \parbox[t]{0.3\linewidth}{\centering LED-Streifen in der Heckleuchte} \\
-		& \parbox[t]{0.3\linewidth}{\centering LED-Streifen im Interieur} \\
-		& \parbox[t]{0.3\linewidth}{\centering LED Türtafeln} \\
-		& \parbox[t]{0.3\linewidth}{\centering Morphende Oberfläche\\in der Mittelkonsole} \\
-		\hline
-		\textbf{Dritter Bereich} & \textbf{Vierter Bereich} \\
-		$ 1\,\mathrm{GByte} $ & $ 5\,\mathrm{GByte} $ \\
-		\hline
+		\textbf{Zweiter Bereich} & \textbf{Vierter Bereich} \\
+		Speichergröße $ 30\,\mathrm{MByte} $ & Speichergröße $ 5\,\mathrm{GByte} $ \\
+		Kollektionsgröße $ 3\,\mathrm{MByte} $ & Kollektionsgröße $ 500\,\mathrm{MByte} $ \\
+		Anzahl 9 & Anzahl 11 \\
 		\textbf{Video-Komponenten} & \textbf{Video-Komponenten} \\
+		\parbox[t]{0.3\linewidth}{\centering LED-Streifen in der Frontschürze} & \parbox[t]{0.3\linewidth}{\centering Videoprojektoren im Fußraum} \\
+		\parbox[t]{0.3\linewidth}{\centering LED-Streifen in den Radkästen} & \parbox[t]{0.3\linewidth}{\centering Videoprojektoren in\\den Außenspiegeln} \\ 
+		\parbox[t]{0.3\linewidth}{\centering LED-Streifen in der Heckleuchte} & \parbox[t]{0.3\linewidth}{\centering Bildschirme in den\\hinteren Seitenfenstern} \\ 
+		\parbox[t]{0.3\linewidth}{\centering LED-Streifen im Interieur} & \parbox[t]{0.3\linewidth}{\centering Bildschirme in den\\hinteren Seitenfenstern} \\
+		\parbox[t]{0.3\linewidth}{\centering LED Türtafeln} & \parbox[t]{0.3\linewidth}{\centering  Bildschirme in der Einstiegsleiste} \\
+		\parbox[t]{0.3\linewidth}{\centering Morphende Oberfläche\\in der Mittelkonsole}& \parbox[t]{0.3\linewidth}{\centering Durchsichtiger Bildschirm\\im Dachfenster} \\
 		\hline
-		\hline
-		\parbox[t]{0.3\linewidth}{\centering LED-Matrix im Dachhimmel} & \parbox[t]{0.3\linewidth}{\centering Videoprojektoren im Fußraum} \\
-		& \parbox[t]{0.3\linewidth}{\centering Videoprojektoren in\\den Außenspiegeln} \\ 
-		& \parbox[t]{0.3\linewidth}{\centering Bildschirme in den\\hinteren Seitenfenstern} \\ 
-		& \parbox[t]{0.3\linewidth}{\centering Bildschirme in den\\hinteren Seitenfenstern} \\
-		& \parbox[t]{0.3\linewidth}{\centering  Bildschirme in der Einstiegsleiste} \\
-		& \parbox[t]{0.3\linewidth}{\centering Durchsichtiger Bildschirm\\im Dachfenster} \\
 	\end{tabular} 
 \end{table}
-Der Speicherbedarf für eine gesamte Kollektion beträgt die Summe des Datenbedarfes von fünf Inhalten aller Kollektionen. Der Bedarf liegt bei $ 3,127\,\mathrm{GByte} $. Der Gesamtspeicherbedarf für zehn Kollektionen liegt bei $ 31,27\,\mathrm{GByte} $.
+
+Der erste Bereich sind Bild-Komponenten mit einem Speicherbedarf pro Inhalt von weniger als $ 600\,\mathrm{kByte} $. Der zweite Bereich sind Video-Komponenten mit einem Speicherbedarf pro Inhalt von weniger als $ 600\,\mathrm{kByte} $ und einer Datenrate beim Abspielen eines Videos von weniger als $ 60\,\frac{\mathrm{kByte}}{\mathrm{s}} $. Der dritte Bereich sind Video-Komponenten mit einem Speicherbedarf pro Inhalt von weniger als $ 20\,\mathrm{MByte} $ und einer Datenrate beim Abspielen eines Videos von weniger als $ 2\,\frac{\mathrm{MByte}}{\mathrm{s}} $. Der vierte Bereich sind Video-Komponenten mit einem Speicherbedarf pro Inhalt von weniger als $ 100\,\mathrm{MByte} $ und einer Datenrate beim Abspielen eines Videos von weniger als $ 10\,\frac{\mathrm{MByte}}{\mathrm{s}} $. \\
+Der Speicherbedarf für das gesamte Fahrzeug beträgt die Summe des Datenbedarfes von fünf Inhalten einer Kollektionen. Der Bedarf liegt bei $ 5,642\,\mathrm{GByte} $. Wichtig bei der Berechnung ist die Mehrzahl gleicher Komponenten, die aber unterschiedliche Daten besitzen, zum Beispiel Videoprojektor links und rechts. Der Gesamtspeicherbedarf für zehn Kollektionen liegt bei $ 56,42\,\mathrm{GByte} $.
 \section{Anforderungen an Konzeptentwürfe}
 Die Anforderungen an die Konzeptentwürfe sind zum einen die oben beschrieben Speichergrößen für Bild und Videodateien. Diese sind direkt aus der Anzahl der Inhalte und den dafür benötigten Dateigrößen berechnet. \\
-Zum anderen sollen die Benutzer zwischen zehn Kollektionen in Echtzeit umschalten können. Echtzeit bedeutet in diesem Fall, dass der Benutzer keine längere Verzögerung hinnehmen muss. Es wird für das Umschalten eine maximale Verzögerung von $ 1\,\mathrm{s} $ gesetzt.
+Zum anderen wurden für zwei Benutzerverhalten die maximale Verzögerungszeit auf eine bestimmte Länge abgeschätzt, um damit die Berechnungsgrundlage einordnen zu können. Die Benutzer sollen zwischen zehn Kollektionen in Echtzeit umschalten können. Echtzeit bedeutet in diesem Fall, dass der Benutzer keine längere Verzögerung hinnehmen muss. Es wird für das Umschalten eine maximale Verzögerung von $ 1\,\mathrm{s} $ gesetzt.
 Das Anzeigen einer neuen Kollektion, die noch nicht im Fahrzeug gespeichert ist, soll nach dem ersten Herunterladen aus dem Internet in unter zehn Sekunden angezeigt werden können.
 Nachfolgend werden die zwei Anforderungen grafisch dargestellt:
-\begin{figure}[hbt]
+\begin{figure}[]
 	\centering
 	\input{tikz/anforderung1.tex}
 	\caption[Anforderung 1: Umschalten zwischen Kollektionen in unter einer Sekunde]{Anforderung 1: Umschalten zwischen Kollektionen in unter einer Sekunde}
 	\label{fig:anforderung1}
 \end{figure}
-\begin{figure}[hbt]
+\begin{figure}[]
 	\centering
 	\input{tikz/anforderung2.tex}
 	\caption[Anforderung 2: Anzeigen einer neuen Kollektion in unter zehn Sekunde]{Anforderung 2: Anzeigen einer neuen Kollektion in unter zehn Sekunde}
 	\label{fig:anforderung2}
 \end{figure}
+In der ersten Anforderung \ref{fig:anforderung1} wird eine Aufforderung zum Umschalten der App an das zentrale Steuergerät gesendet, dieses schickt die Steuerbotschaft über das Bussystem 1 an den Speicherort. Vom Speicherort werden die Daten mit dem Bussystem 2 an die Komponenten zur Anzeige übertragen. \\
+In der zweiten Anforderung \ref{fig:anforderung2} wird eine Anforderung zum Herunterladen einer Kollektion an das zentrale Steuergerät gesendet, dass die Kollektion über eine Internet Anbindung lädt. Von Steuergerät müssen die einzelnen Daten an ihre Speicherorte über das Bussystem 1 transferiert werden und von dort über das Bussystem 2 angezeigt werden.
+Weitere Annahmen für die Berechnung sind: 
+Die Verzögerungszeit entsteht hauptsächlich durch die Übertragung in den Bussen und nicht in Verarbeitung in den Steuergeräten.
+Steuerbotschaften, die zum Beispiel den Befehl zum Umschalten oder Herunterladen einer Kollektion enthalten, haben eine Datengröße von $ 10\,\mathrm{kByte} $.
 \section{Implementierungsoptionen}
 Jede Komponente besteht aus einer Anzeigefläche mit einer dazugehörigen Steuerung, die aus Bild oder Videodateien die einzelnen Bildpunkte setzt. Diese Komponente kann sich überall im Fahrzeug befinden.
-Das Fahrzeug verfügt über ein zentrales Steuergerät, dass neue Kollektion aus dem Internet herunterladen kann und die Bedienbefehle der App erhält.
+Das Fahrzeug verfügt über ein zentrales Steuergerät, dass neue Kollektionen aus dem Internet herunterladen kann und die Bedienbefehle der App erhält.
 \paragraph{Speicherort}
-Der Speicherort der Daten kann an unterschiedlichen Stellen im Fahrzeug liegen. Entweder die Daten sind gesammelt in dem zentralen Steuergerät gespeichert oder die Daten sind direkt bei den Komponenten gespeichert. Eine dritte Option ist die Bündelung der Daten von Komponenten, die sich in der Nähe befinden.
-Nachfolgend werden die drei mögliche Varianten in den Diagrammen \ref{fig:architektur1}, \ref{fig:architektur2}  und \ref{fig:architektur3} skizziert.
-\begin{figure}[hbt]
+Der Speicherort der Daten kann an unterschiedlichen Stellen im Fahrzeug liegen. In der folgenden Konzeptentwicklung liegen die Daten entweder gesammelt im zentralen Steuergerät oder dezentral in den Komponenten. 
+Nachfolgend werden die zwei mögliche Varianten in den Diagrammen \ref{fig:architektur1} und \ref{fig:architektur2} skizziert.
+\begin{figure}[]
 	\centering
 	\input{tikz/architektur1.tex}
-	\caption[Positionierung Dateispeicher im zentralen Steuergerät]{Positionierung Dateispeicher im zentralen Steuergerät}
+	\caption[Architektur 1: Positionierung Dateispeicher im zentralen Steuergerät]{Architektur 1: Positionierung Dateispeicher im zentralen Steuergerät}
 	\label{fig:architektur1}
 \end{figure}
-\begin{figure}[hbt]
+\begin{figure}[]
 	\centering
 	\input{tikz/architektur2.tex}
-	\caption[Positionierung Dateispeicher lokal an der Komponente]{Positionierung Dateispeicher lokal an der Komponente}
+	\caption[Architektur 2: Positionierung Dateispeicher lokal an der Komponente]{Architektur 2: Positionierung Dateispeicher lokal an der Komponente}
 	\label{fig:architektur2}
 \end{figure}
-\begin{figure}[hbt]
-	\centering
-	\input{tikz/architektur3.tex}
-	\caption[Positionierung Dateispeicher zwischen zentralen Steuergerät und Komponente]{Positionierung Dateispeicher zwischen zentralen Steuergerät und Komponente}
-	\label{fig:architektur3}
-\end{figure}
 Abhängig vom Speicherort müssen die Bussysteme eine genügend hohe Bandbreite besitzen, um die Anforderungen einzuhalten. 
-
-\section{Vergleich der unterschiedlichen Lösungsansätze}
+\section{Berechnung der erforderlichen Datenraten für die drei Speicherorte}
+Im folgenden wird für beide Architekturmodelle die erforderlichen Datenraten für die zwei Anforderungen berechnet. Im Anschluss werden die Ergebnisse gesammelt dargestellt. \\
+Die zeitlichen Anforderungen für Bilddaten bedeuten, dass innerhalb dieser Zeit die gesamten Bilddaten einer Kollektion übertragen sein müssen. 
+Für Videodaten bedeuten die Anforderungen, dass zumindest immer bei Beginn des Anzeigenstarts eine Sekunde an Videodaten geladen sind. Die restlichen Videodaten müssen dann spätestens eine Sekunde vor dem Ende des Videos geladen sein. 
+\subsection{Berechnung für das erste Architekturmodell}
+Beim ersten Architekturmodell befindet sich der Datenspeicher direkt am zentralen Steuergerät. Es ist kein Bussystem 1 vorhanden.
+\paragraph{Anforderung 1}
+Für die Anforderung 1 darf die Verzögerungszeit für die Datenübertragung über das Bussystem 2 von einem Speicherort an alle Komponenten maximal eine Sekunde betragen. 
+Nach einer Sekunden müssen alle Bilddaten und ein Zehntel der Videodaten übertragen sein. Die Datenmenge beträgt:
+\begin{align}
+	Daten &= 5 \cdot 3\,\mathrm{MByte} + \frac{9 \cdot 3 \,\mathrm{MByte} + 1 \cdot 100\,\mathrm{MByte} + 11 \cdot 500\,\mathrm{MByte}}{10} =  577,7\,\mathrm{MByte}
+\end{align}
+Nach 10 Sekunden müssen alle Daten übertragen sein. Die Datenmenge beträgt:
+\begin{align}
+	Daten &= 5 \cdot 3\,\mathrm{MByte} + 9 \cdot 3 \,\mathrm{MByte} + 1 \cdot 100\,\mathrm{MByte} + 11 \cdot 500\,\mathrm{MByte} =  5642\,\mathrm{MByte}
+\end{align}
+Das Diagramm \ref{fig:arch1anf1} zeigt den Verlauf der Datenmenge über die Zeit. Nach einer Sekunde muss die übertragene Datenmenge mindestens $ 577,7\,\mathrm{MByte} $ betragen. Nach zehn Sekunden beträgt die gesamte Datenmenge $ 5642\,\mathrm{MByte} $. Die rote Linie gibt an wie viele Daten zu einem Zeitpunkt mindestens übertragen sein müssen, während die pinke Linie den durchschnittlichen Wert angibt. Das heißt, um die Anforderung zu erfüllen muss die tatsächliche Datenmenge im Zeitverlauf immer oberhalb der roten Linie sein.
+\begin{figure}[]
+	\centering
+	\input{pgfplot/arch1anf1.tex}
+	\caption[Datenmengenverlauf in Relation zur Zeit für die Anforderung 1 bei der Architektur 1]{Datenmengenverlauf in Relation zur Zeit für die Anforderung 1 bei der Architektur 1}
+	\label{fig:arch1anf1}
+\end{figure}
+Um die Mindestbandbreite des Bussystems zu berechnen, wird die Steigung der roten Linie berechnet.
+\begin{align}
+	Mindestbandbreite = \frac{5642\,\mathrm{MByte}}{10\,\mathrm{s}} = 564,2\,\frac{\mathrm{MByte}}{\mathrm{s}}
+\end{align}
+\paragraph{Anforderung 2}
+Für die Anforderung 2 gilt hier, dass die Verzögerungszeit für die Datenübertragung über das Bussystem 2 von einem Speicherort an alle Komponenten maximal zehn Sekunden betragen darf. Diese Anforderung ist gleich zur Anforderung 1, nur mit einer längeren Zeitdauer.
+Nach zehn Sekunden müssen alle Bilddaten und ein Zehntel der Videodaten übertragen sein.
+\begin{align}
+	Daten &= 5 \cdot 3\,\mathrm{MByte} + \frac{9 \cdot 3 \,\mathrm{MByte} + 1 \cdot 100\,\mathrm{MByte} + 11 \cdot 500\,\mathrm{MByte}}{10} =  577,7\,\mathrm{MByte}
+\end{align}
+Nach 19 Sekunden müssen alle Daten übertragen sein.
+\begin{align}
+	Daten &= 5 \cdot 3\,\mathrm{MByte} + 9 \cdot 3 \,\mathrm{MByte} + 1 \cdot 100\,\mathrm{MByte} + 11 \cdot 500\,\mathrm{MByte} =  5642\,\mathrm{MByte}
+\end{align}
+Die Abbildung \ref{fig:arch1anf2} zeigt den zeitlichen Datenverlauf. Wie man hier sehen kann, ist im Gegensatz zur Anforderung 1 die rote Linie zuerst flacher und wird dann steiler. Dadurch liegt die durchschnittliche Datenverlaufslinie oberhalb der Roten.
+\begin{figure}[]
+	\centering
+	\input{pgfplot/arch1anf2.tex}
+	\caption[Datenmengenverlauf in Relation zur Zeit für die Anforderung 2 bei der Architektur 1]{Datenmengenverlauf in Relation zur Zeit für die Anforderung 2 bei der Architektur 1}
+	\label{fig:arch1anf2}
+\end{figure}
+Bei genügend Pufferspeicher in der Komponente kann die tatsächliche Bandbreite am Anfang höher als die Steigung der roten Linie sein. Dafür ist die Maximale Bandbreite geringer als die Steigung der roten Linie in der zweiten Hälfte. Die minimalste durchschnitlliche Bandbreit ist die Steigung der pinken Linie.
+\begin{align}
+	Mindestbandbreite = \frac{5642\,\mathrm{MByte}}{19\,\mathrm{s}} = 296,9\,\frac{\mathrm{MByte}}{\mathrm{s}}
+\end{align}
+\subsection{Berechnung für das zweite Architekturmodell}
+Beim zweiten Architekturmodell befindet sich die Datenspeicher direkt an den Komponente. Es ist kein Bussystem 2 vorhanden.
+\paragraph{Anforderung 1}
+Für die Anforderung 1 darf die Verzögerungszeit für die Steuerübertragung über das Bussystem 1 vom zentralen Steuergerät an alle Komponenten maximal eine Sekunde betragen.
+Die Datenrate für diese Anforderung berechnet sich aus der Anzahl der Komponenten mal die Datengröße der Steuerbotschaft.
+\begin{align}
+	Daten = 26 \cdot 10\,\mathrm{kByte} = 260\,\mathrm{kByte}
+\end{align}
+Die Mindestbandbreite des Bussystems beträgt:
+\begin{align}
+	Mindestbandbreite = \frac{260\,\mathrm{kByte}}{1\,\mathrm{s}} = 260\,\frac{\mathrm{kByte}}{\mathrm{s}}
+\end{align}
+\paragraph{Anforderung 2}
+Für die Anforderung 2 darf die Verzögerungszeit für die Datenübertragung über das Bussystem 1 vom zentralen Steuergerät an alle Komponenten maximal zehn Sekunden betragen.
+Nach zehn Sekunden müssen alle Bilddaten und ein Zehntel der Videodaten übertragen sein.
+\begin{align}
+	Daten &= 5 \cdot 3\,\mathrm{MByte} + \frac{9 \cdot 3 \,\mathrm{MByte} + 1 \cdot 100\,\mathrm{MByte} + 11 \cdot 500\,\mathrm{MByte}}{10} =  577,7\,\mathrm{MByte}
+\end{align}
+Nach 19 Sekunden müssen alle Daten übertragen sein.
+\begin{align}
+	Daten &= 5 \cdot 3\,\mathrm{MByte} + 9 \cdot 3 \,\mathrm{MByte} + 1 \cdot 100\,\mathrm{MByte} + 11 \cdot 500\,\mathrm{MByte} =  5642\,\mathrm{MByte}
+\end{align}
+Die Berechnungen sind die gleichen wie bei der Architektur 2. Die Mindestbandbreite beträgt dementsprechend $ 296,9\,\frac{\mathrm{MByte}}{\mathrm{s}} $.
+\section{Vergleich der beiden Konzeptentwürfe}
+Die Tabelle \ref{Mindestbandbreite}
+\begin{table}[]	
+	\centering
+	\renewcommand{\arraystretch}{1.5}	% Skaliert die Zeilenhöhe der Tabelle
+	\captionabove[Mindestbandbreite bei Architektur und Anforderung]{Mindestbandbreite Bei Architektur und Anforderung}
+	\label{tab:Mindestbandbreite}
+	\begin{tabular}{c|c|c|}
+		& \textbf{Anforderung 1} & \textbf{Anforderung 2} \\
+		\hline
+		Architektur 1 & $ 564,2\,\frac{\mathrm{MByte}}{\mathrm{s}} $ & $ 296,9\,\frac{\mathrm{MByte}}{\mathrm{s}} $ \\
+		\hline
+		Architektur 2 & $ 260\,\frac{\mathrm{kByte}}{\mathrm{s}} $ & $ 296,9\,\frac{\mathrm{MByte}}{\mathrm{s}} $ \\
+		\hline
+	\end{tabular} 
+\end{table}

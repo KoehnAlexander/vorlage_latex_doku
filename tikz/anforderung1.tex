@@ -13,8 +13,8 @@
 	\draw[->, red, very thick] (S1) -- (K1);
 	\draw[->, green, very thick] (5, 3) -- (6,3) node[right] {Steuerbotschaften};
 	\draw[->, red, very thick] (5, 2) -- (6, 2) node[right] {Datenaustausch};
-	\node[second, right=of D] (S) {Start};
-	\node[second, below=of K1] (E) {Ende};
-	
-	\draw (S) .. controls (-1,-1) .. (E);
+	\node[second] (S) at (2, -1) {Start};
+	\node[second] (E) at (10.8, -1) {Ende};
+	\draw[->] (S) .. controls (4, -0.5) and (7, -0.5) .. (E);
+	\node (B) at (6,-1) {Maximale Dauer von $ 1\,\mathrm{s} $};
 \end{tikzpicture}

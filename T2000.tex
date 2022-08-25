@@ -170,7 +170,13 @@ marginal
 % Folgende Zeilen weden benötigt, um Tikz und PGF-Plot-Grafiken einzubinden
 \usepackage{pgfplots}
 \usepackage{pgfplotstable}
-\pgfplotsset{compat=newest,width=0.6\linewidth}
+\pgfplotsset{
+	every axis/.append style={grid, width=1\textwidth, height=10cm},
+	grid style={densely dotted, thick},
+	label style={font=\small},	
+	legend pos={outer north east},
+	cycle list={red, green, cyan, yellow}
+}
 \usepgfplotslibrary{smithchart}
 \usepackage{tikz}						% Tikz sollte nach Listings Pakete geladen werden.
 \usepackage{fontawesome}
