@@ -32,13 +32,19 @@ Im Gegensatz zu bisherigen Individualisierungsmöglichkeiten, wie zum Beispiel A
 Das Diagramm \ref{fig:sinneeinteilung} teilt den drei Grundbereichen die verwendeten Sinneseindrücke zu. \\
 Für das Gesamtkonzept wurden vier unterschiedliche Kollektionen erstellt. Die Collectibles zeigen je nach Trigger unterschiedliche Inhalte trotz gleicher Kollektion. \\
 Das Gesamtkonzept beinhaltet ein Ökosystem für den Handel und die Interaktion für Kollektionen als digitale Wertgegenstände.
-%TODO Diagramm Ökosystem%
+
 \section{Beschreibung}
 Der Prototyp wurde unter den Leitlinien des Gesamtkonzeptes entwickelt. Die Basis des Prototypen bildet ein produziertes elektrisches Serienfahrzeug. An dem Fahrzeug wurden im Exterieur und Interieur entweder Teile ergänzt oder mit neuen Komponenten getauscht, die das Gesamtkonzept des Prototypen umsetzen. Die Serienfunktionen wurden zum größten Teil durch die Umbauten nicht beeinträchtigt.\\
-Durch Zeit- und Budgetknappheit besitzt das Fahrzeug nicht alle Ideen des Gesamtkonzeptes. Bei den Hardware-Komponenten gibt es keine mit olfaktorischen Sinneseindrücken, sondern nur passende Düfte für die Kollektionen. Die App besitzt alle oben beschriebenen Funktionen zumindest als Schaubilder, aber hat nur die Auswahl und Steuerung der Kollektionen und AR Inhalte als Funktionen implementiert.
+Durch Zeit- und Budgetknappheit besitzt das Fahrzeug nicht alle Ideen des Gesamtkonzeptes. Bei den Hardware-Komponenten gibt es keine mit olfaktorischen Sinneseindrücken, sondern nur passende Düfte für die Kollektionen. Die App besitzt alle oben beschriebenen Funktionen zumindest als Schaubilder, aber hat nur die Auswahl und Steuerung der Kollektionen und AR Inhalte als Funktionen implementiert. \\
+Die Grafik \ref{fig:fahrzeugstruktur} zeigt alle Komponenten im Fahrzeug aus der Vogelperspektive. Die Farben zeigen, von welcher Bauteil die Komponenten angesteuert werden.
+\begin{figure}[hbt]
+	\centering
+	\input{tikz/fahrzeugstruktur.tex}
+	\caption[Anordnung der Komponenten im Fahrzeug aus der Vogelperspektive]{Anordnung der Komponenten im Fahrzeug aus der Vogelperspektive}
+	\label{fig:fahrzeugstruktur}
+\end{figure}
 \section{Exterieur Komponenten}
 Das Fahrzeug hat sowohl im Exterieur als auch im Interieur Komponenten verbaut. Zuerst werden die Komponenten im Exterieur und dann im Interieur vorgestellt. Die Komponenten wurden nach der verwendeten Technik und dem Ort benannt und nicht nach den Markennamen. Die Einteilung erfolgt nach der Betrachtungsweise innerhalb oder außerhalb des Fahrzeugs der Komponenten. Exterieur Komponenten werden von Beobachtern außerhalb des Fahrzeugs betrachtet. Interieur Komponenten entsprechend von innen.\\
-%TODO Bild Komponenten Exterieur%
 Im Exterieur sind dies:
 \begin{itemize}
 	\item ein E-Papier und ein durchgehendes LED-Streifen in der Frontschürze
@@ -48,6 +54,25 @@ Im Exterieur sind dies:
 	\item nach außen gerichtete Bildschirme in den hinteren Seitenfenstern
 	\item ein LED-Streifen in der Heckleuchte und zwei kleine E-Papiere unterhalb der Heckleuchte
 \end{itemize}
+Die folgende Grafiken zeigen die Front-, Seiten- und Heckansicht des Fahrzeugs (\ref{fig:frontansicht}, \ref{fig:seitansicht} und \ref{fig:heckansicht}).
+\begin{figure}[hbt]
+	\centering
+	\input{tikz/frontansicht.tex}
+	\caption[Frontansicht des Fahrzeugs mit den Komponenten]{Frontansicht des Fahrzeugs mit den Komponenten}
+	\label{fig:frontansicht}
+\end{figure}
+\begin{figure}[hbt]
+	\centering
+	\input{tikz/Seitansicht.tex}
+	\caption[Seitenansicht des Fahrzeugs mit den Komponenten]{Seitenansicht des Fahrzeugs mit den Komponenten}
+	\label{fig:seitansicht}
+\end{figure}
+\begin{figure}[hbt]
+	\centering
+	\input{tikz/heckansicht.tex}
+	\caption[Heckansicht des Fahrzeugs mit den Komponenten]{Heckansicht des Fahrzeugs mit den Komponenten}
+	\label{fig:heckansicht}
+\end{figure}
 Im folgenden werden alle Exterieur Komponenten näher betrachtet:
 \subsection{E-Papier in der Frontschürze}
 Das E-Papier befindet sich hinter einer Scheibe mit einem Markenlogo in der Mitte der Fahrzeugfront und schließt an den Seiten über eine Abmaskierung auf die beiden Frontlichter ab. Das E-Papier bewirkt mit der Laminierung an der Scheibe einen räumlichen Effekt, wonach das Markenlogo vor dem E-Papier erscheint. \\
@@ -93,7 +118,6 @@ Im Interieur sind folgende Komponenten verbaut:
 	\item eine LED-Matrix im Dachhimmel
 \end{itemize}
 Daneben sind weitere Komponenten Duftflakons und ein Soundplayer im Innenraum. \\
-%TODO Bild Komponenten Interieur%
 Im folgenden werden alle Interieur Komponenten näher vorgestellt.
 \subsection{LED-Streifen im Interieur}
 Der LED-Streifen besteht aus fünf Teilen und erstreckt sich im oberen Bereich der vier Türverkleidungen und schließt über das Cockpit zu einem einheitlichen Band ab. Der Streifen befindet sich hinter einer Streulichtscheibe, damit der Betrachter die einzelnen LED nicht erkennen kann. \\
@@ -133,4 +157,3 @@ Die Komponenten des Prototypen sind damit nicht über das Serienbordnetz des Fah
 	\caption[Ansteuerung Komponenten im Prototypen]{Ansteuerung Komponenten im Prototypen}
 	\label{fig:tikz_ansteuerung}
 \end{figure}
-%TODO Grafik umgestalten%

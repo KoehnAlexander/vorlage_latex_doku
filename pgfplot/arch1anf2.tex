@@ -14,5 +14,9 @@
 		\draw[red, very thick] (100, 57.77) -- node[right, text width=3cm] {Minimum Datenübertragung} (190, 564.2);
 		\draw[magenta] (0,0) -- node[left, text width=3cm] {Durchschnittliche Datenübertragung} (190, 564.2);{Minimum Datenübertragung}
 		\addplot[white] expression {564.2/190 * x * 100};
+		\node[right]  (K1) at (130, 100) {1. kritischer Punkt};
+		\draw[->] (K1) -- (105, 60);
+		\node[left]  (K2) at (160, 550) {2. kritischer Punkt};
+		\draw[->] (K2) -- (185, 560);
 	\end{axis}
 \end{tikzpicture}
