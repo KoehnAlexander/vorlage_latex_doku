@@ -1,6 +1,9 @@
 \chapter{Konzeptentwurf für eine informationstechnische Anbindung der Komponenten} \label{cha:Konzeptentwurf}
 Auf Basis der unter \ref{cha:Analyse} gewonnenen Erkenntnissen zum Speicherbedarf der Komponenten werden in diesem Kapitel Entwürfe erarbeitet, wie die Komponenten in eine Fahrzeugarchitektur implementiert werden können.\\
-Im ersten Schritt werden die durch die Analyse gewonnenen Erkenntnisse genutzt, um Komponenten nach ihren Speichereigenschaften zu sortieren. Die Sortierung hilft die Komponenten in der Konzeptanalyse zu bewerten. Im zweiten Schritt werden Anforderungen an Architekturen aufgestellt. Mit den Anforderungen werden im dritten Schritt zwei mögliche Konzeptentwürfe erstellt und bei diesen die benötigten Bandbreiten berechnet. Im Anschluss werden im fünften Schritt die Modelle verglichen und abschließend ein Realisierungsmöglichkeiten vorgestellt.
+Im ersten Schritt werden die durch die Analyse gewonnenen Erkenntnisse genutzt, um Komponenten nach ihren Speichereigenschaften zu sortieren. Die Sortierung hilft die Komponenten in der Konzeptanalyse zu bewerten. \\
+Im zweiten Schritt werden Anforderungen an Architekturen aufgestellt. \\
+Mit den Anforderungen werden im dritten Schritt zwei mögliche Konzeptentwürfe erstellt und bei diesen die benötigten Bandbreiten im vierten Schritt berechnet. \\
+Im Anschluss werden im fünften Schritt die Modelle verglichen und abschließend ein Realisierungsmöglichkeiten vorgestellt.
 \section{Einteilung der Komponenten}
 Die erste Gruppe benötigt einen Speicher für 50 Inhalte von weniger als $ 30\,\mathrm{MByte} $, die zweite Gruppe von weniger als $ 1\,\mathrm{GByte} $, die dritte Gruppe von weniger als $ 5\,\mathrm{GByte} $. \\
 Tabelle \ref{tab:Einteilung} weist die Komponenten den Gruppen zu. Für die Konzeptentwürfe werden allen Komponenten die maximalen Speichergrößen der Gruppe zugeordnet. 
@@ -29,8 +32,9 @@ Tabelle \ref{tab:Einteilung} weist die Komponenten den Gruppen zu. Für die Konz
 	\end{tabular} 
 \end{table}
 
-Diese erste Einteilung liefert eine Gruppierung mit der Speichergröße. Eine weitere Einteilung nach Komponenten, die statisch Bilder anzeigen oder dynamisch Videos anzeigen, ist relevant für die Dimensionierung der Busanbindung. Diese Einteilung ist ebenfalls in der Tabelle \ref{tab:Einteilung} integriert. \\
-Bei Komponenten beträgt die Größe eines Inhalts die Division der Speichergröße der Gruppe durch die 50 Inhalte. Bei Komponenten, die nur Bilder anzeigen, ist dieser Betrag gleich des Betrags für ein Bild.
+Eine weitere Einteilung nach Komponenten, die statisch Bilder anzeigen oder dynamisch Videos anzeigen, ist relevant für die Dimensionierung der Busanbindung. Diese Einteilung ist ebenfalls in der Tabelle \ref{tab:Einteilung} integriert. \\
+%TODO Besser erklären
+Bei Komponenten beträgt die Speichergröße dem Äquivalent des Speicherbedarfs für 50 Inhalte.
 \begin{align}
 	EG &= \frac{30\,\mathrm{MByte}}{50} = 600\,\mathrm{kByte} \\
 	ZG &= \frac{1\,\mathrm{GByte}}{50} =  20\,\mathrm{MByte} \\
@@ -42,7 +46,7 @@ Bei Komponenten, die Videos anzeigen, beträgt die Größe der einzelnen Bilder 
 	ZG &= \frac{20\,\mathrm{MByte}}{10\,\mathrm{s} \cdot 24\,\mathrm{fps}} = 83,33\,\mathrm{kByte} \\
 	DG &= \frac{100\,\mathrm{MByte}}{10\,\mathrm{s} \cdot 24\,\mathrm{fps}} = 416,67\,\mathrm{kByte}
 \end{align}
-Die erste Gruppe besteht aus Bild- und Videokomponenten, die zweite und dritte Gruppe nur aus Videokomponenten. Daraus folgt die Klassifizierung der Komponenten in vier Bereiche, die Tabelle \ref{tab:Einteilung2} darstellt. Die angegebene Anzahl gibt die reale Anzahl der Komponenten an, da es zum Beispiel vier mal die LED-Streifen im Radkasten gibt.
+Die erste Gruppe besteht aus Bild- und Video-, die zweite und dritte Gruppe nur aus Videokomponenten. Daraus folgt die Klassifizierung der Komponenten in vier Bereiche, die Tabelle \ref{tab:Einteilung2} darstellt. Die angegebene Anzahl gibt die reale Anzahl der Komponenten an, da es zum Beispiel vier mal die LED-Streifen im Radkasten gibt.
 \begin{table}[]	
 	\centering
 	\renewcommand{\arraystretch}{1.5}	% Skaliert die Zeilenhöhe der Tabelle
@@ -75,8 +79,9 @@ Die erste Gruppe besteht aus Bild- und Videokomponenten, die zweite und dritte G
 \end{table}
 
 Der erste Bereich sind Bild-Komponenten mit einem Speicherbedarf pro Inhalt von weniger als $ 600\,\mathrm{kByte} $. Der zweite Bereich sind Video-Komponenten mit einem Speicherbedarf pro Inhalt von weniger als $ 600\,\mathrm{kByte} $ und einer Datenrate beim Abspielen eines Videos von weniger als $ 60\,\frac{\mathrm{kByte}}{\mathrm{s}} $. Der dritte Bereich sind Video-Komponenten mit einem Speicherbedarf pro Inhalt von weniger als $ 20\,\mathrm{MByte} $ und einer Datenrate beim Abspielen eines Videos von weniger als $ 2\,\frac{\mathrm{MByte}}{\mathrm{s}} $. Der vierte Bereich sind Video-Komponenten mit einem Speicherbedarf pro Inhalt von weniger als $ 100\,\mathrm{MByte} $ und einer Datenrate beim Abspielen eines Videos von weniger als $ 10\,\frac{\mathrm{MByte}}{\mathrm{s}} $. \\
-Der Speicherbedarf für eine Kollektion beträgt die Summe des Datenbedarfes von fünf Inhalten der Kollektionen. Der Bedarf liegt bei $ 5,642\,\mathrm{GByte} $. Wichtig bei der Berechnung ist die Mehrzahl gleicher Komponenten, die aber unterschiedliche Daten besitzen, zum Beispiel Videoprojektor links und rechts. Der Gesamtspeicherbedarf für das Fahrzeug für zehn Kollektionen liegt bei $ 56,42\,\mathrm{GByte} $.
+Der Speicherbedarf für eine Kollektion ergibt sich aus der Summe des Datenbedarfes von fünf Inhalten für jede Komponente. Der Bedarf liegt bei $ 5,642\,\mathrm{GByte} $. Wichtig bei der Berechnung ist die Mehrzahl gleicher Komponenten, die aber unterschiedliche Daten besitzen, zum Beispiel Videoprojektor links und rechts. Der Gesamtspeicherbedarf für das Fahrzeug für zehn Kollektionen liegt bei $ 56,42\,\mathrm{GByte} $.
 \section{Anforderungen an Konzeptentwürfe}
+%TODO Hier Weitermachen
 Die Anforderungen an die Konzeptentwürfe sind zum einen die Bereitstellung der oben beschriebenen Speichergrößen für Bild und Videodateien. Diese sind direkt aus der Anzahl der Inhalte und den dafür benötigten Dateigrößen berechnet. \\
 Zum anderen wurden für zwei Benutzerverhalten die maximale Verzögerungszeit auf eine bestimmte Länge abgeschätzt, um damit die Berechnungsgrundlage einordnen zu können. Die Benutzer sollen zwischen zehn Kollektionen in Echtzeit umschalten können. Echtzeit bedeutet in diesem Fall, dass der Benutzer keine längere Verzögerung hinnehmen muss. Es wird für das Umschalten eine maximale Verzögerung von $ 1\,\mathrm{s} $ festgesetzt.
 Das Anzeigen einer neuen Kollektion, die noch nicht im Fahrzeug gespeichert ist, soll nach dem ersten Herunterladen aus dem Internet in unter zehn Sekunden angezeigt werden können.
