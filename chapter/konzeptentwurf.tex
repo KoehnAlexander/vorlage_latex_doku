@@ -33,7 +33,6 @@ Tabelle \ref{tab:Einteilung} weist die Komponenten den Gruppen zu. Für die Konz
 \end{table}
 
 Eine weitere Einteilung nach Komponenten, die statisch Bilder anzeigen oder dynamisch Videos anzeigen, ist relevant für die Dimensionierung der Busanbindung. Diese Einteilung ist ebenfalls in der Tabelle \ref{tab:Einteilung} integriert. \\
-%TODO Besser erklären
 Bei Komponenten beträgt die Speichergröße dem Äquivalent des Speicherbedarfs für 50 Inhalte.
 \begin{align}
 	EG &= \frac{30\,\mathrm{MByte}}{50} = 600\,\mathrm{kByte} \\
@@ -81,9 +80,8 @@ Die erste Gruppe besteht aus Bild- und Video-, die zweite und dritte Gruppe nur 
 Der erste Bereich sind Bild-Komponenten mit einem Speicherbedarf pro Inhalt von weniger als $ 600\,\mathrm{kByte} $. Der zweite Bereich sind Video-Komponenten mit einem Speicherbedarf pro Inhalt von weniger als $ 600\,\mathrm{kByte} $ und einer Datenrate beim Abspielen eines Videos von weniger als $ 60\,\frac{\mathrm{kByte}}{\mathrm{s}} $. Der dritte Bereich sind Video-Komponenten mit einem Speicherbedarf pro Inhalt von weniger als $ 20\,\mathrm{MByte} $ und einer Datenrate beim Abspielen eines Videos von weniger als $ 2\,\frac{\mathrm{MByte}}{\mathrm{s}} $. Der vierte Bereich sind Video-Komponenten mit einem Speicherbedarf pro Inhalt von weniger als $ 100\,\mathrm{MByte} $ und einer Datenrate beim Abspielen eines Videos von weniger als $ 10\,\frac{\mathrm{MByte}}{\mathrm{s}} $. \\
 Der Speicherbedarf für eine Kollektion ergibt sich aus der Summe des Datenbedarfes von fünf Inhalten für jede Komponente. Der Bedarf liegt bei $ 5,642\,\mathrm{GByte} $. Wichtig bei der Berechnung ist die Mehrzahl gleicher Komponenten, die aber unterschiedliche Daten besitzen, zum Beispiel Videoprojektor links und rechts. Der Gesamtspeicherbedarf für das Fahrzeug für zehn Kollektionen liegt bei $ 56,42\,\mathrm{GByte} $.
 \section{Anforderungen an Konzeptentwürfe}
-%TODO Hier Weitermachen
-Die Anforderungen an die Konzeptentwürfe sind zum einen die Bereitstellung der oben beschriebenen Speichergrößen für Bild und Videodateien. Diese sind direkt aus der Anzahl der Inhalte und den dafür benötigten Dateigrößen berechnet. \\
-Zum anderen wurden für zwei Benutzerverhalten die maximale Verzögerungszeit auf eine bestimmte Länge abgeschätzt, um damit die Berechnungsgrundlage einordnen zu können. Die Benutzer sollen zwischen zehn Kollektionen in Echtzeit umschalten können. Echtzeit bedeutet in diesem Fall, dass der Benutzer keine längere Verzögerung hinnehmen muss. Es wird für das Umschalten eine maximale Verzögerung von $ 1\,\mathrm{s} $ festgesetzt.
+Die Anforderungen an die Konzeptentwürfe ergeben sich zum einen aus den oben beschriebenen Speichergrößen für Bild und Videodateien. Diese sind direkt aus der Anzahl der Inhalte und den dafür benötigten Dateigrößen berechnet. \\
+Zum anderen wurden für zwei Benutzerverhalten die maximale Verzögerungszeit auf eine bestimmte Länge abgeschätzt, um damit die Berechnungsgrundlage einordnen zu können. Die Benutzer sollen zwischen zehn Kollektionen in Echtzeit umschalten können. Echtzeit bedeutet in diesem Fall, dass der Benutzer für das Umschalten der Kollektionen eine maximale Verzögerung von $ 1\,\mathrm{s} $ hinnehmen muss.
 Das Anzeigen einer neuen Kollektion, die noch nicht im Fahrzeug gespeichert ist, soll nach dem ersten Herunterladen aus dem Internet in unter zehn Sekunden angezeigt werden können.
 Nachfolgend werden die zwei Anforderungen grafisch dargestellt:
 \begin{figure}[]
@@ -104,7 +102,7 @@ Weitere Annahmen für die Berechnung sind:
 Die Verzögerungszeit entsteht hauptsächlich durch die Übertragung in den Bussen und nicht in  der Verarbeitung in den Steuergeräten.
 Steuerbotschaften, die zum Beispiel den Befehl zum Umschalten oder Herunterladen einer Kollektion enthalten, haben eine Datengröße von $ 10\,\mathrm{kByte} $.
 \section{Implementierungsoptionen}
-Jede Komponente besteht aus einer Anzeigefläche mit einer dazugehörigen Steuerung, die aus Bild oder Videodateien die einzelnen Bildpunkte setzt. Diese Komponente kann sich überall im Fahrzeug befinden.
+Jede Komponente besteht aus einer Anzeigefläche mit einer dazugehörigen Steuerung, die aus Bild- oder Videodateien die einzelnen Bildpunkte setzt. Diese Komponente kann sich überall im Fahrzeug befinden.
 Das Fahrzeug verfügt über ein zentrales Steuergerät, dass neue Kollektionen aus dem Internet herunterladen kann und die Bedienbefehle der App erhält.
 \paragraph{Speicherort}
 Der Speicherort der Daten kann an unterschiedlichen Stellen im Fahrzeug liegen. In der folgenden Konzeptentwicklung liegen die Daten entweder gesammelt im zentralen Steuergerät oder dezentral in den Komponenten. 
