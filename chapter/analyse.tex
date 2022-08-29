@@ -83,17 +83,17 @@ Im folgenden werden die Exterieur-Komponenten an Hand der oben beschriebenen ein
 \subsection{E-Papier in der Frontschürze}
 Rechtlich ist zu prüfen, ob das E-Papier als Leuchte gilt und danach behandelt werden muss. Daneben sind die rechtlichen Grundlagen für das Ändern der Bildschirminhalte in unterschiedlichen Fahrmodi, wie zum Beispiel Parken oder Fahren, zu analysieren. \\
 Wirtschaftlich betrachtet ist diese Komponente ein zentraler Bestandteil des Fahrzeugkonzeptes, da durch die Größe und Lage der Kunde die Inhalte stark wahrnimmt. \\
-Mit einer physikalischen Dimensionierung über die gesamte Breite zwischen den Frontlichtscheinwerfern und somit eine mögliche Breite bei unterschiedlichen Fahrzeugmodellen von $ 80 $ bis $ 100\,\mathrm{cm} $ und einer Höhe von $ 50 $ bis $ 60\,\mathrm{cm} $ ist die Stabilität des E-Papiers zu prüfen, da die Lage im Kotflügel besonders exponiert ist. \\ 
+Bei einer physikalischen Dimensionierung mit einer möglichen Breite bei unterschiedlichen Fahrzeugmodellen von $ 80 $ bis $ 100\,\mathrm{cm} $ und einer Höhe von $ 50 $ bis $ 60\,\mathrm{cm} $ ist die Stabilität des E-Papiers zu prüfen, da die Lage im Kotflügel besonders exponiert ist. \\ 
 Das zusätzliche Gewicht des Bildschirms ist an der vorderen Kotflügelbefestigung aufzunehmen. \\
-Mit einer Auflösung von 2560 Pixel pro Zeile zu 1440 Zeilen und einer Farbtiefe von 16 Stufen benötigt das Display mit der Formel \ref{eq:Bilddatenmenge} pro Bild einen Speicher S von $ 368,64\,\mathrm{kByte} $. 
+Mit einer Auflösung von 2560 Pixel pro Zeile zu 1440 Zeilen und einer Farbtiefe von 16 Stufen benötigt das Display mit der Formel \ref{eq:Bilddatenmenge} pro Bild einen Speicher S von $ 369\,\mathrm{kByte} $. 
 \begin{align}
 	S &= \frac{2560\,\frac{\mathrm{Pixel}}{\mathrm{Zeile}}\times 1440\,\mathrm{Zeilen} \times 8\,\frac{\mathrm{Bit}}{\mathrm{Pixel}}}{10} \\
-	&=  368,64\,\mathrm{kByte}
+	&=  369\,\mathrm{kByte}
 \end{align}
-Bei zehn Kollektionen mit jeweils fünf Bildern benötigt man einen Speicher von $ 18,432\,\mathrm{MByte} $. \\
+Bei zehn Kollektionen mit jeweils fünf Bildern benötigt man einen Speicher von $ 18\,\mathrm{MByte} $. \\
 Die Pixeldichte des Bildschirms beträgt bei einer Breite von $ 691,2\,\mathrm{mm} $ und einer Höhe von $ 388,8\,\mathrm{mm} $:
 \begin{align}
-	Pixeldichte = \frac{2560\,\mathrm{Pixel}}{27,2\,\mathrm{inch}} = 94,1\,\mathrm{ppi}
+	P = \frac{2560\,\mathrm{Pixel}}{27,2\,\mathrm{inch}} = 94\,\mathrm{ppi}
 \end{align}
 Mit dieser Pixeldichte wirkt das Bild scharf bis zu einer Entfernung von einem Meter.
 Durch die Position ist die gezielte Brechung bei Crashs relevant für die Sicherheit von Passanten.
@@ -108,9 +108,9 @@ Für eine Farbtiefe von 256 Stufen pro Farbe benötigt jede einzelne LED 24 Bit 
 Für ein Video von zehn Sekunden Länge wird ein Speicher S von 
 \begin{align}
 	S &= 996\,\mathrm{Byte} \cdot 24\,\mathrm{fps} \cdot 10\,\mathrm{s}\\
-	&= 239,04\,\mathrm{kByte}
+	&= 239\,\mathrm{kByte}
 \end{align}
-benötigt. Bei insgesamt 50 Inhalten bedeutet das $ 11,952\,\mathrm{MByte} $ an Speicherbedarf. \\
+benötigt. Bei insgesamt 50 Inhalten bedeutet das $ 12\,\mathrm{MByte} $ an Speicherbedarf. \\
 Eine farbige LED, die pro Pixel vier Dioden (Rot, Grün, Blau und Weiß) enthält, hat einen Leistungsaufnahme von $ 320\,\mathrm{mW} $.  
 Die LED-Streifen benötigen mit einer Anzahl von 500 LED eine Leistung von $ 160\,\mathrm{W} $. Im 12 V Bordnetz beträgt die Stromstärke $ 13,3\,\mathrm{A} $. 
 \subsection{E-Papiere über den vorderen Radkästen}
@@ -151,51 +151,51 @@ Der Betrachter soll bei unterschiedlichen Lichtverhältnissen noch ein möglichs
 Ein Standbild benötigt bei einer Pixelanzahl pro Zeile von $ 1280 $ und $ 800 $ Zeilen ein Speichergröße von ca. $ 256\,\mathrm{kByte}$. 
 \begin{align}
 	S &= \frac{1280\,\frac{\mathrm{Pixel}}{\mathrm{Zeile}} \times 800\,\mathrm{Zeilen} \times 24\,\frac{\mathrm{Bit}}{\mathrm{Pixel}}}{10} \\
-	&= 307,2\,\mathrm{kByte}
+	&= 307\,\mathrm{kByte}
 \end{align}
-Für eine Animation von zehn Sekunden Länge benötigt eine Videoprojektor einen Speicher von $ 73,728\,\mathrm{MByte}$.
+Für eine Animation von zehn Sekunden Länge benötigt eine Videoprojektor einen Speicher von $ 74\,\mathrm{MByte}$.
 \begin{align}
-	S &= 307,2\,\mathrm{kByte} \cdot 24\,\mathrm{fps} \cdot 10\,\mathrm{s}\\
-	&= 73,728\,\mathrm{MByte} 
+	S &= 307\,\mathrm{kByte} \cdot 24\,\mathrm{fps} \cdot 10\,\mathrm{s}\\
+	&= 74\,\mathrm{MByte} 
 \end{align}
-Insgesamt wird ein Speicher in Höhe von $ 3,6864\,\mathrm{GByte} $ benötigt. \\
-Die Projektionsfläche auf dem Boden beträgt in der Breite ca. $ 1,20\,\mathrm{m} $ und in der Höhe $ 0,75\,\mathrm{m} $. Damit ergibt sich eine Pixeldichte von $ 27,1\,\mathrm{ppi} $. Die Pixeldichte reicht bis zu einer Entfernung von ca. drei Metern aus.
+Insgesamt wird ein Speicher in Höhe von $ 3,7\,\mathrm{GByte} $ benötigt. \\
+Die Projektionsfläche auf dem Boden beträgt in der Breite ca. $ 1,20\,\mathrm{m} $ und in der Höhe $ 0,75\,\mathrm{m} $. Damit ergibt sich eine Pixeldichte von $ 27\,\mathrm{ppi} $. Die Pixeldichte reicht bis zu einer Entfernung von ca. drei Metern aus.
 \subsection{Bildschirme in den hinteren Seitenfenstern}
 Rechtlich ist die Zulässigkeit wegen möglicher Ablenkungen von Straßenverkehrsteilnehmern zu prüfen.
 Das Verkleinern der Fensterfläche ist dahingehend zu bewerten, ob dies mit Kundeninteressen vereinbar ist.
 Die Crashsicherheit an dieser Stelle und die Stabilität ist wichtig, da sich diese Komponente in unmittelbarer Nähe zu den Fahrzeuginsassen befindet.
-Ein Standbild benötigt bei einer Pixelanzahl pro Zeile von $ 1280 $ und von $ 800 $ Zeilen ein Speichergröße von ca. $ 307,2\,\mathrm{kByte}$. 
+Ein Standbild benötigt bei einer Pixelanzahl pro Zeile von $ 1280 $ und von $ 800 $ Zeilen ein Speichergröße von ca. $ 307\,\mathrm{kByte}$. 
 \begin{align}
 	S &= \frac{1280\,\frac{\mathrm{Pixel}}{\mathrm{Zeile}}\times 800\,\mathrm{Zeilen} \times 24\,\frac{\mathrm{Bit}}{\mathrm{Pixel}}}{10} \\
-	&= 307,2\,\mathrm{KByte}
+	&= 307\,\mathrm{KByte}
 \end{align}
-Für eine Animation von zehn Sekunden Länge benötigt das Display einen Speicher von $ 73,728\,\mathrm{MByte}$.
+Für eine Animation von zehn Sekunden Länge benötigt das Display einen Speicher von $ 73,7\,\mathrm{MByte}$.
 \begin{align}
-	S &= 307,2\,\mathrm{kByte} \cdot 24\,\mathrm{fps} \cdot 10\,\mathrm{s}\\
-	&= 73,728\,\mathrm{MByte}
+	S &= 307\,\mathrm{kByte} \cdot 24\,\mathrm{fps} \cdot 10\,\mathrm{s}\\
+	&= 73,7\,\mathrm{MByte}
 \end{align}
-Insgesamt wird ein Speicher pro Bildschirm von $ 3,6864\,\mathrm{GByte} $ benötigt. \\
-Mit einer Breite von $ 30\,\mathrm{cm} $ besitzt das Display eine Pixeldichte von $ 108,4\,\mathrm{ppi} $ und bildet bis zu einer Distanz von circa einem Meter ein scharfes Bild ab.
+Insgesamt wird ein Speicher pro Bildschirm von $ 3,7\,\mathrm{GByte} $ benötigt. \\
+Mit einer Breite von $ 30\,\mathrm{cm} $ besitzt das Display eine Pixeldichte von $ 108\,\mathrm{ppi} $ und bildet bis zu einer Distanz von circa einem Meter ein scharfes Bild ab.
 \subsection{LED-Streifen in der Heckleuchte}
 Wie bei den LED-Streifen in der Frontschürze sind die rechtlichen und wirtschaftlichen Fragestellungen gleich. \\
 Grundsätzlich gilt es zu prüfen, ob die vorhandenen Steuergeräte für die Lichter Kapazitäten für dynamische Lichtstreifen frei haben.
 Die weiteren technischen Kriterien verhalten sich wie oben erläutert. \\
-Für ein Bild benötigt man einen Speicher von $ 1,173\,\mathrm{kByte} $.
+Für ein Bild benötigt man einen Speicher von $ 1,2\,\mathrm{kByte} $.
 \begin{align}
 	S &= 391\,\mathrm{Pixel} \times 24\,\frac{\mathrm{Bit}}{\mathrm{Pixel}} \cdot \\
-	&= 1,173\,\mathrm{kByte}
+	&= 1,2\,\mathrm{kByte}
 \end{align}
-Für eine Animation von zehn Sekunden Länge sind $ 281,52\,\mathrm{kByte} $ erforderlich.
+Für eine Animation von zehn Sekunden Länge sind $ 282\,\mathrm{kByte} $ erforderlich.
 \begin{align}
-	S &= 1,173\,\mathrm{kByte} \cdot 24\,\mathrm{fps} \cdot 10\,\mathrm{s} \\
-	&= 281,52\,\mathrm{kByte}
+	S &= 1,2\,\mathrm{kByte} \cdot 24\,\mathrm{fps} \cdot 10\,\mathrm{s} \\
+	&= 282\,\mathrm{kByte}
 \end{align}
-Insgesamt wird ein Speicher von $ 14,076\,\mathrm{MByte} $ benötigt.
+Insgesamt wird ein Speicher von $ 14\,\mathrm{MByte} $ benötigt.
 Der Strombedarf für das gesamte Lichtband beträgt ca. $ 128\,\mathrm{W} $
 \subsection{E-Papier in der Heckleuchte}
 Die E-Papiere in der Heckleuchte haben ähnliche Eigenschaften wie die E-Papiere über den vorderen Seitenkästen in Bezug auf die rechtlichen Kriterien. Durch die Position in der Nähe der Heckleuchten kann von dort die Stromversorgung und Busanbindung erfolgen. Der Strombedarf und Datenspeicherbedarf von $ 160\,\mathrm{kByte} $ pro Bild sind gleich mit dem anderen E-Papier. 
 \begin{align}
-	S &= \frac{1600\,\mathrm{Pixel pro Zeile} \times 1200\,\mathrm{Zeilen} \times 8\,\frac{\mathrm{Bit}}{\mathrm{Pixel}}}{10} \cdot \\
+	S &= \frac{1600\,\frac{\mathrm{Pixel}}{\mathrm{Zeile}} \times 1200\,\mathrm{Zeilen} \times 8\,\frac{\mathrm{Bit}}{\mathrm{Pixel}}}{10} \cdot \\
 	&= 192\,\mathrm{kByte}
 \end{align}
 Für 50 Bilder sind es dementsprechend $ 9,6\,\mathrm{MByte} $.
@@ -206,16 +206,16 @@ Im folgenden werden die einzelnen Interieur-Komponenten mit den Kriterien, die i
 Rechtlich ist bei den Animationen durch LED-Streifen im Fahrzeug die Vermeidung von Ablenkung des Fahrers oder der Fahrerin zu gewährleisten.
 Durch die Länge des Streifens müssen für die Crashsicherheit eventuelle Sollbruchstellen sichergestellt werden. \\
 Bei einer Anzahl von 719 LED benötigt der LED Streifen eine Leistung von $ 230\,\mathrm{W} $.
-Für eine Inszenierung von zehn Sekunden Länge benötigt der LED-Streifen Speicherplatz in der Höhe von $ 25,884\,\mathrm{MByte}$.
+Für eine Inszenierung von zehn Sekunden Länge benötigt der LED-Streifen Speicherplatz in der Höhe von $ 26\,\mathrm{MByte}$.
 \begin{align}
 	S &= 719\,\mathrm{Pixel} \times 24\,\frac{\mathrm{Bit}}{\mathrm{Pixel}} \cdot \\
-	&= 2,157\,\mathrm{kByte}
+	&= 2,2\,\mathrm{kByte}
 \end{align}
 \begin{align}
-	S &= 2,157\,\mathrm{kByte} \cdot 24\,\mathrm{fps} \cdot 10\,\mathrm{s}\\
-	&= 517,68\,\mathrm{kByte}
+	S &= 2,2\,\mathrm{kByte} \cdot 24\,\mathrm{fps} \cdot 10\,\mathrm{s}\\
+	&= 518\,\mathrm{kByte}
 \end{align}
-Für 50 Videos beträgt die Speichergröße $ 25,884\,\mathrm{MByte} $.
+Für 50 Videos beträgt die Speichergröße $ 26\,\mathrm{MByte} $.
 \subsection{LED-Türtafeln}
 Rechtlich gesehen ist zu prüfen, ab welchem Helligkeitsgrad und ab welcher Farbinszenierung der Fahrer oder die Fahrerin durch die LED zu stark abgelenkt werden. \\
 Im Moment wird nur eine LED pro Türtafel genutzt, wodurch Möglichkeiten der Inszenierung im Vergleich zu einer LED-Matrix nicht genutzt werden. 
@@ -224,48 +224,48 @@ Die Ansteuerung der Türtafeln kann durch die Nähe zu den LED-Streifen im Inter
 \subsection{Bildschirme in der Einstiegsleiste}
 Unter den rechtlichen Aspekten gibt es in einer ersten Untersuchung keine Beschränkungen, da der Bildschirm nur bei geöffneter Türe und dementsprechend im Stand betrachtet werden kann.
 Die technische Umsetzbarkeit ist durch Bestätigung in ersten Voruntersuchungen, wie zum Beispiel Kugelfalltest, positiv. Technische Herausforderungen an dieser Stelle sind Feuchtigkeitsschutz, Temperaturempfindlichkeit, und Kratzfestigkeit. \\
-Ein Standbild benötigt bei einer Pixelanzahl pro Zeile von $ 1280 $ und von $ 1024 $ Zeilen ein Speichergröße von ca. $ 393,216\,\mathrm{kByte}$. 
+Ein Standbild benötigt bei einer Pixelanzahl pro Zeile von $ 1280 $ und von $ 1024 $ Zeilen ein Speichergröße von ca. $ 393\,\mathrm{kByte}$. 
 \begin{align}
 	S &= \frac{1280\,\frac{\mathrm{Pixel}}{\mathrm{Zeile}}\times 1024\,\mathrm{Zeilen} \times 24\,\frac{\mathrm{Bit}}{\mathrm{Pixel}}}{10} \\
-	&= 393,216\,\mathrm{KByte}
+	&= 393\,\mathrm{kByte}
 \end{align}
-Für eine Animation von zehn Sekunden Länge benötigt das Display einen Speicher von $ 94,37184\,\mathrm{MByte}$.
-Insgesamt bei 50 Videos beträgt der benötigte Speicher $ 4,718592\,\mathrm{GByte}$. \\
-Bei einer Breite von $ 30\,\mathrm{cm} $ beträgt die Pixeldichte $ 108,4\,\mathrm{ppi} $. Damit ist die Betrachtung von bis zu einem Meter scharf.
+Für eine Animation von zehn Sekunden Länge benötigt das Display einen Speicher von $ 94\,\mathrm{MByte}$.
+Insgesamt bei 50 Videos beträgt der benötigte Speicher $ 4,7\,\mathrm{GByte}$. \\
+Bei einer Breite von $ 30\,\mathrm{cm} $ beträgt die Pixeldichte $ 108\,\mathrm{ppi} $. Damit ist die Betrachtung von bis zu einem Meter scharf.
 \subsection{Videoprojektoren im Fußraum}
 Unter den rechtlichen Fragestellungen ergibt sich die Vermeidung von Ablenkung für den Fahrer oder die Fahrerin.
 Aus Kundenperspektive ist die angestrahlte Oberfläche eventuell nicht geeignet, da diese stärker verschmutzt sein kann. \\
 Unter den technischen Kriterien ist die Verfügbarkeit des Bauraums mit der benötigten Kühlung zu prüfen. Eine Herausforderung ist die Befestigung des Videoprojektors, da dieser sich bei Fahrt relativ zum Auto nicht bewegen darf. 
-Ein Standbild benötigt bei einer Pixelanzahl pro Zeile von $ 1280 $ und von $ 800 $ Zeilen ein Speichergröße von ca. $ 307,2\,\mathrm{kByte}$. 
+Ein Standbild benötigt bei einer Pixelanzahl pro Zeile von $ 1280 $ und von $ 800 $ Zeilen ein Speichergröße von ca. $ 307\,\mathrm{kByte}$. 
 \begin{align}
 	S &= \frac{1280\,\frac{\mathrm{Pixel}}{\mathrm{Zeile}}\times 800\,\mathrm{Zeilen} \times 24\,\frac{\mathrm{Bit}}{\mathrm{Pixel}}}{10} \\
-	&= 307,2\,\mathrm{kByte}
+	&= 307\,\mathrm{kByte}
 \end{align}
-Für eine Animation von zehn Sekunden Länge benötigt das Display einen Speicher von $ 73,728\,\mathrm{MByte}$.
-Insgesamt bei 50 Videos beträgt der benötigte Speicher $ 3,6864\,\mathrm{GByte}$.
-Die Pixeldichte beträgt bei einer Breite von $ 30\,\mathrm{cm} $ $ 108,4\,\mathrm{ppi} $. Damit ist die Betrachtung von bis zu einem Meter scharf.
+Für eine Animation von zehn Sekunden Länge benötigt das Display einen Speicher von $ 74\,\mathrm{MByte}$.
+Insgesamt bei 50 Videos beträgt der benötigte Speicher $ 3,7\,\mathrm{GByte}$.
+Die Pixeldichte beträgt bei einer Breite von $ 30\,\mathrm{cm} $ $ 108\,\mathrm{ppi} $. Damit ist die Betrachtung von bis zu einem Meter scharf.
 \subsection{Morphende Oberfläche in der Mittelkonsole}
 Die tatsächlich verwendete technische Realisierung der morphenden Oberfläche ist eine Übergangslösung für eine neue Technik, die einzelne Pixelelemente auf einer Fläche gesteuert hoch und herunterfahren kann. Diese Technik ist derzeit in der Entwicklung. Wie die Farbtiefe bei einem Bildschirm kann die Höhe der einzelnen Punkte eingestellt werden. \\
 Mit 8 Bit Höhentiefe benötigt ein Feld mit 20 auf 20 einzelnen Punkten einen Speicher in der Größe von $ 400\,\mathrm{Byte}$.
 Eine weitere technische Weiterentwicklung kann Animationen auf der Mittelkonsole abspielen. Die Datenmenge steigert sich dementsprechend mit der Bildwiederholungsrate und der Dauer der Animation. Bei einer Bildwiederholungsrate von $ 24\,\mathrm{fps} $ und 10 Sekunden Dauer beträgt der benötigte Speicher $ 96\,\mathrm{kByte}$.
 \subsection{Durchsichtiger Bildschirm im Dachfenster} 
 Herausforderungen bestehen durch die Temperaturentwicklung der Oberfläche durch Sonneneinstrahlung und die Festigkeit der Kontaktierung bei Bewegung des Glasdaches. 
-Ein Standbild benötigt bei einer Pixelanzahl pro Zeile von $ 1920 $ und von $ 1080 $ Zeilen ein Speichergröße von ca. $ 207,36\,\mathrm{kByte}$. 
+Ein Standbild benötigt bei einer Pixelanzahl pro Zeile von $ 1920 $ und von $ 1080 $ Zeilen ein Speichergröße von ca. $ 207\,\mathrm{kByte}$. 
 \begin{align}
 	S &= \frac{1920\,\frac{\mathrm{Pixel}}{\mathrm{Zeile}}\times 1080\,\mathrm{Zeilen} \times 8\,\frac{\mathrm{Bit}}{\mathrm{Pixel}}}{10} \\
-	&= 207,36\,\mathrm{kByte}
+	&= 207\,\mathrm{kByte}
 \end{align}
-Für eine Animation von zehn Sekunden Länge benötigt das Display einen Speicher von $ 49,7664\,\mathrm{MByte}$.
-Insgesamt bei 50 Videos beträgt der benötigte Speicher $ 2,488320\,\mathrm{GByte}$.
-Mit einer Breite von $ 80\,\mathrm{cm} $ und $ 1920 $ Pixel pro Zeile beträgt die Pixeldichte $ 61,0\,\mathrm{ppi} $. Das Bild ist bis zu ca. $ 1,5\,\mathrm{m} $ scharf.
+Für eine Animation von zehn Sekunden Länge benötigt das Display einen Speicher von $ 50\,\mathrm{MByte}$.
+Insgesamt bei 50 Videos beträgt der benötigte Speicher $ 2,5\,\mathrm{GByte}$.
+Mit einer Breite von $ 80\,\mathrm{cm} $ und $ 1920 $ Pixel pro Zeile beträgt die Pixeldichte $ 61\,\mathrm{ppi} $. Das Bild ist bis zu ca. $ 1,5\,\mathrm{m} $ scharf.
 \subsection{LED-Matrix im Dachhimmel}
-Ein Standbild benötigt bei einer Pixelanzahl pro Zeile von $ 192 $ und von $ 96 $ Zeilen ein Speichergröße von ca. $ 55,296\,\mathrm{kByte}$. 
+Ein Standbild benötigt bei einer Pixelanzahl pro Zeile von $ 192 $ und von $ 96 $ Zeilen ein Speichergröße von ca. $ 55\,\mathrm{kByte}$. 
 \begin{align}
 	S &= 192\,\frac{\mathrm{Pixel}}{\mathrm{Zeile}}\times 96\,\mathrm{Zeilen} \times 24\,\frac{\mathrm{Bit}}{\mathrm{Pixel}} \\
-	&= 55,296\,\mathrm{kByte}
+	&= 55\,\mathrm{kByte}
 \end{align}
-Für eine Animation von zehn Sekunden Länge benötigt das Display einen Speicher von $ 13,27104\,\mathrm{MByte}$.
-Insgesamt bei 50 Videos beträgt der benötigte Speicher $ 663,552\,\mathrm{MByte}$.
+Für eine Animation von zehn Sekunden Länge benötigt das Display einen Speicher von $ 13\,\mathrm{MByte}$.
+Insgesamt bei 50 Videos beträgt der benötigte Speicher $ 664\,\mathrm{MByte}$.
 \subsection{Duftflakons im Innenraum}
 Eine technische Verbreitung unterschiedlicher individueller Düfte ist in diesem Konzept nicht realisiert. Ein aktueller technischer Aufbau besteht aus einem Set mit unterschiedlichen Duftflakons, die einzeln geöffnet werden können. Dadurch ist die Anzahl der Düfte beschränkt auf die Set-Größe.
 \subsection{Bildschirmoberflächen im Cockpit}
@@ -279,23 +279,25 @@ In der Tabelle \ref{tab:Speicherbedarf} werden die Komponenten, die visuelle ode
 	\renewcommand{\arraystretch}{1.5}	% Skaliert die Zeilenhöhe der Tabelle
 	\captionabove[Berechnung des Speicherbedarfes für ein Bild]{Berechnung des Speicherbedarfes für ein Bild}
 	\label{tab:Speicherbedarf}
-	\begin{tabular}{c|cccc}
+	\begin{tabular}{l|cccr}
 		\textbf{Komponente} & \parbox[t]{0.1\linewidth}{\centering Pixel} & \parbox[t]{0.11\linewidth}{\centering Bit pro Pixel} & \parbox[t]{0.15\linewidth}{\centering Kompression} & \parbox[t]{0.1\linewidth}{\centering Speicher pro Bild} \\ 
 		\hline 
 		\hline 
-		\parbox[t]{0.3\linewidth}{\centering E-Papier in der Frontschürze} & $ 2560 \times 1440 $ & $ 8 $ & $ 10 $ & $ 368,64\,\mathrm{kByte} $\\ \parbox[t]{0.3\linewidth}{\centering E-Papier über den vorderen Radkästen} & $ 1600 \times 1200 $ & $ 8 $ & $ 10 $ & $ 192\,\mathrm{kByte} $ \\
-		\parbox[t]{0.3\linewidth}{\centering E-Papier in der Heckleuchte} & $ 1600 \times 1200 $ & $ 8 $ & $ 10 $ & $ 192\,\mathrm{kByte} $ \\
-		\parbox[t]{0.3\linewidth}{\centering LED-Streifen in der Frontschürze} & $ 332 \times 1 $ & $ 24 $ & $ 1 $ & $ 996\,\mathrm{Byte} $ \\
-		\parbox[t]{0.3\linewidth}{\centering LED-Streifen in den Radkästen} & $ 200 \times 1 $ & $ 24 $ & $ 1 $ & $ 600\,\mathrm{Byte} $\\ \parbox[t]{0.3\linewidth}{\centering LED-Streifen in der Heckleuchte} & $ 391 \times 1 $ & $ 24 $ & $ 1 $ & $ 1,173\,\mathrm{kByte} $ \\ 
-		\parbox[t]{0.3\linewidth}{\centering LED-Streifen im Interieur} & $ 719 \times 1 $ & $ 24 $ & $ 1 $ & $ 2,157\,\mathrm{kByte} $ \\
-		\parbox[t]{0.3\linewidth}{\centering LED Türtafeln} & $ 4 \times 1 $ & $ 24 $ & $ 1 $ &  $ 12\,\mathrm{Byte} $ \\
-		\parbox[t]{0.3\linewidth}{\centering Videoprojektoren in\\den Außenspiegeln} & $ 1280 \times 800 $ & $ 24 $ & $ 10 $ &   $ 307,2\,\mathrm{kByte} $ \\ 
-		\parbox[t]{0.3\linewidth}{\centering Videoprojektoren im Fußraum} & $ 1280 \times 800 $ & $ 24 $ & $ 10 $ & $ 307,2\,\mathrm{kByte} $ \\
-		\parbox[t]{0.3\linewidth}{\centering Bildschirme in den\\hinteren Seitenfenstern} & $ 1280 \times 800 $ & $ 24 $ & $ 10 $ & $ 307,2\,\mathrm{kByte} $ \\
-		\parbox[t]{0.3\linewidth}{\centering Bildschirme in der Einstiegsleiste} &  $ 1280 \times 1024 $ & $ 24 $ & $ 10 $ & $ 393,216\,\mathrm{kByte} $ \\
-		\parbox[t]{0.3\linewidth}{\centering Durchsichtiger Bildschirm\\im Dachfenster} & $ 1920 \times 1080 $ & $ 8 $ & $ 10 $ & $ 207,36\,\mathrm{kByte} $ \\
-		\parbox[t]{0.3\linewidth}{\centering LED-Matrix im Dachhimmel} & $ 192 \times 96 $ & $ 24 $ & $ 1 $ & $ 55,296\,\mathrm{kByte} $ \\
-		\parbox[t]{0.3\linewidth}{\centering Morphende Oberfläche\\in der Mittelkonsole} & $ 20 \times 20 $ & $ 8 $ & $ 1 $ & $ 400\,\mathrm{Byte} $ \\
+		\parbox[t]{0.3\linewidth}{\RaggedRight E-Papier in der\\ Frontschürze} & $ 2560 \times 1440 $ & $ 8 $ & $ 10 $ & $ 369\,\mathrm{kByte} $\\ 
+		\parbox[t]{0.3\linewidth}{\RaggedRight E-Papier über den\\ vorderen Radkästen} & $ 1600 \times 1200 $ & $ 8 $ & $ 10 $ & $ 192\,\mathrm{kByte} $ \\
+		\parbox[t]{0.3\linewidth}{\RaggedRight E-Papier in der\\ Heckleuchte} & $ 1600 \times 1200 $ & $ 8 $ & $ 10 $ & $ 192\,\mathrm{kByte} $ \\
+		\parbox[t]{0.3\linewidth}{\RaggedRight LED-Streifen in der Frontschürze} & $ 332 \times 1 $ & $ 24 $ & $ 1 $ & $ 996\,\mathrm{Byte} $ \\
+		\parbox[t]{0.3\linewidth}{\RaggedRight LED-Streifen in den\\ Radkästen} & $ 200 \times 1 $ & $ 24 $ & $ 1 $ & $ 600\,\mathrm{Byte} $\\ 
+		\parbox[t]{0.3\linewidth}{\RaggedRight LED-Streifen in der Heckleuchte} & $ 391 \times 1 $ & $ 24 $ & $ 1 $ & $ 1,2\,\mathrm{kByte} $ \\ 
+		\parbox[t]{0.3\linewidth}{\RaggedRight LED-Streifen im Interieur} & $ 719 \times 1 $ & $ 24 $ & $ 1 $ & $ 2,2\,\mathrm{kByte} $ \\
+		\parbox[t]{0.3\linewidth}{\RaggedRight LED Türtafeln} & $ 4 \times 1 $ & $ 24 $ & $ 1 $ &  $ 12\,\mathrm{Byte} $ \\
+		\parbox[t]{0.3\linewidth}{\RaggedRight Videoprojektoren in\\den Außenspiegeln} & $ 1280 \times 800 $ & $ 24 $ & $ 10 $ &   $ 307\,\mathrm{kByte} $ \\ 
+		\parbox[t]{0.3\linewidth}{\RaggedRight Videoprojektoren im\\ Fußraum} & $ 1280 \times 800 $ & $ 24 $ & $ 10 $ & $ 307\,\mathrm{kByte} $ \\
+		\parbox[t]{0.3\linewidth}{\RaggedRight Bildschirme in den\\hinteren Seitenfenstern} & $ 1280 \times 800 $ & $ 24 $ & $ 10 $ & $ 307\,\mathrm{kByte} $ \\
+		\parbox[t]{0.3\linewidth}{\RaggedRight Bildschirme in der\\ Einstiegsleiste} &  $ 1280 \times 1024 $ & $ 24 $ & $ 10 $ & $ 393\,\mathrm{kByte} $ \\
+		\parbox[t]{0.3\linewidth}{\RaggedRight Durchsichtiger Bildschirm\\im Dachfenster} & $ 1920 \times 1080 $ & $ 8 $ & $ 10 $ & $ 207\,\mathrm{kByte} $ \\
+		\parbox[t]{0.3\linewidth}{\RaggedRight LED-Matrix im\\ Dachhimmel} & $ 192 \times 96 $ & $ 24 $ & $ 1 $ & $ 55\,\mathrm{kByte} $ \\
+		\parbox[t]{0.3\linewidth}{\RaggedRight Morphende Oberfläche\\in der Mittelkonsole} & $ 20 \times 20 $ & $ 8 $ & $ 1 $ & $ 400\,\mathrm{Byte} $ \\
 	\end{tabular} 
 \end{table}
 Die unterschiedlichen Datenmengen zwischen $ 12\,\mathrm{Byte} $ und $ 393,216\,\mathrm{kByte} $ für ein Bild machen deutlich, dass eine Abwägung zwischen hoher Pixelanzahl und Farbtiefe gemacht werden muss. Die benötigte Speichergröße wird neben dem Speicher pro Bild in der Tabelle \ref{tab:Werte} dargestellt. Es wird deutlich, dass das Anzeigen von bewegten Bildern mehr Daten benötigt.
@@ -304,25 +306,25 @@ Die unterschiedlichen Datenmengen zwischen $ 12\,\mathrm{Byte} $ und $ 393,216\,
 	\renewcommand{\arraystretch}{1.5}	% Skaliert die Zeilenhöhe der Tabelle
 	\captionabove[Liste der Komponenten mit den oben festgestellten Werten]{Liste der Komponenten mit den oben festgestellten Werte}
 	\label{tab:Werte}
-	\begin{tabular}{c|ccc}
+	\begin{tabular}{l|rrr}
 		\textbf{Komponente} & \parbox[t]{0.18\linewidth}{\centering Speicher pro Bild} & \parbox[t]{0.18\linewidth}{\centering Speicher pro Video} &\parbox[t]{0.18\linewidth}{\centering Speichergröße gesamt} \\ 
 		\hline 
 		\hline 
-		\parbox[t]{0.3\linewidth}{\centering E-Papier in der Frontschürze} & $ 368,64\,\mathrm{kByte} $ && $ 18,432\,\mathrm{MByte} $  \\
-		\parbox[t]{0.3\linewidth}{\centering E-Papier über den vorderen Radkästen} & $ 192\,\mathrm{kByte} $ && $ 9,6\,\mathrm{MByte} $ \\
-		\parbox[t]{0.3\linewidth}{\centering E-Papier in der Heckleuchte} & $ 192\,\mathrm{kByte} $ && $ 9,6\,\mathrm{MByte} $ \\
-		\parbox[t]{0.3\linewidth}{\centering LED-Streifen in der Frontschürze} & $ 996\,\mathrm{Byte} $ & $ 239,04\,\mathrm{kByte} $ & $ 11,952\,\mathrm{MByte} $ \\
-		\parbox[t]{0.3\linewidth}{\centering LED-Streifen in den Radkästen} & $ 600\,\mathrm{Byte} $ & $ 144\,\mathrm{kByte} $ & $ 7,2\,\mathrm{MByte} $ \\ 
-		\parbox[t]{0.3\linewidth}{\centering LED-Streifen in der Heckleuchte} & $ 1,173\,\mathrm{kByte} $ & $ 281,52\,\mathrm{kByte} $ & $ 14,076\,\mathrm{MByte} $ \\ 
-		\parbox[t]{0.3\linewidth}{\centering LED-Streifen im Interieur} & $ 2,157\,\mathrm{kByte} $ & $ 517,68\,\mathrm{kByte} $ &$ 25,884\,\mathrm{MByte} $ \\
-		\parbox[t]{0.3\linewidth}{\centering LED Türtafeln} & $ 12\,\mathrm{Byte} $ & $ 2,88\,\mathrm{kByte} $ & $ 144\,\mathrm{KByte} $ \\
-		\parbox[t]{0.3\linewidth}{\centering Videoprojektoren in\\den Außenspiegeln} & $ 307,2\,\mathrm{kByte} $ & $ 73,728\,\mathrm{MByte} $ & $ 3,6864\,\mathrm{GByte} $ \\ 
-		\parbox[t]{0.3\linewidth}{\centering Videoprojektoren im Fußraum} & $ 307,2\,\mathrm{kByte} $ & $ 73,728\,\mathrm{MByte} $ &$ 3,6864\,\mathrm{GByte} $ \\
-		\parbox[t]{0.3\linewidth}{\centering Bildschirme in den\\hinteren Seitenfenstern} & $ 307,2\,\mathrm{kByte} $ & $ 73,728\,\mathrm{MByte} $ & $ 3,6864\,\mathrm{GByte} $ \\
-		\parbox[t]{0.3\linewidth}{\centering Bildschirme in der Einstiegsleiste} & $ 393,216\,\mathrm{kByte} $ & $ 94,37184\,\mathrm{MByte} $ & $ 4,718592\,\mathrm{GByte} $ \\
-		\parbox[t]{0.3\linewidth}{\centering Durchsichtiger Bildschirm\\im Dachfenster} & $ 207,36\,\mathrm{kByte} $ & $ 49,7664\,\mathrm{MByte} $ & $ 2,48832\,\mathrm{GByte} $ \\
-		\parbox[t]{0.3\linewidth}{\centering LED-Matrix im Dachhimmel} & $ 55,296\,\mathrm{kByte} $ & $ 13,27104\,\mathrm{MByte} $ & $ 663,552\,\mathrm{MByte} $ \\
-		\parbox[t]{0.3\linewidth}{\centering Morphende Oberfläche\\in der Mittelkonsole} & $ 400\,\mathrm{Byte} $ & $ 96\,\mathrm{kByte} $ &$ 4,8\,\mathrm{MByte} $ \\
+		\parbox[t]{0.3\linewidth}{\RaggedRight E-Papier in der\\ Frontschürze} & $ 369\,\mathrm{kByte} $ && $ 18\,\mathrm{MByte} $  \\
+		\parbox[t]{0.3\linewidth}{\RaggedRight E-Papier über den\\ vorderen Radkästen} & $ 192\,\mathrm{kByte} $ && $ 9,6\,\mathrm{MByte} $ \\
+		\parbox[t]{0.3\linewidth}{\RaggedRight E-Papier in der\\ Heckleuchte} & $ 192\,\mathrm{kByte} $ && $ 9,6\,\mathrm{MByte} $ \\
+		\parbox[t]{0.3\linewidth}{\RaggedRight LED-Streifen in der Frontschürze} & $ 996\,\mathrm{Byte} $ & $ 239\,\mathrm{kByte} $ & $ 12\,\mathrm{MByte} $ \\
+		\parbox[t]{0.3\linewidth}{\RaggedRight LED-Streifen in den\\ Radkästen} & $ 600\,\mathrm{Byte} $ & $ 144\,\mathrm{kByte} $ & $ 7,2\,\mathrm{MByte} $ \\ 
+		\parbox[t]{0.3\linewidth}{\RaggedRight LED-Streifen in der Heckleuchte} & $ 1,2\,\mathrm{kByte} $ & $ 282\,\mathrm{kByte} $ & $ 14\,\mathrm{MByte} $ \\ 
+		\parbox[t]{0.3\linewidth}{\RaggedRight LED-Streifen im Interieur} & $ 2,2\,\mathrm{kByte} $ & $ 518\,\mathrm{kByte} $ &$ 26\,\mathrm{MByte} $ \\
+		\parbox[t]{0.3\linewidth}{\RaggedRight LED Türtafeln} & $ 12\,\mathrm{Byte} $ & $ 2,88\,\mathrm{kByte} $ & $ 144\,\mathrm{KByte} $ \\
+		\parbox[t]{0.3\linewidth}{\RaggedRight Videoprojektoren in\\den Außenspiegeln} & $ 307\,\mathrm{kByte} $ & $ 74\,\mathrm{MByte} $ & $ 3,7\,\mathrm{GByte} $ \\ 
+		\parbox[t]{0.3\linewidth}{\RaggedRight Videoprojektoren im\\ Fußraum} & $ 307\,\mathrm{kByte} $ & $ 74\,\mathrm{MByte} $ &$ 3,7\,\mathrm{GByte} $ \\
+		\parbox[t]{0.3\linewidth}{\RaggedRight Bildschirme in den\\hinteren Seitenfenstern} & $ 307\,\mathrm{kByte} $ & $ 73,7\,\mathrm{MByte} $ & $ 3,7\,\mathrm{GByte} $ \\
+		\parbox[t]{0.3\linewidth}{\RaggedRight Bildschirme in der\\ Einstiegsleiste} & $ 393\,\mathrm{kByte} $ & $ 94\,\mathrm{MByte} $ & $ 4,7\,\mathrm{GByte} $ \\
+		\parbox[t]{0.3\linewidth}{\RaggedRight Durchsichtiger Bildschirm\\im Dachfenster} & $ 207\,\mathrm{kByte} $ & $ 50\,\mathrm{MByte} $ & $ 2,5\,\mathrm{GByte} $ \\
+		\parbox[t]{0.3\linewidth}{\RaggedRight LED-Matrix im\\ Dachhimmel} & $ 55\,\mathrm{kByte} $ & $ 13\,\mathrm{MByte} $ & $ 664\,\mathrm{MByte} $ \\
+		\parbox[t]{0.3\linewidth}{\RaggedRight Morphende Oberfläche\\in der Mittelkonsole} & $ 400\,\mathrm{Byte} $ & $ 96\,\mathrm{kByte} $ &$ 4,8\,\mathrm{MByte} $ \\
 	\end{tabular} 
 \end{table}
 In diesem Abschnitt werden die Komponenten als gesamtes unter den wirtschaftlichen Kriterien betrachtet, weil die Komponenten nicht als einzelne Sonderausstattung, sondern als ganzes oder gebündelt vertrieben werden sollen. Daher ist eine Gesamtbetrachtung der wirtschaftlichen Kriterien sinnvoll. \\
@@ -333,28 +335,28 @@ Für eine erste Einschätzung der Entwicklungskosten der Komponenten werden die 
 	\renewcommand{\arraystretch}{1.5}	% Skaliert die Zeilenhöhe der Tabelle
 	\captionabove[Liste der Komponenten mit den nötigen Eingriffen in die Fahrzeugentwicklung]{Liste der Komponenten mit den nötigen Eingriffen in die Fahrzeugentwicklung}
 	\label{tab:Entwicklung}
-	\begin{tabular}{c|ccc}
+	\begin{tabular}{l|ccc}
 		\textbf{Komponente} & \textbf{Hardware} & \textbf{E/E Architektur} & \textbf{Software} \\ 
 		\hline 
 		\hline 
-		\parbox[t]{0.4\linewidth}{\centering E-Papier in der Frontschürze} & X & X & X \\
-		\parbox[t]{0.4\linewidth}{\centering LED-Streifen in der Frontschürze} & X & X & X \\
-		\parbox[t]{0.4\linewidth}{\centering E-Papier über den vorderen Radkästen} & X & X & X \\
-		\parbox[t]{0.4\linewidth}{\centering LED-Streifen in den Radkästen} & X & X & X \\
-		\parbox[t]{0.4\linewidth}{\centering Videoprojektoren in\\den Außenspiegeln} & X & X & X \\
-		\parbox[t]{0.4\linewidth}{\centering Bildschirme in den\\hinteren Seitenfenstern} & X & X & X \\
-		\parbox[t]{0.4\linewidth}{\centering LED-Streifen in der Heckleuchte} &  & X & X \\
-		\parbox[t]{0.4\linewidth}{\centering E-Papier in der Heckleuchte} & X & X & X \\
-		\parbox[t]{0.4\linewidth}{\centering LED-Streifen im Interieur} &  & X & X \\
-		\parbox[t]{0.4\linewidth}{\centering LED Türtafeln} &  & X & X \\
-		\parbox[t]{0.4\linewidth}{\centering Bildschirme in der Einstiegsleiste} &  & X & X \\
-		\parbox[t]{0.4\linewidth}{\centering Videoprojektoren im Fußraum} &  & X & X \\
-		\parbox[t]{0.4\linewidth}{\centering Morphende Oberfläche\\in der Mittelkonsole} &  & X & X \\
-		\parbox[t]{0.4\linewidth}{\centering Durchsichtiger Bildschirm\\im Dachfenster} &  & X & X \\
+		\parbox[t]{0.4\linewidth}{\RaggedRight E-Papier in der Frontschürze} & X & X & X \\
+		\parbox[t]{0.4\linewidth}{\RaggedRight LED-Streifen in der Frontschürze} & X & X & X \\
+		\parbox[t]{0.4\linewidth}{\RaggedRight E-Papier über den vorderen\\ Radkästen} & X & X & X \\
+		\parbox[t]{0.4\linewidth}{\RaggedRight LED-Streifen in den Radkästen} & X & X & X \\
+		\parbox[t]{0.4\linewidth}{\RaggedRight Videoprojektoren in\\den Außenspiegeln} & X & X & X \\
+		\parbox[t]{0.4\linewidth}{\RaggedRight Bildschirme in den\\hinteren Seitenfenstern} & X & X & X \\
+		\parbox[t]{0.4\linewidth}{\RaggedRight LED-Streifen in der Heckleuchte} &  & X & X \\
+		\parbox[t]{0.4\linewidth}{\RaggedRight E-Papier in der Heckleuchte} & X & X & X \\
+		\parbox[t]{0.4\linewidth}{\RaggedRight LED-Streifen im Interieur} &  & X & X \\
+		\parbox[t]{0.4\linewidth}{\RaggedRight LED Türtafeln} &  & X & X \\
+		\parbox[t]{0.4\linewidth}{\RaggedRight Bildschirme in der Einstiegsleiste} &  & X & X \\
+		\parbox[t]{0.4\linewidth}{\RaggedRight Videoprojektoren im Fußraum} &  & X & X \\
+		\parbox[t]{0.4\linewidth}{\RaggedRight Morphende Oberfläche\\in der Mittelkonsole} &  & X & X \\
+		\parbox[t]{0.4\linewidth}{\RaggedRight Durchsichtiger Bildschirm\\im Dachfenster} &  & X & X \\
 		LED-Matrix im Dachhimmel & X & X & X \\
-		\parbox[t]{0.4\linewidth}{\centering Bildschirmoberflächen im Cockpit} &  &  & X \\
-		\parbox[t]{0.4\linewidth}{\centering Soundplayer im Innenraum} &  & X & X \\
-		\parbox[t]{0.4\linewidth}{\centering Duftflakons im Innenraum} &  & X & X \\
+		\parbox[t]{0.4\linewidth}{\RaggedRight Bildschirmoberflächen im Cockpit} &  &  & X \\
+		\parbox[t]{0.4\linewidth}{\RaggedRight Soundplayer im Innenraum} &  & X & X \\
+		\parbox[t]{0.4\linewidth}{\RaggedRight Duftflakons im Innenraum} &  & X & X \\
 	\end{tabular} 
 \end{table}
 		%Der parbox-Befehl ist erforderlich, damit ein Zeilenumbruch erzeugt werden kann. c-Spalten (zentriert) erlauben nicht automatisch einen Zeilenumpruch. Linksbündig gesetzte p-Spalten erlauben automatisch den Zeilenumbruch.%

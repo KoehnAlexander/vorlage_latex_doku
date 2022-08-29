@@ -4,8 +4,8 @@ Im folgenden werden für diese Arbeit notwendige Grundlagen zu unterschiedlichen
 Zuerst wird die menschliche Wahrnehmung erläutert, da auf diesen die Kriterien zur Evaluierung der Komponenten klassifiziert werden. Anschließend werden die Technologien der Komponenten des Prototypen vorgestellt, um einen Einblick auf die Funktionsweise zu liefern. Mit den technischen Grundlagen können Kriterien zur Bewertung der Technologien aufgestellt werden. Zuletzt werden die vorhandenen Bussysteme in Fahrzeugen vorgestellt und miteinander verglichen.
 \section{Menschliche Wahrnehmung}
 Menschliche Wahrnehmung ist die \glqq Tätigkeit oder Vorgang der Informationsaufnahme durch unsere Sinne\grqq{} \cite[Seite 12]{Buhler.2017}. Dieser Prozess beschränkt sich dabei nicht nur auf die Aufnahme von Informationen, sondern auch auf die Auswahl und Bewertung der Informationsdaten nach Relevanz. Die Aufnahme der Informationen geschieht über Sinnesorgane, die die Informationen über unterschiedliche Techniken in Reize wandeln. Die Auswahl und Bewertung erfolgt hauptsächlich im zentralen Nervensystem und dem Gehirn. \cite[Vgl. Seite 12]{Buhler.2017}\\
-Mit 70 \% der wahrgenommenen Umweltreize ist das Auge, das bedeutendste Sinnesorgan des Menschen vor der Haut, Nase, Ohr oder Zunge. Unsere Wahrnehmung ist dabei immer eine Interpretation der erhaltenen Sinnesreize aller Sinnesorgane. Unsere visuelle Wahrnehmung ist daher nicht nur durch die Augen bestimmt, sondern auch durch die Ohren, der Nase, der Zunge und der Haut. Daneben spielen unsere Erfahrungen und emotionale Lage einen Einfluss auf die Wahrnehmung. \cite[Vgl. Seite 13 f.]{Buhler.2017}
-Abbildung \ref{fig:information} veranschaulicht diesen Zusammenhang mit optischen Informationsaufnahme über die Physik, Physiologie und der Psychologie.\\
+Mit 70 \% der wahrgenommenen Umweltreize ist das Auge, das bedeutendste Sinnesorgan des Menschen vor der Haut, Nase, Ohr oder Zunge. Unsere Wahrnehmung ist dabei immer eine Interpretation der erhaltenen Sinnesreize aller Sinnesorgane. Unsere visuelle Wahrnehmung ist daher nicht nur durch die Augen bestimmt, sondern auch durch die Ohren, der Nase, der Zunge und der Haut. Daneben spielen unsere Erfahrungen und emotionale Lage einen Einfluss auf die Wahrnehmung. \cite[Vgl. Seite 10 ff.]{Steiner.2020}
+Abbildung \ref{fig:information} veranschaulicht diesen Zusammenhang mit der optischen Informationsaufnahme über die Physik, Physiologie und der Psychologie. \cite[Vgl. Seite 13 f.]{Buhler.2017}\\
 \begin{figure}[hbt]
 	\centering
 	\input{tikz/information.tex}
@@ -21,16 +21,15 @@ In den nächsten Unterkapiteln werden die unterschiedlichen menschlichen Wahrneh
 Die visuelle Wahrnehmung basiert hauptsächlich auf den Sinneseindrücken durch unser Auge und daneben, wie oben erwähnt, aus dem Zusammenspiel der anderen Sinnesorgane. \\
 Das Auge besitzt lichtempfindliche Zellen. Die Zellen werden dabei zwischen Stäbchen und Zapfen unterschieden. Die Mehrzahl an Zellen bilden die spektral unempfindlichen Stäbchen, mit ca. 120 Millionen pro Auge, während nur eine geringe Anzahl von 7 Millionen pro Auge farbempfindliche Zapfen sind. Durch den Unterschied in der Anzahl ist zum Beispiel das Sehen bei Dunkelheit eher schwarz-weiß, da die Anzahl der Zapfen nicht ausreicht, um genügend Licht zu erhalten und ein Farbbild zu erzeugen. Dabei ist ein Zapfen immer nur für eine der drei licht Frequenzbereiche rot (langwellig), grün (mittelwellig) oder blau (kurzwellig) lichtempfindlich. Die Farben in der menschlichen Wahrnehmung sind daher ein Ergebnis der Signalverarbeitung der drei unterschiedlichen Zapfenarten. \cite[Vgl. Seite 14]{Buhler.2017}\\
 Abbildung \ref{fig:Auge} zeigt eine schematische Darstellung eines Auges mit der Vergrößerung eines Teilbereiches. In dem Teilbereich sind die Stäbchen und Zapfen dargestellt. \\
-\begin{figure}[hbt]
+\begin{figure}[]
 	\centering
 	\includegraphics[width=0.5\linewidth]{images/Auge}
 	\caption[Schematische Darstellung eines Auges mit den Nervenzellen]{Schematische Darstellung eines Auges mit den Nervenzellen \cite[Seite 141]{Schonhammer.2013}}
 	\label{fig:Auge}
 \end{figure}
-
 Menschen können dabei nicht von ihrem Standpunkt aus den gesamten Raum betrachten, sondern durch biologischen Gegebenheiten immer nur ein eingeschränktes Feld. Das Blickfeld deckt in der Horizontalen ca. 180\,° und in der Vertikalen 120\,° ab. Von diesem Blickfeld sind nur ca. 1,5\,° in beiden Dimensionen als scharfes Bild sichtbar. \\
 Durch Bewegungen des Auges und des Kopfes werden verschiedene scharfe Bereiche abgedeckt. Unser Gehirn fügt diese Bereiche zusammen, um ein ganzheitliches scharfes Blickbild zu erzeugen. \cite[Vgl. Seite 14]{Buhler.2017} \\
-Interessant für die Bewertung der optischen Komponenten ist das Sehvermögen des Auges, Pixel bei einer bestimmten Distanz noch zu erkennen. Das Auflösungsvermögen beschreibt den kleinsten Winkel zwischen zwei Punkten, die noch als getrennt wahrgenommen werden. In der Literatur wird das Auflösungsvermögen A\nomenclature{A}{Auflösungsvermögen} des menschlichen Auges auf $ 1' = \frac{1}{3000}\,^\circ = 0,0167\,^\circ $ angegeben. Mithilfe von trigonometrischen Rechnungen kann der Abstand x der zwei Punkte bei einer bestimmten Entfernung d und die dazu gehörige Pixeldichte ppi (pixel per inch\nomenclature{ppi}{pixel per inch}) berechnet werden. Die Bezugslänge $ d_{i} $ für die Pixeldichte ist häufig ein Inch. \cite[Vgl. Seite 209 f.]{LofflerMang.2020} \\
+Interessant für die Bewertung der optischen Komponenten ist das Sehvermögen des Auges, Pixel bei einer bestimmten Distanz noch zu erkennen. Das Auflösungsvermögen beschreibt den kleinsten Winkel zwischen zwei Punkten, die noch als getrennt wahrgenommen werden. In der Literatur wird das Auflösungsvermögen $ A $\nomenclature{A}{Auflösungsvermögen} des menschlichen Auges auf $ 1' = \frac{1}{3000}\,^\circ = 0,0167\,^\circ $ angegeben. Mithilfe von trigonometrischen Rechnungen kann der Abstand $ x $ der zwei Punkte bei einer bestimmten Entfernung $ d $ und die dazu gehörige Pixeldichte $ P $ in ppi (pixel per inch\nomenclature{ppi}{pixel per inch}) berechnet werden. Die Bezugslänge $ d_{i} $ für die Pixeldichte ist häufig ein Inch. \cite[Vgl. Seite 209 f.]{LofflerMang.2020} \\
 Als ein Bewertungskriterium von zweidimensionalen Anzeigen dient die Pixeldichte. Die Pixeldichte beschreibt, wie viele einzelne LEDs in einer bestimmten Richtung vorhanden sind. Je näher der Betrachter an der Anzeigefläche steht, desto höher muss die Pixeldichte sein, damit der Betrachter einzelne Pixel nicht erkennt. Bei Bildschirmen besteht die Möglichkeit, dass die Pixeldichte in die Höhe und in die Breite unterschiedlich ist. Wenn dies der Fall ist, wird häufig die Pixeldichte in diagonaler Richtung bestimmt. Die Skizze \ref{fig:Rechnung} beschreibt die Zusammenhänge der genannten Größen. \\
 \begin{figure}[hbt]
 	\centering
@@ -40,7 +39,7 @@ Als ein Bewertungskriterium von zweidimensionalen Anzeigen dient die Pixeldichte
 \end{figure}
 \begin{align}
 	x &= \sin (A) \cdot d \\
-	ppi &= \frac{d_{i}}{x}
+	P &= \frac{d_{i}}{x}
 \end{align}
 
 Die Tabelle \ref{tab:Aufloessung} bildet eine Aufstellung über die Entfernung zwischen dem Auge und der Oberfläche mit der benötigten Pixeldichte.
@@ -49,7 +48,7 @@ Die Tabelle \ref{tab:Aufloessung} bildet eine Aufstellung über die Entfernung z
 	\renewcommand{\arraystretch}{1.5}	% Skaliert die Zeilenhöhe der Tabelle
 	\captionabove[Berechnung der benötigten Pixeldichte bei einer bestimmten Entfernung]{Berechnung der benötigten Pixeldichte bei einer bestimmten Entfernung}
 	\label{tab:Aufloessung}
-	\begin{tabular}{c|c}
+	\begin{tabular}{l|r}
 		\parbox[t]{0.2\linewidth}{\centering Entfernung} & \parbox[t]{0.2\linewidth}{\centering Pixeldichte}  \\
 		\hline 
 		\hline 
@@ -93,7 +92,7 @@ Die Wahrnehmung von Oberflächen geschieht über alle Sinneseindrücke. Zuerst w
 Das folgende Zitat beschreibt deutlich die Relevanz der haptischen Wahrnehmung für eine multisensuelle Gesamtinszenierung. \\
 \glqq Die Verknüpfung der haptischen Wahrnehmung mit projizierten Simulationen zeigt letztendlich den Wunsch nach Kombinationen zu multisensuellen Interfaces, die allerdings nicht mehr die audiovisuelle Wahrnehmung als strikt dominant betrachten und die haptische Wahrnehmung ausschließlich als unterstützenden Sinn zur verbesserten Immersion heranziehen. Über die Haptik sollen direkt und unabhängig von anderen Sinnen Informationen gegeben wie auch erfahren werden, die in Kombination mit den anderen Sinnen kräftigere Informationsträger sind und somit auch als multisensuelle Kombinationen erforscht werden. \grqq{} \cite[Seite 263]{Sprenger.2020}
 \subsection{Akustische Wahrnehmung}
-Der Mensch ist in der Lage mit den Ohren Schallwellen zwischen $ 20\,\mathrm{Hertz} $ und $ 20\,\mathrm{Kilohertz} $ zu hören. Schallwellen sind Druckwellen eines Mediums wie Luft oder Wasser in longitudinaler Richtung. Das bedeutet, die Druckamplitudenrichtung ist parallel zur Ausbreitungsrichtung. \cite[Vgl. Seite 217]{Schonhammer.2013} \\
+Der Mensch ist in der Lage mit den Ohren Schallwellen zwischen $ 20 $ und $ 20.000\,\mathrm{Hertz} $ zu hören. Schallwellen sind Druckwellen eines Mediums wie Luft oder Wasser in longitudinaler Richtung. Das bedeutet, die Druckamplitudenrichtung ist parallel zur Ausbreitungsrichtung. \cite[Vgl. Seite 217]{Schonhammer.2013} \\
 \glqq Über den äußeren Gehörgang gelangt die Schallwelle zum Trommelfell. Die Schwingungen des Trommelfells werden über die Kette der drei Gehörknöchelchen (Hammer, Amboss, Steigbügel) an das ovale Fenster übertragen, dessen Membran die mit Flüssigkeit gefüllte Schnecke (Cochlea) abschließt. Die Cochlea ist ein schneckenförmiger Kanal, der in das überaus harte Felsenbein eingebettet ist und die Basilarmembran enthält. Schallschwingungen erregen eine längs dieser Membran entlang fortschreitende Welle. Durch diese Auslenkung der Basilarmembran werden die Haarzellen angesprochen, die in einem geometrischen Muster längs der Basilarmembran angeordnet sind und das Muster der Anregung an das Gehirn übertragen. \grqq{} \cite[Seite 71f.]{Bernstein.2019}
 Das Bild \ref{fig:Ohr} zeigt einen schematischen Aufbau des Gehörgangs mit den oben beschriebenen Teilen.
 \begin{figure}[hbt]
@@ -104,15 +103,17 @@ Das Bild \ref{fig:Ohr} zeigt einen schematischen Aufbau des Gehörgangs mit den 
 \end{figure}
 \subsection{Olfaktorische Wahrnehmung}
 Unser Körper ist in der Lage Gerüche schon bei sehr geringen Konzentrationen zu unterscheiden und Unterschiedlichkeiten wahrzunehmen. In der menschlichen Nase befinden sich Riechzellen in der Riechschleimhaut. Durch chemische Reize in den Rezeptoren der Zellen werden spezifische Entladungsmuster an evolutionär ältere Gehirnareale und das limbische System gesendet. Das limbische System ist maßgeblich für die Emotionen des Menschen verantwortlich. \cite[Vgl. Seite 102]{Schonhammer.2013}\\
-Gerüche werden oft nach dem Stoff benannt mit dem sie assoziiert werden. Der Begriff \glqq blumig\grqq{} beschreibt Gerüchen, die dem Geruch von Blumen ähneln. Diese Klassifikation bei Gerüchen ist dabei nicht eindeutig, da die Zuordnung von Gerüchen zu Objekten Überschneidungen mit anderen Gerüchen haben können. Eine bessere erste Differenzierung von Gerüchen in Kategorien ist die Bewertung von Gerüchen nach angenehm und unangenehm. Da die olfaktorische Wahrnehmung und Gefühle eng miteinander verbunden sind. Angenehme Gerüche verursachen eine positive Stimmung und eine anziehende Gestik. \cite[Vgl. Seite 105 f.]{Schonhammer.2013}\\
+Gerüche werden oft nach dem Stoff benannt mit dem sie assoziiert werden. Der Begriff \glqq blumig\grqq{} beschreibt Gerüchen, die dem Geruch von Blumen ähneln. \cite[Vgl. Seite 29 ff.]{Keller.2019}
+Diese Klassifikation bei Gerüchen ist dabei nicht eindeutig, da die Zuordnung von Gerüchen zu Objekten Überschneidungen mit anderen Gerüchen haben können. Eine bessere erste Differenzierung von Gerüchen in Kategorien ist die Bewertung von Gerüchen nach angenehm und unangenehm. Da die olfaktorische Wahrnehmung und Gefühle eng miteinander verbunden sind. Angenehme Gerüche verursachen eine positive Stimmung und eine anziehende Gestik. \cite[Vgl. Seite 105 f.]{Schonhammer.2013}\\
 Paul Jellinek klassifiziert Gerüche auf einer zweidimensionalen Karte \ref{fig:Duft} zwischen süß - bitter und basisch - sauer. \cite[Vgl. Seite 104]{Schonhammer.2013} \\
-\begin{figure}[hbt]
+\begin{figure}[]
 	\centering
 	\includegraphics[width=0.5\linewidth]{images/Duft}
 	\caption[Duftkreis nach P. Jellinek]{Duftkreis nach P. Jellinek \cite[Seite 105]{Schonhammer.2013}}
 	\label{fig:Duft}
 \end{figure}
-Erste Überlegungen zur gesteuerten Stimulierung von Fahrzeuginsassen bildet das folgende Zitat.
+
+Erste Überlegungen zur gesteuerten Stimulierung von Fahrzeuginsassen bildet das folgende Zitat:
 \glqq Konzepte zur Beduftung der Innenräume von Automobilen werden u.a. unter dem Aspekt des allgemeinen Erregungszustandes des Fahrers vertreten. Gemeinsam mit Beleuchtung und Beschallung sollen Düfte den Menschen am Steuer etwa stimulieren oder beruhigen.\grqq{} \cite[Seite 122 f.]{Schonhammer.2013} \\
 Dabei ist der Einsatz von Düften in Fahrzeugen stets behutsam anzuwenden. \\
 \glqq Beduftung mag als verlockende Strategie emotional wirksamer Gestaltung erscheinen, ist jedoch nicht nur aus ethischen Gründen, sondern in Rücksicht auf das Wohlbefinden unfreiwillig Betroffener problematisch. [...] Schließlich ist daran zu erinnern, dass wegen der innigen Verbindung von Gefühl und Geruch Momente der visuellen, akustischen und taktil-haptischen Gestaltung indirekt auch auf das Riechen wirken. \grqq{} \cite[Seite 123]{Schonhammer.2013}
@@ -126,7 +127,7 @@ Zum Erzeugen von weißem Licht strahlen drei verschiedene LEDs mit den Farben ro
 Günstiger sind Weißlicht-LEDs (WLED\nomenclature{WLED}{Weißlicht-LED}), bei denen in der Produktion auf Basis von blauen LEDs noch ein fluoreszierender Konverterstoff beigemischt wird. Dieser Stoff wird durch das blaue Licht angeregt und strahlt einen breiten Spektralbereich wieder aus, wodurch ein weißes Licht aus Primär- und Sekundärlicht entsteht. Bei WLEDs ist die Farbe nicht variabel. \cite[Vgl. Seite 194]{LofflerMang.2020} \\
 Organische LED (OLED\nomenclature{OLED}{Organische LED}) besitzen einen veränderten Schichtaufbau, bei dem zwischen p- und n-Schicht eine organische Schicht aufgebracht ist. OLEDs sind dünner als normale LEDs und dadurch leichter und flexibel, wodurch sich neue Einsatzbereiche ergeben. Daneben besitzen sie eine hohe Helligkeit bei starkem Kontrast. \cite[Vgl. Seite 195]{LofflerMang.2020}
 \subsection{LED-Matrix}
-Eine LED-Matrix ist eine bestimmte Anordnung von LEDs in zwei orthogonalen Richtungen auf einer Ebene. Somit entsteht ein zwei dimensionales Bild. 
+Eine LED-Matrix ist eine bestimmte Anordnung von LEDs in zwei orthogonalen Richtungen auf einer Ebene. Somit entsteht ein zwei-dimensionales Bild. 
 \subsection{Bildschirmtechnologien}
 Unter den Bildschirmtechnologien werden folgend zwei unterschiedliche Realisierungen vorgestellt. Die erste Technologie sind aktive OLED-Displays und die zweite passive Flüssigkristallanzeigen (LCD\nomenclature{LCD}{Flüssigkristallanzeigen}). \\
 Durch die schnellen Entwicklungen bei Bildschirmtechnologien ist es nicht möglich, alle unterschiedlichen Techniken vorzustellen. Die folgenden Absätze sollen ein Grundverständnis für die möglichen Funktionsweisen liefern.\\
@@ -142,7 +143,7 @@ Für die Auswahl des richtigen Projektors ist die Einsatzumgebung von Bedeutung.
 \subsection{Elektronisches Papier}
 Elektronisches Papier (E-Papier\nomenclature{E-Papier}{Elektronisches Papier}) ist eine Bezeichnung für Bildschirme, deren visuelle Anmutung Papier entspricht und deren Inhalt durch Elektronik gesteuert wird. Häufig sind diese Displays passiv, also reflektieren nur Licht und erzeugen keines. Bei manchen E-Papieren ist seitlich eine Hintergrundbeleuchtung, die über eine Folie das Display beleuchtet. Im folgenden wird die häufig verwendete Technologie der Elektrophorese für die Displays erläutert. \\
 \glqq Elektronisches Papier lässt sich vereinfacht als dünne, flexible Folie beschreiben, in der in Flüssigkeit eingelagerte, elektrisch geladene Partikel (als elektronische Tinte bezeichnet) ein schwarz-weißes oder allgemein zweifarbiges Bild ergeben. Dies wird ermöglicht, indem über Elektroden elektrische Felder auf die Partikel wirken, die sich entsprechend der Ladung des angelegten Feldes ausrichten. \grqq{} \cite[Seite 568]{Schryen.2002} \\
-\begin{figure}[hbt]
+\begin{figure}[]
 	\centering
 	\input{tikz/epapier.tex}
 	\caption[Schichtaufbau eines E-Papiers]{Schichtaufbau eines E-Papiers}
@@ -156,8 +157,8 @@ Da bei E-Papieren vorwiegend Bilder dargestellt werden, soll im folgenden die Be
 \paragraph{Berechnung der Datengröße eines Bildes}
 Zur Berechnung der Datengröße eines Bildes kann die Rohdatenmenge für jeden Pixel herangezogen werden. Jedes Pixel benötigt Informationen, wie es leuchten soll. Bei schwarz-weiß Displays benötigt ein Pixel nur die Information wie stark es leuchten soll, bzw. wie stark abdunkeln. Bei farbigen Displays werden für die drei Grundfarben Informationen benötigt. Diese Informationen werden als Farbtiefe bezeichnet. \\
 Die Farbtiefe gibt an, wie viele unterschiedliche Farben gespeichert werden können. Bei einer Farbtiefe von $ 8\,\mathrm{Bit} $ können 256 unterschiedliche Farben dargestellt werden. Je größer die Farbtiefe desto höher ist die Datenmenge. Die Farbtiefe sollt danach ausgelegt werden, welche Farbqualität für ein Bild gewünscht ist und welche Genauigkeit das Anzeigemedium zur Verfügung stellt.
-Die Rohdatenmenge ist das Produkt aus der Anzahl der Pixel und der Farbtiefe.\\
-Durch Algorithmen kann diese Datenmenge komprimiert werden, indem Informationen gelöscht werden, die eine Geringe Relevanz für die Betrachter besitzen, oder strukturelle Wiederholungen im Datenspeichersatz gekürzt werden. Die Datenkompression kann je nach Kompressionsalgorithmus eingeteilt werden in verlustbehaftete und verlustfreie Kompression. Bei einer verlustfreien Kompression kann das originale Bild aus dem Kompromierten wiederhergestellt werden, was bei verlustbehafteten Kompression nicht der Fall ist. \\
+Die Rohdatenmenge ist das Produkt aus der Anzahl der Pixel und der Farbtiefe. \cite[Vgl. Seite 297 f.]{Stotz.2019}\\
+Durch Algorithmen kann diese Datenmenge komprimiert werden, indem Informationen gelöscht werden, die eine Geringe Relevanz für die Betrachter besitzen, oder strukturelle Wiederholungen im Datenspeichersatz gekürzt werden. Die Datenkompression kann je nach Kompressionsalgorithmus eingeteilt werden in verlustbehaftete und verlustfreie Kompression. Bei einer verlustfreien Kompression kann das originale Bild aus dem Komprimierten wiederhergestellt werden, was bei verlustbehafteten Kompression nicht der Fall ist. \\
 Kompression benötigt für eine Dateneinsparung Rechenleistung bei der Kompression und Dekompression. Deswegen ist abzuwägen, wie stark die Datenkompression bei Daten eingesetzt werden soll. \\
 Als Beispiel dient ein Schwarz-Weiß E-Papier mit einer Farbtiefe von 16 Stufen. Die Farbtiefe $ FT $\nomenclature{FT}{Farbtiefe} beträgt bei 16 Stufen zwar nur 5 Bit, um aber auf gängige Datengrößen zu kommen, sollte für die Berechnung 8 Bit pro Pixel und damit 1 Byte angenommen werden. Das Dateiformat JPEG \nomenclature{JPEG}{Joint Photographic Experts Group} nutzt 8 Bit pro Farbkanal. Die Pixelanzahl pro Zeile $ P $ \nomenclature{P}{Pixelanzahl pro Zeile}beträgt 1920 Pixel und Zeilenanzahl $ Z $\nomenclature{Z}{Zeilenanzahl} 1080 Pixel. Für den Komprimierungsfaktor $ KF $\nomenclature{KF}{Komprimierungsfaktor} wird hier ein Mittelwert von 12 angenommen. \cite[Vgl. Seite 22]{Buhler.2018}
 \begin{align}
@@ -167,9 +168,9 @@ Als Beispiel dient ein Schwarz-Weiß E-Papier mit einer Farbtiefe von 16 Stufen.
 \end{align}
 \section{Bordnetz}
 Zur Kommunikation zwischen Steuergeräten von Fahrzeugkomponenten werden unterschiedliche Bussysteme genutzt. \\
-Im folgenden werden die gängigen Bussysteme in der Fahrzeugtechnik vorgestellt, um für den späteren Konzeptentwurf die notwendigen Grundlagen zu kennen. Im Anschluss erfolgt ein Vergleich zwischen den Merkmalen der einzelnen Bussysteme.
-\subsection{Controller Area Network (CAN \nomenclature{CAN}{Controller Area Network})}
-CAN wird zum Austausch von Mess-, Steuer- und Regelsignalen genutzt. Es ist ein bitstrom-orientiertes System. Es basiert auf Differenzsignalübertragung und benutzt dazu verdrillte Leiterpaare. Als ereignisgesteuertes System wird das Senden von Nachrichten durch ein Ereignis ausgelöst. \\
+Im folgenden werden die gängigen Bussysteme in der Fahrzeugtechnik vorgestellt, um für den späteren Konzeptentwurf die notwendigen Grundlagen zu kennen. Im Anschluss erfolgt ein Vergleich zwischen den Merkmalen der einzelnen Bussysteme. \cite[Vgl. Seite 124 ff.]{Schauffele.2016}
+\subsection{Controller Area Network (CAN\nomenclature{CAN}{Controller Area Network})}
+CAN wird zum Austausch von Mess-, Steuer- und Regelsignalen genutzt. Es ist ein bitstrom-orientiertes System. Es basiert auf Differenzsignalübertragung und benutzt dazu verdrillte Leiterpaare. Als ereignisgesteuertes System wird das Senden von Nachrichten durch ein Ereignis ausgelöst. \cite[Vgl. Seite 15 ff.]{Wolf.2018}\\
 Der High-Speed CAN besitzt Bitraten von $ 250\,\frac{\mathrm{kBit}}{\mathrm{s}} $ bis zu $ 1\,\frac{\mathrm{MBit}}{\mathrm{s}}$.
 Der Low-Speed CAN besitzt Bitraten kleiner als $ 125\,\frac{\mathrm{kBit}}{\mathrm{s}} $. 
 Der CAN verfügt über Fehlererkennung und Sicherungssysteme. Das Senden von Nachrichten erfolgt über eine Priorisierung der Nachrichten. \cite[Vgl. Seite 57 ff.]{Zimmermann.2014}
@@ -177,7 +178,7 @@ Der CAN verfügt über Fehlererkennung und Sicherungssysteme. Das Senden von Nac
 Je nach Ausschöpfung der Nutzdatenmenge pro Botschaft liegt die maximale Übertragungsgeschwindigkeit zwischen $ 7,7\,\frac{\mathrm{kByte}}{\mathrm{s}} $ bei einem Byte Nutzdaten pro Botschaft und $ 29,6\,\frac{\mathrm{kByte}}{\mathrm{s}} $ bei acht Byte Nutzdaten. Die Latenz einer Botschaft ist nicht deterministisch bestimmbar und ist abhängig von der aktuellen Buslast und der Priorität der Botschaft. Die Übertragungsdauer einer Botschaft mit maximaler Nutzdatenmenge bei $ 500\,\frac{\mathrm{kBit}}{\mathrm{s}} $ Bittakt liegt bei $ 270\,\mathrm{\mu s}$.
 Durch den Einsatz der weiterentwickelten CAN-Version CAN FD (CAN with Flexible Data Rate\nomenclature{CAN FD}{CAN with Flexible Data Rate}) kann die Übertragungsgeschwindigkeit durch größere Nutzdatenmengen und höherer Bittakte auf bis zu $ 260\,\frac{\mathrm{kByte}}{\mathrm{s}} $ gesteigert werden. \cite[Vgl. Seite 76 ff.]{Zimmermann.2014}
 \subsection{Local Interconnect Network (LIN\nomenclature{LIN}{Local Interconnect Network})} 
-Der LIN soll mit einem einfacheren Aufbau eine kostengünstige Alternative zum CAN für Low Speed Sensor-Aktor Anwendungen bieten.
+Der LIN soll mit einem einfacheren Aufbau eine kostengünstige Alternative zum CAN für Low Speed Sensor-Aktor Anwendungen bieten. \cite[Vgl. Seite 138 ff.]{Borgeest.2021}
 LIN ist ein Master-Slave gesteuertes Netzwerk, worin der Master die gesamte Kommunikation steuert, indem er die Slaves nach einem Zeitplan Berechtigungen zum Senden gibt. Die Bitrate beträgt üblicherweise $ 19,2\,\frac{\mathrm{kBit}}{\mathrm{s}} $. \cite[Vgl. Seite 79 ff.]{Zimmermann.2014}
 \paragraph{Performance}
 Für Botschaften mit acht Byte Nutzdaten werden Sendezeitraster von $ 10\,\mathrm{ms} $ benötigt. Die Nutzdatenmenge beträgt dementsprechend ca. $ 800\,\frac{\mathrm{Byte}}{\mathrm{s}} $. \cite[Vgl. Seite 94 f.]{Zimmermann.2014}
@@ -186,7 +187,7 @@ Mit dem Hintergrund, dass bei CAN keine deterministischen Aussagen zur Latenz ge
 \cite[Vgl. Seite 96 ff.]{Zimmermann.2014}
 \paragraph{Performance}
 Die Nutzdatenmenge beträgt je nach Bitrate $ 1000\,\frac{\mathrm{kByte}}{\mathrm{s}} $ pro Kanal bei einem Bittakt von $ 10\,\frac{\mathrm{MBit}}{\mathrm{s}} $. \cite[Vgl. Seite 118 f.]{Zimmermann.2014}
-\subsection{Media Oriented Systems Transport (MOST \nomenclature{MOST}{Media Oriented Systems Transport})}
+\subsection{Media Oriented Systems Transport (MOST)}
 MOST ist für Telematik- und Multimedia- Anwendungen mit hohen Übertragungsbandbreiten konzipiert.
 Die Botschaften werden dabei nach Kanälen, in denen sich Audio-, Video- oder andere Daten befinden, gruppiert.
 Die Bitraten betragen in unterschiedlichen Stufen $ 25\,\frac{\mathrm{MBit}}{\mathrm{s}} $, $ 50\,\frac{\mathrm{MBit}}{\mathrm{s}} $ und $ 150\,\frac{\mathrm{MBit}}{\mathrm{s}} $.
@@ -204,17 +205,17 @@ Im folgenden werden die oben vorgestellten Bussysteme miteinander verglichen in 
 	\renewcommand{\arraystretch}{1.5}	% Skaliert die Zeilenhöhe der Tabelle
 	\captionabove[Vergleich der Bittakt- und Nutzdatenraten der Bussysteme]{Vergleich der Bittakt- und Nutzdatenraten der Bussysteme}
 	\label{tab:Bussysteme}
-	\begin{tabular}{c|cc}
+	\begin{tabular}{l|rr}
 		 \parbox[t]{0.2\linewidth}{\centering Bussystem} & \parbox[t]{0.2\linewidth}{\centering Bittakt} & \parbox[t]{0.2\linewidth}{\centering Nutzdatenrate}  \\ 
 		\hline 
 		\hline
-		LIN & $ 19,2\,\frac{\mathrm{kBit}}{\mathrm{s}} $ & $ 800\,\frac{\mathrm{Byte}}{\mathrm{s}} $  \\
+		LIN & $ 19,2\,\frac{\mathrm{kBit}}{\mathrm{s}} $ & $ 0,8\,\frac{\mathrm{kByte}}{\mathrm{s}} $  \\
 		CAN Low-Speed & $ 125\,\frac{\mathrm{kBit}}{\mathrm{s}} $ & $ 7,4\,\frac{\mathrm{kByte}}{\mathrm{s}} $ \\
 		CAN High Speed & $ 500\,\frac{\mathrm{kBit}}{\mathrm{s}} $ & $ 29\,\frac{\mathrm{kByte}}{\mathrm{s}} $  \\
-		FlexRay & $ 10\,\frac{\mathrm{MBit}}{\mathrm{s}} $ & $ 1 \,\frac{\mathrm{MByte}}{\mathrm{s}} $  \\
-		MOST25 & $ 25\,\frac{\mathrm{MBit}}{\mathrm{s}} $ & $ 2,6\,\frac{\mathrm{MByte}}{\mathrm{s}} $  \\
-		MOST50 & $ 50\,\frac{\mathrm{MBit}}{\mathrm{s}} $ & $ 5,6\,\frac{\mathrm{MByte}}{\mathrm{s}} $  \\
-		MOST150 & $ 150\,\frac{\mathrm{MBit}}{\mathrm{s}} $ & $ 17,8\,\frac{\mathrm{MByte}}{\mathrm{s}} $  \\
-		Automotive Ethernet & $ 100\,\frac{\mathrm{MBit}}{\mathrm{s}} $ & $ 10\,\frac{\mathrm{MByte}}{\mathrm{s}} $  \\
+		FlexRay & $ 10.000\,\frac{\mathrm{kBit}}{\mathrm{s}} $ & $ 1.000 \,\frac{\mathrm{kByte}}{\mathrm{s}} $  \\
+		MOST25 & $ 25.000\,\frac{\mathrm{kBit}}{\mathrm{s}} $ & $ 2.600\,\frac{\mathrm{kByte}}{\mathrm{s}} $  \\
+		MOST50 & $ 50.000\,\frac{\mathrm{kBit}}{\mathrm{s}} $ & $ 5.600\,\frac{\mathrm{kByte}}{\mathrm{s}} $  \\
+		MOST150 & $ 150.000\,\frac{\mathrm{kBit}}{\mathrm{s}} $ & $ 17.800\,\frac{\mathrm{kByte}}{\mathrm{s}} $  \\
+		Automotive Ethernet & $ 100.000\,\frac{\mathrm{kBit}}{\mathrm{s}} $ & $ 10.000\,\frac{\mathrm{kByte}}{\mathrm{s}} $  \\
 	\end{tabular} 
 \end{table}
