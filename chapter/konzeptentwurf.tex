@@ -3,8 +3,9 @@ Auf Basis der unter Kapitel \ref{cha:Analyse} gewonnenen Erkenntnissen zum Speic
 Im ersten Schritt werden die durch die Analyse gewonnenen Erkenntnisse genutzt, um Komponenten nach ihren Speichereigenschaften zu sortieren. Die Sortierung hilft die Komponenten in der Konzeptanalyse zu bewerten. \\
 Im zweiten Schritt werden Anforderungen an Architekturen aufgestellt. \\
 Mit den Anforderungen werden im dritten Schritt zwei mögliche Konzeptentwürfe erstellt und bei diesen die benötigten Bandbreiten im vierten Schritt berechnet. \\
-Im Anschluss werden im fünften Schritt die Modelle verglichen und abschließend ein Realisierungsmöglichkeiten vorgestellt.
+Im Anschluss werden im fünften Schritt die Modelle verglichen und abschließend Realisierungsmöglichkeiten vorgestellt.
 \section{Einteilung der Komponenten}
+Im folgenden werden die Komponenten nach ihren virtuellen Speichergrößen eingeteilt.
 Die erste Gruppe benötigt einen Speicher für 50 Inhalte von weniger als $ 30\,\mathrm{MByte} $, die zweite Gruppe von weniger als $ 1\,\mathrm{GByte} $, die dritte Gruppe von weniger als $ 5\,\mathrm{GByte} $. \\
 Tabelle \ref{tab:Einteilung} weist die Komponenten den Gruppen zu. Für die Konzeptentwürfe werden allen Komponenten die maximalen Speichergrößen der Gruppe zugeordnet. 
 \\
@@ -33,19 +34,21 @@ Tabelle \ref{tab:Einteilung} weist die Komponenten den Gruppen zu. Für die Konz
 \end{table}
 
 Eine weitere Einteilung nach Komponenten, die statisch Bilder anzeigen oder dynamisch Videos anzeigen, ist relevant für die Dimensionierung der Busanbindung. Diese Einteilung ist ebenfalls in der Tabelle \ref{tab:Einteilung} integriert. \\
-Bei Komponenten beträgt die Speichergröße dem Äquivalent des Speicherbedarfs für 50 Inhalte.
+Bei den Komponenten beträgt die Speichergröße dem Äquivalent des Speicherbedarfs für 50 Inhalte.
 \begin{align}
 	EG &= \frac{30\,\mathrm{MByte}}{50} = 600\,\mathrm{kByte} \\
 	ZG &= \frac{1\,\mathrm{GByte}}{50} =  20\,\mathrm{MByte} \\
 	DG &= \frac{5\,\mathrm{GByte}}{50} = 100\,\mathrm{MByte}
 \end{align}
-Bei Komponenten, die Videos anzeigen, beträgt die Größe der einzelnen Bilder in den Videos die Größe der oben berechneten Inhalte durch die Anzahl der Bilder pro Videos.
+Die Größe einzelner Bilder in den Videos der Video-Komponenten beträgt die Größe der Inhalte durch die Anzahl der Bilder pro Video.
 \begin{align}
 	EG &= \frac{600\,\mathrm{kByte}}{10\,\mathrm{s} \cdot 24\,\mathrm{fps}} = 2,50\,\mathrm{kByte} \\
 	ZG &= \frac{20\,\mathrm{MByte}}{10\,\mathrm{s} \cdot 24\,\mathrm{fps}} = 83,33\,\mathrm{kByte} \\
 	DG &= \frac{100\,\mathrm{MByte}}{10\,\mathrm{s} \cdot 24\,\mathrm{fps}} = 416,67\,\mathrm{kByte}
 \end{align}
-Die erste Gruppe besteht aus Bild- und Video-, die zweite und dritte Gruppe nur aus Videokomponenten. Daraus folgt die Klassifizierung der Komponenten in vier Bereiche, die Tabelle \ref{tab:Einteilung2} darstellt. Die angegebene Anzahl gibt die reale Anzahl der Komponenten an, da es zum Beispiel vier mal die LED-Streifen im Radkasten gibt.
+Die erste Gruppe an Komponenten besteht aus Bild- und Video-, die zweite und dritte Gruppe nur aus Videokomponenten. Daraus folgt die Klassifizierung der Komponenten in vier Bereiche, die Tabelle \ref{tab:Einteilung2} darstellt. Die angegebene Anzahl gibt die reale Anzahl der Komponenten an, da es zum Beispiel vier mal die LED-Streifen im Radkasten gibt. \\
+Der erste Bereich sind Bild-Komponenten mit einem Speicherbedarf pro Inhalt von weniger als $ 600\,\mathrm{kByte} $. Der zweite Bereich sind Video-Komponenten mit einem Speicherbedarf pro Inhalt von weniger als $ 600\,\mathrm{kByte} $ und einer Datenrate beim Abspielen eines Videos von weniger als $ 60\,\frac{\mathrm{kByte}}{\mathrm{s}} $. Der dritte Bereich sind Video-Komponenten mit einem Speicherbedarf pro Inhalt von weniger als $ 20\,\mathrm{MByte} $ und einer Datenrate beim Abspielen eines Videos von weniger als $ 2\,\frac{\mathrm{MByte}}{\mathrm{s}} $. Der vierte Bereich sind Video-Komponenten mit einem Speicherbedarf pro Inhalt von weniger als $ 100\,\mathrm{MByte} $ und einer Datenrate beim Abspielen eines Videos von weniger als $ 10\,\frac{\mathrm{MByte}}{\mathrm{s}} $. \\
+Der Speicherbedarf für eine Kollektion ergibt sich aus der Summe des Datenbedarfes von fünf Inhalten für jede Komponente. Der Bedarf liegt bei $ 5,642\,\mathrm{GByte} $. Wichtig bei der Berechnung ist die Mehrzahl gleicher Komponenten, die aber unterschiedliche Daten besitzen, zum Beispiel Videoprojektor links und rechts. Der Gesamtspeicherbedarf für das Fahrzeug für zehn Kollektionen liegt bei $ 56,42\,\mathrm{GByte} $.
 \begin{table}[]	
 	\centering
 	\renewcommand{\arraystretch}{1.5}	% Skaliert die Zeilenhöhe der Tabelle
@@ -76,9 +79,6 @@ Die erste Gruppe besteht aus Bild- und Video-, die zweite und dritte Gruppe nur 
 		\hline
 	\end{tabular} 
 \end{table}
-
-Der erste Bereich sind Bild-Komponenten mit einem Speicherbedarf pro Inhalt von weniger als $ 600\,\mathrm{kByte} $. Der zweite Bereich sind Video-Komponenten mit einem Speicherbedarf pro Inhalt von weniger als $ 600\,\mathrm{kByte} $ und einer Datenrate beim Abspielen eines Videos von weniger als $ 60\,\frac{\mathrm{kByte}}{\mathrm{s}} $. Der dritte Bereich sind Video-Komponenten mit einem Speicherbedarf pro Inhalt von weniger als $ 20\,\mathrm{MByte} $ und einer Datenrate beim Abspielen eines Videos von weniger als $ 2\,\frac{\mathrm{MByte}}{\mathrm{s}} $. Der vierte Bereich sind Video-Komponenten mit einem Speicherbedarf pro Inhalt von weniger als $ 100\,\mathrm{MByte} $ und einer Datenrate beim Abspielen eines Videos von weniger als $ 10\,\frac{\mathrm{MByte}}{\mathrm{s}} $. \\
-Der Speicherbedarf für eine Kollektion ergibt sich aus der Summe des Datenbedarfes von fünf Inhalten für jede Komponente. Der Bedarf liegt bei $ 5,642\,\mathrm{GByte} $. Wichtig bei der Berechnung ist die Mehrzahl gleicher Komponenten, die aber unterschiedliche Daten besitzen, zum Beispiel Videoprojektor links und rechts. Der Gesamtspeicherbedarf für das Fahrzeug für zehn Kollektionen liegt bei $ 56,42\,\mathrm{GByte} $.
 \section{Anforderungen an Konzeptentwürfe}
 Die Anforderungen an die Konzeptentwürfe ergeben sich zum einen aus den oben beschriebenen Speichergrößen für Bild und Videodateien. Diese sind direkt aus der Anzahl der Inhalte und den dafür benötigten Dateigrößen berechnet. \\
 Zum anderen wurden für zwei Benutzerverhalten die maximale Verzögerungszeit auf eine bestimmte Länge abgeschätzt, um damit die Berechnungsgrundlage einordnen zu können. Die Benutzer sollen zwischen zehn Kollektionen in Echtzeit umschalten können. Echtzeit bedeutet in diesem Fall, dass der Benutzer für das Umschalten der Kollektionen eine maximale Verzögerung von $ 1\,\mathrm{s} $ hinnehmen muss.
@@ -93,7 +93,7 @@ Nachfolgend werden die zwei Anforderungen grafisch dargestellt:
 \begin{figure}[]
 	\centering
 	\input{tikz/anforderung2.tex}
-	\caption[Anforderung 2: Anzeigen einer neuen Kollektion in unter zehn Sekunde]{Anforderung 2: Anzeigen einer neuen Kollektion in unter zehn Sekunde}
+	\caption[Anforderung 2: Anzeigen einer neuen Kollektion in unter zehn Sekunden]{Anforderung 2: Anzeigen einer neuen Kollektion in unter zehn Sekunden}
 	\label{fig:anforderung2}
 \end{figure}
 In der ersten Anforderung \ref{fig:anforderung1} wird eine Aufforderung zum Umschalten der App an das zentrale Steuergerät gesendet, dieses schickt die Steuerbotschaft über das Bussystem 1 an den Speicherort. Vom Speicherort werden die Daten mit dem Bussystem 2 an die Komponenten zur Anzeige übertragen. \\
@@ -125,37 +125,37 @@ Im folgenden wird für beide Architekturmodelle die erforderlichen Datenraten f�
 Die zeitlichen Anforderungen für Bilddaten bedeuten, dass innerhalb dieser Zeit die gesamten Bilddaten einer Kollektion übertragen sein müssen. 
 Für Videodaten bedeuten die Anforderungen, dass zumindest immer bei Beginn des Anzeigenstarts eine Sekunde an Videodaten geladen sind. Die restlichen Videodaten müssen dann spätestens eine Sekunde vor dem Ende des Videos geladen sein. 
 \subsection{Berechnung für das erste Architekturmodell}
-Beim ersten Architekturmodell befindet sich der Datenspeicher direkt am zentralen Steuergerät. Es ist kein Bussystem 1 vorhanden.
+Beim ersten Architekturmodell befindet sich der Datenspeicher direkt am zentralen Steuergerät. Das Bussystem 2 verbindet das zentrale Steuergerät mit allen Komponenten. Es ist kein Bussystem 1 vorhanden.
 \paragraph{Anforderung 1}
 Für die Anforderung 1 darf die Verzögerungszeit für die Datenübertragung über das Bussystem 2 von einem Speicherort an alle Komponenten maximal eine Sekunde betragen. 
-Nach einer Sekunden müssen alle Bilddaten und ein Zehntel der Videodaten übertragen sein. Die Datenmenge beträgt:
+Nach einer Sekunden müssen alle Bilddaten und ein Zehntel der Videodaten übertragen sein. Die Datenmenge $ D $\nomenclature[$ D $]{D}{Datenmenge} beträgt
 \begin{align}
-	Daten &= 5 \cdot 3\,\mathrm{MByte} + \frac{9 \cdot 3 \,\mathrm{MByte} + 1 \cdot 100\,\mathrm{MByte} + 11 \cdot 500\,\mathrm{MByte}}{10} =  577,7\,\mathrm{MByte}
+	5 \cdot 3\,\mathrm{MByte} + \frac{9 \cdot 3 \,\mathrm{MByte} + 1 \cdot 100\,\mathrm{MByte} + 11 \cdot 500\,\mathrm{MByte}}{10} =  577,7\,\mathrm{MByte}
 \end{align}
-Nach 10 Sekunden müssen alle Daten übertragen sein. Die Datenmenge beträgt:
+Nach 10 Sekunden müssen alle Daten übertragen sein. Die Datenmenge beträgt
 \begin{align}
-	Daten &= 5 \cdot 3\,\mathrm{MByte} + 9 \cdot 3 \,\mathrm{MByte} + 1 \cdot 100\,\mathrm{MByte} + 11 \cdot 500\,\mathrm{MByte} =  5642\,\mathrm{MByte}
+	5 \cdot 3\,\mathrm{MByte} + 9 \cdot 3 \,\mathrm{MByte} + 1 \cdot 100\,\mathrm{MByte} + 11 \cdot 500\,\mathrm{MByte} =  5642\,\mathrm{MByte}
 \end{align}
-Das Diagramm \ref{fig:arch1anf1} zeigt den Verlauf der Datenmenge über die Zeit. Nach einer Sekunde muss die übertragene Datenmenge mindestens $ 577,7\,\mathrm{MByte} $ betragen. Nach zehn Sekunden beträgt die gesamte Datenmenge $ 5642\,\mathrm{MByte} $. Die rote Linie gibt an wie viele Daten zu einem Zeitpunkt mindestens übertragen sein müssen, wenn die Bandbreite bis zum nächsten kritischen Punkt konstant bleibt. Die pinke Linie gibt den durchschnittlichen Wert der Bandbreite für den Gesamtwert an Daten angibt. Das heißt, um die Anforderung zu erfüllen muss die tatsächliche Datenmenge im Zeitverlauf immer oberhalb der roten Linie sein, wenn die Zeit an einem kritischen Punkt ist.
+Das Diagramm \ref{fig:arch1anf1} zeigt den Verlauf der Datenmenge über die Zeit. Nach einer Sekunde muss die übertragene Datenmenge mindestens $ 577,7\,\mathrm{MByte} $ betragen. Nach zehn Sekunden beträgt die gesamte Datenmenge $ 5642\,\mathrm{MByte} $. Die rote Linie gibt an, wie viele Daten zu einem Zeitpunkt mindestens übertragen sein müssen, wenn die Bandbreite bis zum nächsten kritischen Punkt konstant bleibt. Die pinke Linie gibt den durchschnittlichen Wert der Bandbreite für den Gesamtwert an Daten an. Das heißt, um die Anforderung zu erfüllen muss die tatsächliche Datenmenge im Zeitverlauf immer oberhalb der roten Linie sein, wenn die Zeit an einem kritischen Punkt ist.
 \begin{figure}[]
 	\centering
 	\input{pgfplot/arch1anf1.tex}
 	\caption[Datenmengenverlauf in Relation zur Zeit für die Anforderung 1 bei der Architektur 1]{Datenmengenverlauf in Relation zur Zeit für die Anforderung 1 bei der Architektur 1}
 	\label{fig:arch1anf1}
 \end{figure}
-Um die Mindestbandbreite des Bussystems zu berechnen, wird die Steigung der roten Linie berechnet.
+Um die Mindestbandbreite $ M $\nomenclature[$ M $]{M}{Mindestbandbreite} des Bussystems zu berechnen, wird die Steigung der roten Linie berechnet.
 \begin{align}
-	Mindestbandbreite = \frac{5642\,\mathrm{MByte}}{10\,\mathrm{s}} = 564,2\,\frac{\mathrm{MByte}}{\mathrm{s}}
+	M = \frac{5642\,\mathrm{MByte}}{10\,\mathrm{s}} = 564,2\,\frac{\mathrm{MByte}}{\mathrm{s}}
 \end{align}
 \paragraph{Anforderung 2}
 Für die Anforderung 2 gilt hier, dass die Verzögerungszeit für die Datenübertragung über das Bussystem 2 von einem Speicherort an alle Komponenten maximal zehn Sekunden betragen darf. Diese Anforderung ist gleich zur Anforderung 1, nur mit einer längeren Zeitdauer.
 Nach zehn Sekunden müssen alle Bilddaten und ein Zehntel der Videodaten übertragen sein.
 \begin{align}
-	Daten &= 5 \cdot 3\,\mathrm{MByte} + \frac{9 \cdot 3 \,\mathrm{MByte} + 1 \cdot 100\,\mathrm{MByte} + 11 \cdot 500\,\mathrm{MByte}}{10} =  577,7\,\mathrm{MByte}
+	D &= 5 \cdot 3\,\mathrm{MByte} + \frac{9 \cdot 3 \,\mathrm{MByte} + 1 \cdot 100\,\mathrm{MByte} + 11 \cdot 500\,\mathrm{MByte}}{10} =  577,7\,\mathrm{MByte}
 \end{align}
 Nach 19 Sekunden müssen alle Daten übertragen sein.
 \begin{align}
-	Daten &= 5 \cdot 3\,\mathrm{MByte} + 9 \cdot 3 \,\mathrm{MByte} + 1 \cdot 100\,\mathrm{MByte} + 11 \cdot 500\,\mathrm{MByte} =  5642\,\mathrm{MByte}
+	D &= 5 \cdot 3\,\mathrm{MByte} + 9 \cdot 3 \,\mathrm{MByte} + 1 \cdot 100\,\mathrm{MByte} + 11 \cdot 500\,\mathrm{MByte} =  5642\,\mathrm{MByte}
 \end{align}
 Die Abbildung \ref{fig:arch1anf2} zeigt den zeitlichen Datenverlauf. Wie man hier sehen kann, ist im Gegensatz zur Anforderung 1 die rote Linie zuerst flacher und wird dann steiler. Dadurch liegt die durchschnittliche Datenverlaufslinie oberhalb der Roten.
 \begin{figure}[]
@@ -164,37 +164,37 @@ Die Abbildung \ref{fig:arch1anf2} zeigt den zeitlichen Datenverlauf. Wie man hie
 	\caption[Datenmengenverlauf in Relation zur Zeit für die Anforderung 2 bei der Architektur 1]{Datenmengenverlauf in Relation zur Zeit für die Anforderung 2 bei der Architektur 1}
 	\label{fig:arch1anf2}
 \end{figure}
-Bei genügend Pufferspeicher in der Komponente kann die tatsächliche Bandbreite am Anfang höher als die Steigung der roten Linie sein. Dafür ist die maximale Bandbreite geringer als die Steigung der roten Linie in der zweiten Hälfte. Die minimalste durchschnitlliche Bandbreite ist die Steigung der pinken Linie.
+Bei genügend Pufferspeicher in der Komponente kann die tatsächliche Bandbreite am Anfang höher als die Steigung der roten Linie sein. Dafür ist die maximale Bandbreite geringer als die Steigung der roten Linie in der zweiten Hälfte. Die Mindestbandbreite ist die Steigung der pinken Linie. 
 \begin{align}
-	Mindestbandbreite = \frac{5642\,\mathrm{MByte}}{19\,\mathrm{s}} = 296,9\,\frac{\mathrm{MByte}}{\mathrm{s}}
+	M = \frac{5642\,\mathrm{MByte}}{19\,\mathrm{s}} = 296,9\,\frac{\mathrm{MByte}}{\mathrm{s}}
 \end{align}
 \subsection{Berechnung für das zweite Architekturmodell}
-Beim zweiten Architekturmodell befindet sich die Datenspeicher direkt an den Komponente. Es ist kein Bussystem 2 vorhanden.
+Beim zweiten Architekturmodell befinden sich die Datenspeicher direkt an den Komponenten. Das Bussystem 1 verbindet die Komponenten mit dem zentralen Steuergerät. Es ist kein Bussystem 2 vorhanden.
 \paragraph{Anforderung 1}
-Für die Anforderung 1 darf die Verzögerungszeit für die Steuerübertragung über das Bussystem 1 vom zentralen Steuergerät an alle Komponenten maximal eine Sekunde betragen. Die Abbildung \ref{fig:arch2anf1} zeigt den Datenverlauf. Hier ist die Skalierung der Ordinatenachse nicht in MByte sondern in kByte. Es wird deutlich, dass es hier nur einen kritischen Zeitpunkt gibt.
+Für die Anforderung 1 darf die Verzögerungszeit für die Steuerübertragung über das Bussystem 1 vom zentralen Steuergerät an alle Komponenten maximal eine Sekunde betragen. Die Abbildung \ref{fig:arch2anf1} zeigt den Datenverlauf. Die Skalierung der Ordinatenachse ist hier nicht in MByte sondern in kByte. Es wird deutlich, dass es hier nur einen kritischen Zeitpunkt gibt.
 \begin{figure}[]
 	\centering
 	\input{pgfplot/arch2anf1.tex}
 	\caption[Datenmengenverlauf in Relation zur Zeit für die Anforderung 1 bei der Architektur 2]{Datenmengenverlauf in Relation zur Zeit für die Anforderung 1 bei der Architektur 2}
 	\label{fig:arch2anf1}
 \end{figure}
-Die Datenrate für diese Anforderung berechnet sich aus der Anzahl der Komponenten mal die Datengröße der Steuerbotschaft.
+Die Datenmenge für diese Anforderung berechnet sich aus der Anzahl der Komponenten mal die Datengröße der Steuerbotschaft.
 \begin{align}
-	Daten = 26 \cdot 10\,\mathrm{kByte} = 260\,\mathrm{kByte}
+	D = 26 \cdot 10\,\mathrm{kByte} = 260\,\mathrm{kByte}
 \end{align}
-Die Mindestbandbreite des Bussystems beträgt:
+Die Mindestbandbreite des Bussystems, um die Anforderung zu erfüllen beträgt:
 \begin{align}
-	Mindestbandbreite = \frac{260\,\mathrm{kByte}}{1\,\mathrm{s}} = 260\,\frac{\mathrm{kByte}}{\mathrm{s}}
+	M = \frac{260\,\mathrm{kByte}}{1\,\mathrm{s}} = 260\,\frac{\mathrm{kByte}}{\mathrm{s}}
 \end{align}
 \paragraph{Anforderung 2}
 Für die Anforderung 2 darf die Verzögerungszeit für die Datenübertragung über das Bussystem 1 vom zentralen Steuergerät an alle Komponenten maximal zehn Sekunden betragen.
 Nach zehn Sekunden müssen alle Bilddaten und ein Zehntel der Videodaten übertragen sein.
 \begin{align}
-	Daten &= 5 \cdot 3\,\mathrm{MByte} + \frac{9 \cdot 3 \,\mathrm{MByte} + 1 \cdot 100\,\mathrm{MByte} + 11 \cdot 500\,\mathrm{MByte}}{10} =  577,7\,\mathrm{MByte}
+	D &= 5 \cdot 3\,\mathrm{MByte} + \frac{9 \cdot 3 \,\mathrm{MByte} + 1 \cdot 100\,\mathrm{MByte} + 11 \cdot 500\,\mathrm{MByte}}{10} =  577,7\,\mathrm{MByte}
 \end{align}
 Nach 19 Sekunden müssen alle Daten übertragen sein.
 \begin{align}
-	Daten &= 5 \cdot 3\,\mathrm{MByte} + 9 \cdot 3 \,\mathrm{MByte} + 1 \cdot 100\,\mathrm{MByte} + 11 \cdot 500\,\mathrm{MByte} =  5642\,\mathrm{MByte}
+	D &= 5 \cdot 3\,\mathrm{MByte} + 9 \cdot 3 \,\mathrm{MByte} + 1 \cdot 100\,\mathrm{MByte} + 11 \cdot 500\,\mathrm{MByte} =  5642\,\mathrm{MByte}
 \end{align}
 Auffallend bei Betrachtung des Datenverlaufs \ref{fig:arch2anf2}, ist das diese Anforderung gleichbedeutend bei beiden Architekturmodellen ist. Die Mindestbandbreite beträgt dementsprechend $ 296,9\,\frac{\mathrm{MByte}}{\mathrm{s}} $.
 \begin{figure}[]
@@ -207,11 +207,11 @@ Auffallend bei Betrachtung des Datenverlaufs \ref{fig:arch2anf2}, ist das diese 
 Die Tabelle \ref{tab:Mindestbandbreite} zeigt die Mindestbandbreite für die vier berechneten Fälle. 
 \paragraph{Mindestbandbreite}
 Beide Architekturmodelle benötigen bei der Anforderung 2 die gleiche Bandbreite. Bei Anforderung 1 unterscheiden sich die Modelle stark. Architektur 1 benötigt eine deutliche höhere Bandbreite, während Architektur eine deutlich geringere Bandbreite benötigt.\\
-Daraus folgt, dass die Architektur 1 eine Bandbreite für das Bussystem 2 von mindestens $ 564,2\,\frac{\mathrm{MByte}}{\mathrm{s}} $ für die Komponenten zur Verfügung stellen muss, während die Bandbreite bei der Architektur 2 für das Bussystem 1 nur $ 296,9\,\frac{\mathrm{MByte}}{\mathrm{s}} $
+Daraus folgt, dass die Architektur 1 eine Bandbreite für das Bussystem 2 von mindestens $ 564,2\,\frac{\mathrm{MByte}}{\mathrm{s}} $ für die Komponenten zur Verfügung stellen muss, während die Bandbreite bei der Architektur 2 für das Bussystem 1 nur $ 296,9\,\frac{\mathrm{MByte}}{\mathrm{s}} $ hoch ist.
 \begin{table}[]	
 	\centering
 	\renewcommand{\arraystretch}{1.5}	% Skaliert die Zeilenhöhe der Tabelle
-	\captionabove[Mindestbandbreite bei Architektur und Anforderung]{Mindestbandbreite Bei Architektur und Anforderung}
+	\captionabove[Mindestbandbreite bei Architektur und Anforderung]{Mindestbandbreite bei Architektur und Anforderung}
 	\label{tab:Mindestbandbreite}
 	\begin{tabular}{c|c|c|}
 		& \textbf{Anforderung 1} & \textbf{Anforderung 2} \\
@@ -227,9 +227,7 @@ Die hier angegebenen Bandbreiten vernachlässigen mögliche Latenzen in der Date
 \paragraph{Speicher}
 Im Architekturmodell 1 liegt der Speicher für alle Daten zentral, wodurch die Verwaltung der Daten leichter ist Im Architekturmodell 2 sind die Daten dezentral bei den Komponenten gespeichert, wodurch viele kleine Speicher benötigt werden.
 \section{Realisierungsoptionen}
-Unter Einbeziehung des Vergleiches benötigt die Architektur 2 ein schwächeres Bussystem. Bei Annahme, dass die Realisierung am kritischsten in der Integration der Komponenten in die Busarchitektur ist, fällt die Entscheidung auf Architektur 2. \\
-Die aktuell leistungsstärksten Bussysteme nach der Nutzdatenrate in der Fahrzeugtechnik sind Most150 und Automotive Ethernet (Vgl. \ref{tab:Bussysteme}). Diese Bussysteme besitzen eine Nutzdatenrate von ca. $ 10\,\frac{\mathrm{MByte}}{\mathrm{s}} $ bis $ 20\,\frac{\mathrm{MByte}}{\mathrm{s}} $. Die Nutzdatenrate ist mit einem Faktor größer als 10 kleiner als die geforderte Bandbreite. \\
+Unter Einbeziehung des Vergleiches benötigt die Architektur 2 ein schwächeres Bussystem. Bei Annahme, dass die Realisierung am kritischsten in der Integration der Komponenten in die Busarchitektur ist, liegt die Architektur 2 im Vorteil. \\
+Die aktuell leistungsstärksten Bussysteme nach der Nutzdatenrate in der Fahrzeugtechnik sind Most150 und Automotive Ethernet (Vgl. \ref{tab:Bussysteme}). Diese Bussysteme besitzen eine Nutzdatenrate von ca. $ 10 $ bis $ 20\,\frac{\mathrm{MByte}}{\mathrm{s}} $. Die Nutzdatenrate ist mit einem Faktor größer zehn kleiner als die geforderte Bandbreite. \\
 Um dieses Problem zu lösen, kann die Anforderung 2 geschwächt werden, indem das Anzeigen einer neuen Kollektion zum Beispiel fünf Minuten betragen darf. Durch diese Vereinfachung könnten die oberen Bussysteme für die Architektur 2 eingesetzt werden und die Datenraten werden eingehalten. \\
-
-
-
+Eine weitere Möglichkeit besteht in der Auftrennung des Busses in mehrere, die für einen Fahrzeugbereich wie zum Beispiel das Heck, verantwortlich sind. Dadurch sinkt die gesamte Übertragungsdauer.\\

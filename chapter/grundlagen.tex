@@ -169,16 +169,16 @@ Als Beispiel dient ein Schwarz-Weiß E-Papier mit einer Farbtiefe von 16 Stufen.
 \section{Bordnetz}
 Zur Kommunikation zwischen Steuergeräten von Fahrzeugkomponenten werden unterschiedliche Bussysteme genutzt. \\
 Im folgenden werden die gängigen Bussysteme in der Fahrzeugtechnik vorgestellt, um für den späteren Konzeptentwurf die notwendigen Grundlagen zu kennen. Im Anschluss erfolgt ein Vergleich zwischen den Merkmalen der einzelnen Bussysteme. \cite[Vgl. Seite 124 ff.]{Schauffele.2016}
-\subsection{Controller Area Network (CAN\nomenclature{CAN}{Controller Area Network})}
-CAN wird zum Austausch von Mess-, Steuer- und Regelsignalen genutzt. Es ist ein bitstrom-orientiertes System. Es basiert auf Differenzsignalübertragung und benutzt dazu verdrillte Leiterpaare. Als ereignisgesteuertes System wird das Senden von Nachrichten durch ein Ereignis ausgelöst. \cite[Vgl. Seite 15 ff.]{Wolf.2018}\\
+\subsection{Controller Area Network (CAN)}
+CAN\nomenclature{CAN}{Controller Area Network} wird zum Austausch von Mess-, Steuer- und Regelsignalen genutzt. Es ist ein bitstrom-orientiertes System. Es basiert auf Differenzsignalübertragung und benutzt dazu verdrillte Leiterpaare. Als ereignisgesteuertes System wird das Senden von Nachrichten durch ein Ereignis ausgelöst. \cite[Vgl. Seite 15 ff.]{Wolf.2018}\\
 Der High-Speed CAN besitzt Bitraten von $ 250\,\frac{\mathrm{kBit}}{\mathrm{s}} $ bis zu $ 1\,\frac{\mathrm{MBit}}{\mathrm{s}}$.
 Der Low-Speed CAN besitzt Bitraten kleiner als $ 125\,\frac{\mathrm{kBit}}{\mathrm{s}} $. 
 Der CAN verfügt über Fehlererkennung und Sicherungssysteme. Das Senden von Nachrichten erfolgt über eine Priorisierung der Nachrichten. \cite[Vgl. Seite 57 ff.]{Zimmermann.2014}
 \paragraph{Performance}
 Je nach Ausschöpfung der Nutzdatenmenge pro Botschaft liegt die maximale Übertragungsgeschwindigkeit zwischen $ 7,7\,\frac{\mathrm{kByte}}{\mathrm{s}} $ bei einem Byte Nutzdaten pro Botschaft und $ 29,6\,\frac{\mathrm{kByte}}{\mathrm{s}} $ bei acht Byte Nutzdaten. Die Latenz einer Botschaft ist nicht deterministisch bestimmbar und ist abhängig von der aktuellen Buslast und der Priorität der Botschaft. Die Übertragungsdauer einer Botschaft mit maximaler Nutzdatenmenge bei $ 500\,\frac{\mathrm{kBit}}{\mathrm{s}} $ Bittakt liegt bei $ 270\,\mathrm{\mu s}$.
 Durch den Einsatz der weiterentwickelten CAN-Version CAN FD (CAN with Flexible Data Rate\nomenclature{CAN FD}{CAN with Flexible Data Rate}) kann die Übertragungsgeschwindigkeit durch größere Nutzdatenmengen und höherer Bittakte auf bis zu $ 260\,\frac{\mathrm{kByte}}{\mathrm{s}} $ gesteigert werden. \cite[Vgl. Seite 76 ff.]{Zimmermann.2014}
-\subsection{Local Interconnect Network (LIN\nomenclature{LIN}{Local Interconnect Network})} 
-Der LIN soll mit einem einfacheren Aufbau eine kostengünstige Alternative zum CAN für Low Speed Sensor-Aktor Anwendungen bieten. \cite[Vgl. Seite 138 ff.]{Borgeest.2021}
+\subsection{Local Interconnect Network (LIN)} 
+Der LIN\nomenclature{LIN}{Local Interconnect Network} soll mit einem einfacheren Aufbau eine kostengünstige Alternative zum CAN für Low Speed Sensor-Aktor Anwendungen bieten. \cite[Vgl. Seite 138 ff.]{Borgeest.2021}
 LIN ist ein Master-Slave gesteuertes Netzwerk, worin der Master die gesamte Kommunikation steuert, indem er die Slaves nach einem Zeitplan Berechtigungen zum Senden gibt. Die Bitrate beträgt üblicherweise $ 19,2\,\frac{\mathrm{kBit}}{\mathrm{s}} $. \cite[Vgl. Seite 79 ff.]{Zimmermann.2014}
 \paragraph{Performance}
 Für Botschaften mit acht Byte Nutzdaten werden Sendezeitraster von $ 10\,\mathrm{ms} $ benötigt. Die Nutzdatenmenge beträgt dementsprechend ca. $ 800\,\frac{\mathrm{Byte}}{\mathrm{s}} $. \cite[Vgl. Seite 94 f.]{Zimmermann.2014}

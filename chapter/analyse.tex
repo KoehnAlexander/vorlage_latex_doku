@@ -300,7 +300,7 @@ In der Tabelle \ref{tab:Speicherbedarf} werden die Komponenten, die visuelle ode
 		\parbox[t]{0.3\linewidth}{\RaggedRight Morphende Oberfläche\\in der Mittelkonsole} & $ 20 \times 20 $ & $ 8 $ & $ 1 $ & $ 400\,\mathrm{Byte} $ \\
 	\end{tabular} 
 \end{table}
-Die unterschiedlichen Datenmengen zwischen $ 12\,\mathrm{Byte} $ und $ 393,216\,\mathrm{kByte} $ für ein Bild machen deutlich, dass eine Abwägung zwischen hoher Pixelanzahl und Farbtiefe gemacht werden muss. Die benötigte Speichergröße wird neben dem Speicher pro Bild in der Tabelle \ref{tab:Werte} dargestellt. Es wird deutlich, dass das Anzeigen von bewegten Bildern mehr Daten benötigt.
+Die unterschiedlichen Datenmengen zwischen $ 12\,\mathrm{Byte} $ und $ 393,216\,\mathrm{kByte} $ für ein Bild machen deutlich, dass eine Abwägung zwischen hoher Pixelanzahl und Farbtiefe gemacht werden muss. Die benötigte Speichergröße wird neben dem Speicher pro Bild in der Tabelle \ref{tab:Werte} dargestellt. 
 \begin{table}[hbt]	
 	\centering
 	\renewcommand{\arraystretch}{1.5}	% Skaliert die Zeilenhöhe der Tabelle
@@ -359,5 +359,12 @@ Für eine erste Einschätzung der Entwicklungskosten der Komponenten werden die 
 		\parbox[t]{0.4\linewidth}{\RaggedRight Duftflakons im Innenraum} &  & X & X \\
 	\end{tabular} 
 \end{table}
-		%Der parbox-Befehl ist erforderlich, damit ein Zeilenumbruch erzeugt werden kann. c-Spalten (zentriert) erlauben nicht automatisch einen Zeilenumpruch. Linksbündig gesetzte p-Spalten erlauben automatisch den Zeilenumbruch.%
+Durch die Analyse werden folgende Erkenntnisse gemacht:
+\begin{itemize}
+	\item Durch rechtliche Einschränkungen können einige Komponenten nicht oder nur mit geringerem Funktionsumfang realisiert werden.
+	\item Die Kosten der Komponenten können unterschiedlich hoch ausfallen.
+	\item Grundlegende Überprüfungen zur Implementierung sind noch nicht vorhanden.
+	\item Die Pixeldichte ist bei den meisten Komponenten ausreichend.
+	\item Die Speichergrößen sind abhängig von der Pixelanzahl der Komponenten.
+\end{itemize}
 

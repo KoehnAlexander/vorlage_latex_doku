@@ -5,14 +5,14 @@ Unter der übergeordneten Vision, das Fahrzeug als Leinwand zu betrachten, bilde
 \section{Gesamtkonzept}
 Das Gesamtkonzept beruht im Kern auf digitaler Kunst im Fahrzeug. Kunden können unterschiedliche digitale Kunstinhalte, sogenannte Kollektionen, erwerben und diese Kollektionen in ihrem Fahrzeug aktivieren. Die Kollektionen bestehen aus mehreren inhaltlichen Bestandteilen, welche auf neuartigen und bestehenden Fahrzeugkomponenten im Fahrzeug dargestellt werden. Die Bestandteile werden als \glqq Collectible\grqq{} bezeichnet. Die Gesamtinszenierung der Kollektion wird durch bestimmte Trigger, wie zum Beispiel das Entriegeln der Türen, aktiviert. \\
 Das Zusammenspiel zwischen den einzelnen Domänen im Kauf und der Verwaltung der Kollektion, beschreibt das Diagramm \ref{fig:gesamtkonzept}. Der Benutzer interagiert mit einer App. Durch den Kaufauftrag vom Benutzer in der App, wird die gewünschte Kollektion auf das Fahrzeug geladen. Durch Aktivierung der Kollektion in der App, wird die Kollektion dem Benutzer angezeigt. \\
-\begin{figure}[hbt]
+Neben optischen Komponenten inszenieren haptische, olfaktorische und akustische Komponenten die Kollektionen. Dazu bilden Augmented Reality (AR\nomenclature{AR}{Augemented Reality}) Anwendungen weitere Collectibles der Kollektionen. Diese werden mit Hilfe einer eigenen App auf einem Mobiltelefon angezeigt. Weitere Informationen zu den Grundlagen von AR finden sich in den Literaturquellen \cite{Dorner.2019}, \cite{Grasnick.2020} und \cite{Hassanien.2022}. \\
+\begin{figure}[]
 	\centering
 	\input{tikz/gesamtkonzept.tex}
 	\caption[Blockdiagramm Kollektionenverwaltung Gesamtkonzept]{Blockdiagramm Kollektionenverwaltung Gesamtkonzept}
 	\label{fig:gesamtkonzept}
 \end{figure}
 
-Neben optischen Komponenten inszenieren haptische, olfaktorische und akustische Komponenten die Kollektionen. Dazu bilden Augmented Reality (AR\nomenclature{AR}{Augemented Reality}) Anwendungen weitere Collectibles der Kollektionen. Diese werden mit Hilfe einer eigenen App auf einem Mobiltelefon angezeigt. Weitere Informationen zu den Grundlagen von AR finden sich in den Literaturquellen \cite{Dorner.2019}, \cite{Grasnick.2020} und \cite{Hassanien.2022}.\\
 Die App ist für den Besitzer das zentrale Bediensystem, in der unterschiedliche Aktionen auf den einzelnen Seiten verfügbar sind:
 \begin{itemize}
 	\item Kollektionen können auf digitalen Börsen gehandelt werden.
@@ -77,7 +77,7 @@ Im folgenden werden alle Exterieur Komponenten näher betrachtet:
 \subsection{E-Papier in der Frontschürze}
 Das E-Papier befindet sich hinter einer Scheibe mit einem Markenlogo in der Mitte der Fahrzeugfront und schließt an den Seiten über eine Abmaskierung auf die beiden Frontlichter ab. Das E-Papier bewirkt mit der Laminierung an der Scheibe einen räumlichen Effekt, wonach das Markenlogo vor dem E-Papier erscheint. \\
 Auf dem E-Papier werden graphische Designs dargestellt, die Betrachter vor dem Auto sehen können. Dafür muss das Bild aus einer Entfernung von $ 1\,\mathrm{m} $ \nomenclature{m}{Meter} für den Betrachter scharf sein. \\
-Das E-Papier hat ein Format von 16:9 und eine Auflösung von  $ 2560\,\mathrm{Pixel}/\mathrm{Zeile} \times 1440\,\mathrm{Zeilen} $, wovon ein Teil des Bildschirms am Rand durch eine Abmaskierung nicht sichtbar ist.
+Das E-Papier hat ein Format von 16:9 und eine Auflösung von  $ 2560\,\frac{\mathrm{Pixel}}{\mathrm{Zeile}} \times 1440\,\mathrm{Zeilen} $, wovon ein Teil des Bildschirms am Rand durch eine Abmaskierung nicht sichtbar ist.
 \subsection{LED-Streifen in der Frontschürze}
 Der LED-Streifen ist dreiteilig aufgeteilt. Die zwei äußeren Teile befinden sich in den beiden Frontleuchten und schließen auf gleicher Höhe mit dem mittleren Streifen ab. Der mittlere Streifen befindet sich oberhalb des E-Papiers in der Frontschürze. \\
 Auf dem Streifen können dynamische bunte Lichtsequenzen gezeigt werden. Für den Betrachter sollen die einzelnen LED aus einer Entfernung von $ 1\,\mathrm{m} $ nicht sichtbar sein und die Animationen flüssig erscheinen. Flüssig bedeutet, dass die Bildwiederholungsrate hoch genug ist, damit das Auge aus den einzelnen Bildern eine Bewegung erkennt. \\
@@ -86,14 +86,14 @@ Komponenten die Darstellung der Kollektionen im Frontbereich. Der mittlere Teil 
 \subsection{E-Papiere über den vorderen Radkästen}
 Oberhalb der Radkästen befinden sich in einem ca. $ 20\,\mathrm{cm} $ breitem und $ 8\,\mathrm{cm} $ hohen Ausschnitt E-Papiere. An dieser Stelle befand sich vorher ein Emblem der Fahrzeugbezeichnung. \\
 Die E-Papiere können genutzt werden, um den Namen der verwendeten Kollektion anzuzeigen. Dafür müssen Sie 20 Zeichen in einer Zeile mit einer Größe anzeigen, die ein Betrachter von mindestens $ 8\,\mathrm{m} $ Entfernung erkennt. \\
-Die E-Papiere haben ein Format von 4:3 und eine Auflösung von $ 1600\,\mathrm{Pixel}/\mathrm{Zeile} \times 1200\,\mathrm{Zeilen} $, wodurch auch bei näherer Betrachtung noch ein scharfes Bild sichtbar ist.
+Die E-Papiere haben ein Format von 4:3 und eine Auflösung von $ 1600\,\frac{\mathrm{Pixel}}{\mathrm{Zeile}} \times 1200\,\mathrm{Zeilen} $, wodurch auch bei näherer Betrachtung noch ein scharfes Bild sichtbar ist.
 \subsection{LED-Streifen in den Radkästen}
 In allen vier Radkästen befinden sich LED-Streifen am äußeren Rand und strahlen durch eine Leiste in den Innenraum Radkasten auf den oberen Halbkreis des Reifenprofils. Der Betrachter sieht nicht den LED-Streifen, sondern nur das vom Reifen und Radkasten reflektierte Licht. \\
 Pro Radkasten befinden sich 196 LEDs. Die Anzahl soll so hoch sein, dass die Beleuchtung ein homogenes Lichtbild gibt.
 \subsection{Videoprojektoren in den Außenspiegeln}
 In den Außenspiegeln wurde der Innenraum mit der Spiegelmechanik ausgebaut und Videoprojektoren eingebaut. Der nach unten ausgerichtete Videoprojektor bestrahlt die Flächen durch ein Loch an der Unterseite des Außenspiegels vor den vorderen Türen.
 Durch den Videoprojektor können Videos auf dem Boden gezeigt werden. Der Betrachter soll hierbei aus einer kurzen Entfernung vom Fahrzeug das Bild scharf auf unterschiedlichen Böden und Lichtverhältnissen sehen können. \\
-Die Videoprojektoren haben ein Format von 16:10 und eine Auflösung von $ 1280\,\mathrm{Pixel}/\mathrm{Zeile} \times 800\,\mathrm{Zeilen} $.
+Die Videoprojektoren haben ein Format von 16:10 und eine Auflösung von $ 1280\,\frac{\mathrm{Pixel}}{\mathrm{Zeile}} \times 800\,\mathrm{Zeilen} $.
 \subsection{Bildschirme in den hinteren Seitenfenstern}
 In den hinteren Seitenfenstern befinden sich an den unbeweglichen Nebenscheiben, die mit einer Leiste von den beweglichen Hauptglasscheiben getrennt sind, Bildschirme. Diese können von außen betrachtet werden. Die Rückseite der Bildschirme ist von innen mit einer schwarzen Kunststoffverkleidung für die Passagiere abgedeckt.\\
 Zusammen mit den LED-Streifen in den Radkästen und den Videoprojektoren in den Außenspiegeln bilden die Bildschirme in den Seitenfenstern die optische Darstellung der Kollektionen im Seitenbereich.
@@ -124,13 +124,13 @@ Der LED-Streifen besteht aus fünf Teilen und erstreckt sich im oberen Bereich d
 Der Streifen spielt dynamische Inszenierungen für die Fahrzeuginsassen ab.
 Die Leisten in den Türen haben eine Auflösung von 115 Pixel, während das mittlere Stück 259 Pixel besitzt. Insgesamt besteht der LED-Streifen aus 719 Pixel.
 \subsection{LED Türtafeln}
-In allen vier Türverkleidungen befinden sich unterhalb des LED-Streifens ein LED-Feld hinter einer Abdeckung mit durchsichtigen Sternen. Die Sterne können somit mit unterschiedlichen Farben angestrahlt werden, womit diese die Wirkung des LED-Streifens unterstützen. \\
+In allen vier Türverkleidungen befinden sich unterhalb des LED-Streifens ein LED-Feld hinter einer Abdeckung mit durchsichtigen Sternen. Die Sterne können mit unterschiedlichen Farben angestrahlt werden, womit sie die Wirkung des LED-Streifens unterstützen.
 \subsection{Bildschirme in der Einstiegsleiste}
 Anstelle einer Edelstahlabdeckung mit einem Schriftzug befinden sich in den vorderen Türen Bildschirme in der Einstiegsleiste. Die Bildschirme können bei geöffneter Türe Inhalte dem Fahrzeuginsassen und Betrachter außerhalb des Fahrzeuges darstellen. Die Größe reicht aus, um lange Wörter oder mehrere kurze Wörter leserlich darzustellen. \\
-Die Auflösung der Bildschirme beträgt $ 1280 \,\mathrm{Pixel}/\mathrm{Zeile} \times 1024 \,\mathrm{Zeilen} $ . 
+Die Auflösung der Bildschirme beträgt $ 1280 \,\frac{\mathrm{Pixel}}{\mathrm{Zeile}} \times 1024 \,\mathrm{Zeilen} $ . 
 \subsection{Videoprojektoren im Fußraum}
 Für die vorderen Fußraumböden wurden zwei Videoprojektoren verbaut. Der linke Videoprojektor befindet sich unterhalb der Lenksäule, der rechte unterhalb des Handschuhfachs. Beide Videoprojektoren strahlen den Fußraum an und können dynamisch Inhalte abspielen. \\
-Die Videoprojektoren haben ein Format von 16:10 und eine Auflösung von $ 1280\,\mathrm{Pixel}/\mathrm{Zeile} \times 800\,\mathrm{Zeilen} $, womit für den Betrachter des Fußraumbodens ein scharfes Bild erscheint.
+Die Videoprojektoren haben ein Format von 16:10 und eine Auflösung von $ 1280\,\frac{\mathrm{Pixel}}{\mathrm{Zeile}}\times 800\,\mathrm{Zeilen} $, womit für den Betrachter des Fußraumbodens ein scharfes Bild erscheint.
 \subsection{Morphende Oberfläche in der Mittelkonsole}
 In der Mittelkonsole wurde das Ablagefach und die abgelederte Abdeckung durch eine neuartige Vorrichtung ersetzt, die von innen mit Hilfe von Formteilen auf die Oberfläche drückt und somit von außen optisch und haptisch spürbar ist. In der Vorrichtung befinden sich in einem Revolver drei Formteile mit unterschiedlicher Ausgestaltung.
 \subsection{Durchsichtiger Bildschirm im Dachfenster}

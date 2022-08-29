@@ -9,14 +9,15 @@
 		\draw[green, dashed, thick] (0, 57.77) -- (240, 57.77);	
 		\node[above, green] at (50, 57.77) {Datenmenge bei Videostart};
 		\draw[green, dashed, thick] (0, 564.2) -- (240, 564.2);	
-		\node[above, green] at (150, 564.2) {Gesamte Datenmenge};
+		\node[below, green] at (50, 564.2) {Gesamte Datenmenge};
 		\draw[red, very thick] (0,0) -- (100, 57.77);
-		\draw[red, very thick] (100, 57.77) -- node[right, text width=3cm] {Minimum Datenübertragung} (190, 564.2);
+		\draw[red, very thick] (100, 57.77) -- (190, 564.2);
+		\node[red, right, text width=3cm] at (150, 300){Minimum Datenübertragung};
 		\draw[magenta] (0,0) -- node[left, text width=3cm] {Durchschnittliche Datenübertragung} (190, 564.2);{Minimum Datenübertragung}
 		\addplot[white] expression {564.2/190 * x * 100};
 		\node[right]  (K1) at (130, 100) {1. kritischer Punkt};
 		\draw[->] (K1) -- (105, 60);
-		\node[left]  (K2) at (160, 550) {2. kritischer Punkt};
+		\node[left]  (K2) at (165, 550) {2. kritischer Punkt};
 		\draw[->] (K2) -- (185, 560);
 	\end{axis}
 \end{tikzpicture}
